@@ -4,6 +4,7 @@ import { ReactNode } from 'react'
 import { useRef } from 'react';
 import Image from 'next/image'
 import React from 'react'
+import basePath from '../utilities/basepath';
 
 interface quickListProps {
     headerImagePath: string,
@@ -38,7 +39,7 @@ const QuickList = ({headerImagePath, title, childrenList}: quickListProps) => {
         <div className='flex items-center w-full'>
           <div className='flex items-center'>
             <div className='pr-2'>
-              <Image src={headerImagePath} alt="headerImagePath" width={24} height={24}></Image>
+              <Image src={basePath + headerImagePath} alt="headerImagePath" width={24} height={24}></Image>
             </div>
             <div className= 'font-bold'>
               {title}

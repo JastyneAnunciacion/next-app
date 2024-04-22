@@ -9,6 +9,7 @@ import ToggleButton from '../components/ToggleButton'
 import WalletDropdown from '../components/WalletDropdown'
 import BorderedDropdown from '../components/BorderedDropdown'
 import languages from '../components/language-list.json'
+import basePath from '../utilities/basepath'
 
 interface ProfileProps {
   username: string,
@@ -31,7 +32,7 @@ const ProfilePage = () => {
       <div className='px-4 pt-4'>
         <p className='font-bold text-lg'>Profile</p>
         <div className='flex items-center gap-3 my-3'>
-          <Image src='/images/blank-account-icon.png' alt='Large Profile Icon' width={60} height={60}></Image>
+          <Image src={`${basePath}/images/blank-account-icon.png`} alt='Large Profile Icon' width={60} height={60}></Image>
           <div>
             <p className='font-bold text-lg'>Username</p>
             <p>User since: Date Joined</p>

@@ -6,6 +6,7 @@ import Footer from '../components/Footer'
 import TextLink from '../components/TextLink'
 import WalletDropdown from '../components/WalletDropdown'
 import Image from 'next/image'
+import basePath from '../utilities/basepath'
 
 const WalletPage = () => {
   const [option, changeOption] = useState(0);
@@ -31,7 +32,7 @@ const WalletPage = () => {
               <p>BTC deposit address</p>
               <div className='w-full bg-gray-900 h-10 rounded-xl text-white flex items-center pl-4'>exampledepositaddress</div>
               <div className='flex justify-center flex-col items-center'>
-                <Image src="/images/qr-code-sample-image.png" alt="QRCode" width={400} height={500}/>
+                <Image src={`${basePath}/images/qr-code-sample-image.png`} alt="QRCode" width={400} height={500}/>
                 <p>Send only BTC to this deposit address.</p>
                 <p className='text-wrap'>Values sent below the minimum amount or to an incorrect address will be lost.</p>
               </div>
