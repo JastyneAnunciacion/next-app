@@ -13,7 +13,7 @@ export default function Home() {
         <div className="flex justify-center items-center flex-col">
           <BannerWithButton />
         </div>
-        <p>Hello Prefix here {prefix}</p>
+        <p>{`Prefix here: ${prefix}`}</p>
         <QuickListCryptoCurrencies />
         <QuickListGames gameListTitle="Top Games" />
         <QuickListGames gameListTitle="New" />
