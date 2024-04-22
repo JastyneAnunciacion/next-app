@@ -16,6 +16,20 @@
   }
 }
 
-body {
-  
+*::-webkit-scrollbar {
+  scrollbar-width: thin;
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #2a3441;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0f1216;
 }
