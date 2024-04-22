@@ -3,7 +3,6 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import QuickListCryptoCurrencies from "./components/QuickListCryptoCurrencies";
 import QuickListGames from "./components/QuickListGames";
-import { prefix } from "./prefix";
 
 export default function Home() {
   return (
