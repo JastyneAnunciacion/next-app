@@ -3,6 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import basePath from '../utilities/basepath';
 
 interface textLinkProps {
     text: string,
@@ -23,11 +24,11 @@ const TextLink = ({ text, linkHref="", onClick = () => {}, hasImage = false, cus
         <Link href={linkHref} className='flex items-center'>
             <div onClick={onClick} className='flex items-center cursor-pointer'>
                 {!showImageOnRightSideOfText && hasImage && (
-                    <Image className='mr-2' src={linkImageSrc} alt="Link Icon" width={imageWidth} height={imageHeight} />
+                    <Image className='mr-2' src={basePath + linkImageSrc} alt="Link Icon" width={imageWidth} height={imageHeight} />
                 )}
                 <div>{text}</div>
                 {showImageOnRightSideOfText && hasImage && (
-                    <Image className='ml-2' src={linkImageSrc} alt="Link Icon" width={imageWidth} height={imageHeight} />
+                    <Image className='ml-2' src={basePath + linkImageSrc} alt="Link Icon" width={imageWidth} height={imageHeight} />
                 )}
             </div>
         </Link>
