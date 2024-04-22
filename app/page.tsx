@@ -3,10 +3,12 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import QuickListCryptoCurrencies from "./components/QuickListCryptoCurrencies";
 import QuickListGames from "./components/QuickListGames";
+import { prefix } from "./prefix";
 
 export default function Home() {
   return (
     <main>
+      <p>{prefix}</p>
       <Header />
       <div className="bg-gray-200 px-4">
         <div className="flex justify-center items-center flex-col">
