@@ -8,12 +8,12 @@ import { prefix } from "./prefix";
 export default function Home() {
   return (
     <main>
-      <p>{prefix}</p>
       <Header />
       <div className="bg-gray-200 px-4">
         <div className="flex justify-center items-center flex-col">
           <BannerWithButton />
         </div>
+        <p>Hello Prefix here {prefix}</p>
         <QuickListCryptoCurrencies />
         <QuickListGames gameListTitle="Top Games" />
         <QuickListGames gameListTitle="New" />
