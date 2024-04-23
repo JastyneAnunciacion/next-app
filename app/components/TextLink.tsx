@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import basePath from '../utilities/basepath';
 
-interface textLinkProps {
+interface TextLinkProps {
     text: string,
     linkHref?: string,
     onClick?: () => void,
@@ -16,7 +16,7 @@ interface textLinkProps {
     showImageOnRightSideOfText?: boolean,
 }
 
-const TextLink = ({ text, linkHref="", onClick = () => {}, hasImage = false, customLinkSrc ="", customImageWidth=null, customImageHeight=null, showImageOnRightSideOfText = true}: textLinkProps) => {
+const TextLink = ({ text, linkHref="", onClick = () => {}, hasImage = false, customLinkSrc ="", customImageWidth=null, customImageHeight=null, showImageOnRightSideOfText = true}: TextLinkProps) => {
     const linkImageSrc = customLinkSrc ? customLinkSrc : '/images/link-image.png';
     const imageWidth = customImageWidth ? customImageWidth : 15;
     const imageHeight = customImageHeight ? customImageHeight : 15;

@@ -4,12 +4,12 @@ import React from 'react'
 import { useState } from 'react';
 import { ReactNode } from 'react';
 
-interface dropdownProps {
+interface DropdownProps {
     title: string,
     children: ReactNode;
 }
 
-const Dropdown = ({title, children}: dropdownProps) => {
+const Dropdown = ({title, children}: DropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

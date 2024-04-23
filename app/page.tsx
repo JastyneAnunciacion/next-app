@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import QuickListCryptoCurrencies from "./components/QuickListCryptoCurrencies";
 import QuickListGames from "./components/QuickListGames";
+import walletList from "./components/wallet-list.json";
 
 export default function Home() {
   return (
@@ -12,14 +13,14 @@ export default function Home() {
         <div className="flex justify-center items-center flex-col">
           <BannerWithButton />
         </div>
-        <QuickListCryptoCurrencies />
-        <QuickListGames gameListTitle="Top Games" />
-        <QuickListGames gameListTitle="New" />
-        <QuickListGames gameListTitle="Biggest Multiplier" />
-        <QuickListGames gameListTitle="Bonus Buy" />
-        <QuickListGames gameListTitle="Crypto Games" />
-        <QuickListGames gameListTitle="Table Games" />
-        <QuickListGames gameListTitle="Game Shows" />
+        <QuickListCryptoCurrencies cryptoList={walletList}/>
+        <QuickListGames gameListTitle="Top Games" gameList={walletList}/>
+        <QuickListGames gameListTitle="New" gameList={walletList}/>
+        <QuickListGames gameListTitle="Biggest Multiplier" gameList={walletList}/>
+        <QuickListGames gameListTitle="Bonus Buy" gameList={walletList}/>
+        <QuickListGames gameListTitle="Crypto Games" gameList={walletList}/>
+        <QuickListGames gameListTitle="Table Games" gameList={walletList}/>
+        <QuickListGames gameListTitle="Game Shows" gameList={walletList}/>
       </div>
       <Footer currentPage="Home"/>
     </main>

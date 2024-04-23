@@ -2,11 +2,11 @@
 
 import FooterButton from './FooterButton'
 
-interface footerProps {
+interface FooterProps {
     currentPage?: string;
 }
 
-const Footer = ({currentPage=""}: footerProps) => {
+const Footer = ({currentPage=""}: FooterProps) => {
   return (
     <div className='p-2 flex justify-center items-center bg-gray-700 h-16 fixed w-full bottom-0 gap-8 sm:gap-16 md:gap-24 lg:gap-44'>
         <FooterButton iconSrc='/images/menu-image.png' pageHref='/menu' active={currentPage === "Menu"}>Menu</FooterButton>

@@ -6,13 +6,14 @@ import Image from 'next/image'
 import React from 'react'
 import basePath from '../utilities/basepath';
 
-interface quickListProps {
-    headerImagePath: string,
+interface QuickListProps {
+    headerIconPath: string,
     title: string,
-    childrenList: ReactNode
+    childrenList: ReactNode,
+    gapAmount?: number,
 }
 
-const QuickList = ({headerImagePath, title, childrenList}: quickListProps) => {
+const QuickList = ({headerIconPath: headerImagePath, title, childrenList, gapAmount=0}: QuickListProps) => {
   const listRef = useRef<HTMLDivElement  | null>(null);
 
   const scrollTo = (direction: 'left' | 'right') => {
@@ -39,7 +40,7 @@ const QuickList = ({headerImagePath, title, childrenList}: quickListProps) => {
         <div className='flex items-center w-full'>
           <div className='flex items-center'>
             <div className='pr-2'>
-              <Image src={basePath + headerImagePath} alt="headerImagePath" width={24} height={24}></Image>
+              <Image src={basePath + headerImagePath} alt="Quick List Icon" width={24} height={24}></Image>
             </div>
             <div className= 'font-bold'>
               {title}
@@ -50,7 +51,7 @@ const QuickList = ({headerImagePath, title, childrenList}: quickListProps) => {
             <button onClick={() => scrollTo('right')} className='w-6 h-6 bg-gray-800 text-xs rounded-lg mr-2'>▶</button>
           </div>
         </div>
-        <div className='flex overflow-x-auto scrollbar-none' ref={listRef}>
+        <div className={`flex overflow-x-auto scrollbar-none gap-${gapAmount}`} ref={listRef}>
           {childrenList}
         </div>
     </div>

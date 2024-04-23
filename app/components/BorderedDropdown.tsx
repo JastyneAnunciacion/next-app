@@ -5,12 +5,12 @@ interface DropdownItem {
   onClick: () => void;
 }
 
-interface dropdownProps {
+interface DropdownProps {
   children: React.ReactNode;
   items: DropdownItem[];
 }
 
-const BorderedDropdown = ({ children, items }: dropdownProps) => {
+const BorderedDropdown = ({ children, items }: DropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(0);
 
