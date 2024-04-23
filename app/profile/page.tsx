@@ -6,10 +6,10 @@ import Footer from '../components/Footer'
 import Image from 'next/image'
 import { useState } from 'react'
 import ToggleButton from '../components/ToggleButton'
-import WalletDropdown from '../components/WalletDropdown'
-import BorderedDropdown from '../components/BorderedDropdown'
+import BorderedDropdown from '../components/Dropdown'
 import languages from '../components/language-list.json'
 import basePath from '../utilities/basepath'
+import SelectionDropdown from '../components/SelectionDropdown'
 
 interface ProfileProps {
   username: string,
@@ -60,7 +60,7 @@ const ProfilePage = () => {
                 <div className='mt-2'>
                   <p>Select preferred language</p>
                   <div>
-                    <BorderedDropdown items={items}>a</BorderedDropdown>
+                    <SelectionDropdown items={items} />
                   </div>
                   <p>Game full screen option</p>
                   <ToggleButton />

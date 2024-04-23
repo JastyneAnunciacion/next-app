@@ -21,6 +21,7 @@ export default function Home() {
         <QuickListGames gameListTitle="Crypto Games" gameList={walletList}/>
         <QuickListGames gameListTitle="Table Games" gameList={walletList}/>
         <QuickListGames gameListTitle="Game Shows" gameList={walletList}/>
+        <div className="h-20"></div>
       </div>
       <Footer currentPage="Home"/>
     </main>

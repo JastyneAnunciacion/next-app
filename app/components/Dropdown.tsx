@@ -3,6 +3,8 @@
 import React from 'react'
 import { useState } from 'react';
 import { ReactNode } from 'react';
+import Image from 'next/image';
+import basePath from '../utilities/basepath';
 
 interface DropdownProps {
     title: string,
@@ -14,12 +16,13 @@ const Dropdown = ({title, children}: DropdownProps) => {
 
   return (
     <div className="relative">
-        <button className='flex items-center font-bold gap-2' onClick={() => setIsOpen((prev) => !prev)} >
-            {!isOpen ? (
-              "▶ "
-            ) : (
-              "▼ "
-            )}
+        <button className='flex items-center font-bold gap-2' onClick={() => setIsOpen((prev) => !prev)}>
+            {!isOpen 
+            ? 
+            <Image src={`${basePath}/images/right-arrow-black-image.png`} alt="right arrow" width={40} height={40} />
+            :
+            <Image src={`${basePath}/images/down-arrow-black-image.png`} alt="down arrow" width={40} height={40} />
+            }
             <p>{title}</p>
         </button>
         {isOpen && (
