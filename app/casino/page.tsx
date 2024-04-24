@@ -7,6 +7,7 @@ import SelectionDropdown from '../components/SelectionDropdown'
 import providerList from '../components/provider-list.json'
 import GridList from '../components/GridList'
 import walletList from '../components/wallet-list.json'
+import Serachbar from '../components/Serachbar'
 
 const CasinoPage = () => {
   const sortOptions = [
@@ -32,7 +33,7 @@ const CasinoPage = () => {
           <div className='px-4 mt-4 flex flex-col gap-1 text-sm'>
             <SelectionDropdown items={sort} placeHolderText='Sort:' placeArrowOnRight={true} />
             <SelectionDropdown items={providers} placeHolderText='Provider:' placeArrowOnRight={true} />
-            <input placeholder='Search Game' className='w-full bg-gray-900 h-10 rounded-xl text-white flex items-center pl-4 font-bold' />
+            <Serachbar placeholderText='Search Games' />
             <GridList list={walletList} />
             <div className='h-20' />
           </div>

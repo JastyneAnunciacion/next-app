@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import QuickListCryptoCurrencies from "./components/QuickListCryptoCurrencies";
 import QuickListGames from "./components/QuickListGames";
+import Serachbar from "./components/Serachbar";
 import walletList from "./components/wallet-list.json";
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
         <div className="flex justify-center items-center flex-col">
           <BannerWithButton />
         </div>
-        <QuickListCryptoCurrencies cryptoList={walletList}/>
+        <Serachbar placeholderText='Search Games' />
         <QuickListGames gameListTitle="Top Games" gameList={walletList}/>
         <QuickListGames gameListTitle="New" gameList={walletList}/>
         <QuickListGames gameListTitle="Biggest Multiplier" gameList={walletList}/>
