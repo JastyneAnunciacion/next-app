@@ -3,7 +3,7 @@
 import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import Banner from '../components/Banner'
+import SmallBanner from '../components/SmallBanner'
 import TextLink from '../components/TextLink'
 import Dropdown from '../components/Dropdown'
 
@@ -12,10 +12,10 @@ const MenuPage = () => {
     <div>
         <Header />
         <div className='flex justify-center px-5 pt-3 flex-col'>
-          <Banner>  
+          <SmallBanner>  
             <p className='w-3/5 text-wrap'>Site Promotions and Other Bonuses Offered at PHX Gamble</p>
             <p className='text-2xl'>PHX.GAMBLE</p>
-          </Banner>
+          </SmallBanner>
           <div className='mt-5 font-bold'>
             <TextLink text='PHX.GAMBLE' linkHref='/' onClick={() => console.log('')} hasImage={true}/>
           </div>

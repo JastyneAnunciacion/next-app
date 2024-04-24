@@ -1,7 +1,6 @@
-import BannerWithButton from "./components/BannerWithButton";
+import BigBannerSlider from "./components/BigBannerSlider";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import QuickListCryptoCurrencies from "./components/QuickListCryptoCurrencies";
 import QuickListGames from "./components/QuickListGames";
 import Serachbar from "./components/Serachbar";
 import walletList from "./components/wallet-list.json";
@@ -11,8 +10,8 @@ export default function Home() {
     <main>
       <Header />
       <div className="bg-gray-200 px-4">
-        <div className="flex justify-center items-center flex-col">
-          <BannerWithButton />
+        <div className="">
+          <BigBannerSlider />
         </div>
         <Serachbar placeholderText='Search Games' />
         <QuickListGames gameListTitle="Top Games" gameList={walletList}/>
