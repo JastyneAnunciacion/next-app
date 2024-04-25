@@ -19,20 +19,22 @@ const DropdownListItem = ({title, children, imgSrc, arrowIsRightSide=false}: Dro
             {!arrowIsRightSide && (
                 !isOpen 
                 ? 
-                <Image src={`${basePath}/images/right-arrow-black-image.png`} alt="right arrow" width={40} height={40} />
+                <Image src={`${basePath}/images/right-arrow-black-image.png`} alt="Right Arrow" width={40} height={40} />
                 :
-                <Image src={`${basePath}/images/down-arrow-black-image.png`} alt="down arrow" width={40} height={40} />
+                <Image src={`${basePath}/images/down-arrow-black-image.png`} alt="Down Arrow" width={40} height={40} />
             )}
             <div className='flex gap-2'>
-                <Image src={imgSrc} alt='list item' width={20} height={20}/>
+                <div>
+                    <Image src={imgSrc} alt='list item' width={22} height={22}/>
+                </div>
                 <p className={`${isOpen ? 'font-bold' : ''}`}>{title}</p>
             </div>
             {arrowIsRightSide && (
                 !isOpen 
                 ? 
-                <Image src={`${basePath}/images/down-arrow-black-image.png`} alt="down arrow" width={40} height={40} />
+                <Image src={`${basePath}/images/down-arrow-black-image.png`} alt="Down Arrow" width={40} height={40} />
                 :
-                <Image src={`${basePath}/images/up-arrow-black-image.png`} alt="up arrow" width={40} height={40} />
+                <Image src={`${basePath}/images/up-arrow-black-image.png`} alt="Up Arrow" width={40} height={40} />
             )}
         </button>
         {isOpen && (

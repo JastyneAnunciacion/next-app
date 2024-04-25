@@ -23,7 +23,7 @@ export default function Home() {
         <QuickListGames gameListTitle="Game Shows" gameList={walletList}/>
         <div className="h-20"></div>
       </div>
-      <Footer currentPage="Home"/>
+      <Footer currentPage="Casino"/>
     </main>
   )
 }

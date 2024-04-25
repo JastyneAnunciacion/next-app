@@ -9,7 +9,7 @@ interface ListContainterWithTitleHeaderProps {
 const ListContainterWithTitleHeader = ({title, children}: ListContainterWithTitleHeaderProps) => {
   return (
     <div>
-        <div>
+        <div className='text-gray-700 text-sm'>
             {title}
         </div>
         <div className='px-3'>

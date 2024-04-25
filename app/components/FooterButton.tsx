@@ -1,23 +1,37 @@
 import React from 'react'
-import { ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import basePath from '../utilities/basepath';
 
 interface FooterButtonProps {
-    children: ReactNode;
+    buttonName: string;
     iconSrc: string;
     pageHref: string;
     active: boolean;
 }
 
-const FooterButton = ({ children, iconSrc,  pageHref, active}: FooterButtonProps) => {
+const FooterButton = ({ buttonName, iconSrc,  pageHref, active}: FooterButtonProps) => {
   return (
     <div>
-        <Link href={pageHref} className={`text-white flex-shrink px-2 py-1.5 text-sm flex flex-col items-center gap-1 ${active && 'bg-gray-900 rounded-xl'}`}>
-            <Image src={basePath + iconSrc} alt='Footer Button Image' width={20} height={20}></Image>
-            {children}
+      {active ? (
+        <div className={`relative text-white p-3 text-sm flex flex-col items-center bg-gray-900 rounded-full`}>
+            <div> 
+              <Image src={basePath + iconSrc} alt='Footer Button Image' width={30} height={30}></Image>
+            </div>
+            <div className='absolute top-16 text-black font-bold text-xs'>
+              {buttonName}
+            </div>
+        </div>
+      ) : (
+        <Link href={pageHref} className={`relative text-white p-3 text-sm flex flex-col items-center`}>
+            <div> 
+              <Image src={basePath + iconSrc} alt='Footer Button Image' width={30} height={30}></Image>
+            </div>
+            <div className='absolute top-16 text-black font-bold text-xs'>
+              {buttonName}
+            </div>
         </Link>
+      )}
     </div>
   )
 }

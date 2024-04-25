@@ -12,8 +12,10 @@ const Level = ({level = 1, levelImgSrc='/images/level-image.png', currentXP=3, X
   return (
     <div>
         <div className='w-full h-12 bg-gray-600 rounded-lg'>
-            <div className='flex p-3'>
-                <Image src={`${basePath}${levelImgSrc}`} alt='level icon' width={40} height={40} />
+            <div className='flex p-2 gap-3 items-center'>
+                <div>
+                    <Image src={`${basePath}${levelImgSrc}`} alt='Level Icon' width={30} height={30} />
+                </div>
                 <div className='w-full flex flex-col gap-1'>
                     <div className='h-1 w-full bg-gray-950 rounded-full'>
                          <div className='h-full bg-blue-500 rounded-full' 

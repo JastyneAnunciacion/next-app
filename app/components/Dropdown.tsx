@@ -19,9 +19,9 @@ const Dropdown = ({title, children}: DropdownProps) => {
         <button className='flex items-center font-bold gap-2' onClick={() => setIsOpen((prev) => !prev)}>
             {!isOpen 
             ? 
-            <Image src={`${basePath}/images/right-arrow-black-image.png`} alt="right arrow" width={40} height={40} />
+            <Image src={`${basePath}/images/right-arrow-black-image.png`} alt="Right Arrow" width={40} height={40} />
             :
-            <Image src={`${basePath}/images/down-arrow-black-image.png`} alt="down arrow" width={40} height={40} />
+            <Image src={`${basePath}/images/down-arrow-black-image.png`} alt="Down Arrow" width={40} height={40} />
             }
             <p>{title}</p>
         </button>

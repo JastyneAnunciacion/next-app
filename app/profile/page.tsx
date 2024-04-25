@@ -34,7 +34,9 @@ const ProfilePage = () => {
       <div className='px-4 pt-4'>
         <p className='font-bold text-lg'>Profile</p>
         <div className='flex items-center gap-3 mt-10 mb-3'>
-          <Image src={`${basePath}/images/blank-account-icon.png`} alt='Large Profile Icon' width={80} height={80}></Image>
+          <div>
+            <Image src={`${basePath}/images/blank-account-icon.png`} alt='Large Profile Icon' width={90} height={90}></Image>
+          </div>
           <div className='w-full'>
             <p className='font-bold text-lg'>Username</p>
             <Level />

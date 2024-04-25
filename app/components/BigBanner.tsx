@@ -4,10 +4,10 @@ import Image from 'next/image'
 interface BigBannerProps {
     hasSeparateButton?: boolean,
     buttonText?: string
-    imageSrc: string
+    imageSrc?: string
 }
 
-const BigBanner = ({hasSeparateButton=false, buttonText="Check Banner", imageSrc}: BigBannerProps) => {
+const BigBanner = ({hasSeparateButton=false, buttonText="Check Banner", imageSrc=''}: BigBannerProps) => {
   return (
     <div>
         {hasSeparateButton ? (

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import basePath from '../utilities/basepath'
 
-const HeaderProfileButton = () => {
+const ProfileButton = () => {
   return (
     <div>
       <Link href="/profile">
@@ -13,4 +13,4 @@ const HeaderProfileButton = () => {
   )
 }
 
-export default HeaderProfileButton
+export default ProfileButton

@@ -21,9 +21,9 @@ const WalletDropdown = () => {
             )}
 
             {!isOpen ? 
-            <Image src={`${basePath}/images/right-arrow-image.png`} alt="right arrow" width={40} height={40} />
+            <Image src={`${basePath}/images/right-arrow-image.png`} alt="Right Arrow" width={40} height={40} />
             :
-            <Image src={`${basePath}/images/down-arrow-image.png`} alt="down arrow" width={40} height={40} />
+            <Image src={`${basePath}/images/down-arrow-image.png`} alt="Down Arrow" width={40} height={40} />
             }
 
             {isOpen && (
