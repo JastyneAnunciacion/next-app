@@ -18,7 +18,9 @@ const BigBanner = ({hasSeparateButton=false, buttonText="Check Banner", imageSrc
         ) : (
         <button style={{backgroundImage: `${imageSrc}`}} className='bg-gray-400 mt-4 h-80 flex justify-center rounded-lg w-full'>
           <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-            <Image src={imageSrc} alt="Banner" layout="fill" objectFit="cover" className="rounded-lg" />
+            {imageSrc && (
+              <Image src={imageSrc} alt="Banner" layout="fill" objectFit="cover" className="rounded-lg" />
+            )}
           </div>
         </button>
         )}

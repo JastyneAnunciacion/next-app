@@ -8,16 +8,16 @@ import Image from 'next/image';
 
 const slides = [
     {
-        imgSrc: '/images/Game Icon 1.jpeg'
+        imgSrc: ''
     },
     {
-        imgSrc: '/images/Game Icon 2.jpeg'
+        imgSrc: ''
     },
     {
-        imgSrc: '/images/Game Icon 2.png'
+        imgSrc: ''
     },
     {
-        imgSrc: '/images/Game Icon 3.png'
+        imgSrc: ''
     }
 ];
 
@@ -47,7 +47,7 @@ const BigBannerSlider = () => {
                 {slides.map((slide, index) => (
                     <div key={index} className='w-full flex-shrink-0 flex justify-center'> 
                         <div className="w-3/4">
-                            <BigBanner imageSrc={`${basePath}${slide.imgSrc}`} />
+                            <BigBanner imageSrc={`${slide.imgSrc === "" ? "" : basePath + slide.imgSrc}`} />
                         </div>
                     </div>
                 ))}

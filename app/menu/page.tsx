@@ -6,26 +6,42 @@ import Footer from '../components/Footer'
 import SmallBanner from '../components/SmallBanner'
 import TextLink from '../components/TextLink'
 import Dropdown from '../components/Dropdown'
+import Serachbar from '../components/Serachbar'
+import ListContainterWithTitleHeader from '../components/ListContainterWithTitleHeader'
+import ListItem from '../components/ListItem'
+import basePath from '../utilities/basepath'
+import DropdownListItem from '../components/DropdownListItem'
 
 const MenuPage = () => {
   return (
     <div>
         <Header />
-        <div className='flex justify-center px-5 pt-3 flex-col'>
-          <SmallBanner>  
-            <p className='w-3/5 text-wrap'>Site Promotions and Other Bonuses Offered at PHX Gamble</p>
-            <p className='text-2xl'>PHX.GAMBLE</p>
+        <div className='flex justify-center px-3 pt-3 flex-col gap-2'>
+          <Serachbar placeholderText='Find a Game' />
+          <SmallBanner>
+            <div className='text-white flex flex-col gap-3 text-sm'>
+              <p className='w-3/5 text-wrap'>Site Promotions and Other Bonuses Offered at PHX Gamble</p>
+              <p className='text-xl font-bold'>PHX.GAMBLE</p>
+            </div>
           </SmallBanner>
-          <div className='mt-5 font-bold'>
-            <TextLink text='PHX.GAMBLE' linkHref='/' onClick={() => console.log('')} hasImage={true}/>
-          </div>
-          <div className='mt-7 text-lg'>
-            <Dropdown title='User'>
-              <div className='flex flex-col mt-4 gap-2 text-'>
-                <TextLink text='Profile' linkHref='/profile' onClick={() => console.log('')} hasImage={true} customLinkSrc='/images/profile-image.png' showImageOnRightSideOfText={false} customImageWidth={20} customImageHeight={20}/>
-                <TextLink text='Referrals' linkHref='/referral' onClick={() => console.log('')} hasImage={true} customLinkSrc='/images/referal-image.png' showImageOnRightSideOfText={false} customImageWidth={20} customImageHeight={20}/>
-              </div>
-            </Dropdown>
+          <div className=''>
+            <ListContainterWithTitleHeader title='GAMES'>
+              <DropdownListItem title='Casino' imgSrc={`${basePath}/images/pencil-circle-fill.256x256.png`} arrowIsRightSide={true}>
+                <ListItem imgSrc={`${basePath}/images/pencil-circle-fill.256x256.png`} itemName='Slots'/>
+                <ListItem imgSrc={`${basePath}/images/pencil-circle-fill.256x256.png`} itemName='Live Casino'/>
+                <ListItem imgSrc={`${basePath}/images/pencil-circle-fill.256x256.png`} itemName='Crypto Games'/>
+              </DropdownListItem>
+              <ListItem imgSrc={`${basePath}/images/pencil-circle-fill.256x256.png`} itemName='Sports'/>
+            </ListContainterWithTitleHeader>
+            <ListContainterWithTitleHeader title='MORE'>
+              <ListItem imgSrc={`${basePath}/images/pencil-circle-fill.256x256.png`} itemName='Earn'/>
+              <ListItem imgSrc={`${basePath}/images/pencil-circle-fill.256x256.png`} itemName='Promotions'/>
+            </ListContainterWithTitleHeader>
+            <ListContainterWithTitleHeader title='USER'>
+              <ListItem imgSrc={`${basePath}/images/pencil-circle-fill.256x256.png`} itemName='Profile'/>
+              <ListItem imgSrc={`${basePath}/images/pencil-circle-fill.256x256.png`} itemName='Wallet'/>
+              <ListItem imgSrc={`${basePath}/images/pencil-circle-fill.256x256.png`} itemName='Settings'/>
+            </ListContainterWithTitleHeader>
           </div>
         </div>
         <Footer currentPage="Menu"/>

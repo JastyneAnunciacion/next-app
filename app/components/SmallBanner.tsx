@@ -7,7 +7,7 @@ interface BannerProps {
 
 const SmallBanner = ({children}: BannerProps) => {
   return (
-    <div className='w-full h-36 bg-gray-600 flex justify-center gap-2 items-start flex-col px-5 rounded-2xl text-white font-bold'>
+    <div className='w-full h-24 bg-gray-600 flex justify-center gap-2 items-start flex-col px-5 rounded-2xl'>
         {children}
     </div>
   )

@@ -16,6 +16,10 @@
   }
 }
 
+body {
+  background-color: #E2E8F0;
+}
+
 *::-webkit-scrollbar {
   scrollbar-width: thin;
   width: 6px;
