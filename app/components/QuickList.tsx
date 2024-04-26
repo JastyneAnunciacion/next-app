@@ -12,7 +12,7 @@ interface QuickListProps {
     title: string,
     childrenList: ReactNode,
     gapAmount?: number,
-    viewAllLink: string
+    viewAllLink?: string
 }
 
 const QuickList = ({headerIconPath: headerImagePath, title, childrenList, gapAmount=0, viewAllLink}: QuickListProps) => {
