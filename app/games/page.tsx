@@ -21,6 +21,7 @@ const CasinoPage = () => {
   onClick: () => {
     console.log(`Selected option: ${sortOption.value}`);
   }}));
+  
   const providers = providerList.map(provider => ({
     content: provider.Provider,
      onClick: () => {

@@ -49,7 +49,7 @@ const ProfilePage = () => {
           <TransactionHistoryTable />
         </div>
         </div>
-      <Footer />
+      <Footer currentPage='Profile'/>
     </div>
   )
 }

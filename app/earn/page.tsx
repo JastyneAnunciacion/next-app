@@ -7,12 +7,15 @@ import basePath from '../utilities/basepath'
 import ReferralInfo from '../components/ReferralInfo'
 import ReferralLink from '../components/ReferralLink'
 import ReferralStatistics from '../components/ReferralStatistics'
+import InvitesPromo from '../components/InvitesPromo'
+import ReferralsTable from '../components/ReferralsTable'
+import FAQReferral from '../components/FAQReferral'
 
 const EarnPage = () => {
   return (
     <div>
         <Header />
-        <div className='px-4'>
+        <div className='px-4 flex flex-col gap-2'>
             <p className='my-5'>Rewards</p>
             <BigBanner />
             <div className='flex items-center gap-3 mt-5 mb-3'>
@@ -23,6 +26,9 @@ const EarnPage = () => {
             </div>
             <ReferralLink />
             <ReferralStatistics />
+            <InvitesPromo currentInvites={2} maxInvites={10} />
+            <ReferralsTable />
+            <FAQReferral />
         </div>
         <Footer currentPage='Earn' />
     </div>

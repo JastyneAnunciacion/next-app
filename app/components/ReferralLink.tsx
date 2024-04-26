@@ -1,18 +1,14 @@
 import React from 'react'
-import CopyButton from './CopyButton'
 import ShareButton from './ShareButton'
+import CopyTextTemplate from './CopyTextTemplate'
 
 
 const ReferralLink = () => {
-    const referralCode = 'https://phx.gamble/examplereferralcode'
   return (
     <div>
         <p>Your Referral Link:</p>
         <div className='flex gap-2 h-10'>
-            <div className='bg-gray-700 text-white h-full w-full rounded-xl flex justify-between p-4 items-center'>
-                {referralCode}
-                <CopyButton textToCopy={referralCode} />
-            </div>
+            <CopyTextTemplate textToCopy='https://phx.gamble/examplereferralcode' />
             <ShareButton />
         </div>
     </div>

@@ -18,7 +18,7 @@ const FooterButton = ({ buttonName, iconSrc,  pageHref, active}: FooterButtonPro
             <div> 
               <Image src={basePath + iconSrc} alt='Footer Button Image' width={30} height={30}></Image>
             </div>
-            <div className='absolute top-16 text-black font-bold text-xs'>
+            <div className='absolute top-16 text-white font-bold text-xs'>
               {buttonName}
             </div>
         </div>
@@ -27,7 +27,7 @@ const FooterButton = ({ buttonName, iconSrc,  pageHref, active}: FooterButtonPro
             <div> 
               <Image src={basePath + iconSrc} alt='Footer Button Image' width={30} height={30}></Image>
             </div>
-            <div className='absolute top-16 text-black font-bold text-xs'>
+            <div className='absolute top-16 text-white font-bold text-xs'>
               {buttonName}
             </div>
         </Link>

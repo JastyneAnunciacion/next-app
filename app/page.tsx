@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main>
       <Header />
-      <div className="bg-gray-200 px-4">
+      <div className="bg-gray-200 px-4 mt-4">
         <div className="">
           <BigBannerSlider />
         </div>
@@ -21,7 +21,6 @@ export default function Home() {
         <QuickListGames gameListTitle="Crypto Games" gameList={walletList}/>
         <QuickListGames gameListTitle="Table Games" gameList={walletList}/>
         <QuickListGames gameListTitle="Game Shows" gameList={walletList}/>
-        <div className="h-20"></div>
       </div>
       <Footer currentPage="Casino"/>
     </main>

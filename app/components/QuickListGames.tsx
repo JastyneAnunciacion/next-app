@@ -13,7 +13,7 @@ interface QuickListGamesProps {
 
 const QuickListGames = ({gameListTitle, gameList}: QuickListGamesProps) => {
   return (
-    <QuickList headerIconPath="/images/pencil-circle-fill.256x256.png" title={gameListTitle} gapAmount={3} childrenList={gameList.map((item, i) => (
+    <QuickList headerIconPath="/images/pencil-circle-fill.256x256.png" title={gameListTitle} gapAmount={3} viewAllLink='/games' childrenList={gameList.map((item, i) => (
           <div key={i}>
             <button className='bg-gray-600 w-40 h-28 rounded-lg mt-2 cursor-pointer' />
             <div className='text-sm'>

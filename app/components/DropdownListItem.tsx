@@ -1,3 +1,5 @@
+'use client'
+
 import React, { ReactNode } from 'react'
 import { useState } from 'react';
 import Image from 'next/image';
@@ -6,7 +8,7 @@ import basePath from '../utilities/basepath';
 interface DropdownListItem {
     title: string,
     children: ReactNode
-    imgSrc: string,
+    imgSrc?: string,
     arrowIsRightSide?: boolean
 }
 
@@ -15,7 +17,7 @@ const DropdownListItem = ({title, children, imgSrc, arrowIsRightSide=false}: Dro
 
   return (
     <div>
-        <button className={`flex w-full items-center px-3 ${isOpen ? 'bg-gray-400 rounded-2xl' : ''} ${arrowIsRightSide ? 'justify-between' : 'gap-2'}`} onClick={() => setIsOpen((prev) => !prev)}>
+        <button className={`flex w-full items-center px-3 rounded-lg ${isOpen ? 'bg-gray-400' : 'bg-gray-300'} ${arrowIsRightSide ? 'justify-between' : 'gap-2'}`} onClick={() => setIsOpen((prev) => !prev)}>
             {!arrowIsRightSide && (
                 !isOpen 
                 ? 
@@ -24,9 +26,11 @@ const DropdownListItem = ({title, children, imgSrc, arrowIsRightSide=false}: Dro
                 <Image src={`${basePath}/images/down-arrow-black-image.png`} alt="Down Arrow" width={40} height={40} />
             )}
             <div className='flex gap-2'>
+                {imgSrc && (
                 <div>
-                    <Image src={imgSrc} alt='list item' width={22} height={22}/>
+                    <Image src={`${basePath + imgSrc}`} alt='list item' width={22} height={22}/>
                 </div>
+                )}
                 <p className={`${isOpen ? 'font-bold' : ''}`}>{title}</p>
             </div>
             {arrowIsRightSide && (

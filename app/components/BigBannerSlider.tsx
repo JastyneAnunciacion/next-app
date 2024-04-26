@@ -47,7 +47,7 @@ const BigBannerSlider = () => {
                 {slides.map((slide, index) => (
                     <div key={index} className='w-full flex-shrink-0 flex justify-center'> 
                         <div className="w-3/4">
-                            <BigBanner imageSrc={`${slide.imgSrc === "" ? "" : basePath + slide.imgSrc}`} />
+                            <BigBanner imgSrc={`${slide.imgSrc === "" ? "" : basePath + slide.imgSrc}`} />
                         </div>
                     </div>
                 ))}
