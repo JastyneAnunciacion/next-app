@@ -8,14 +8,13 @@ interface SelectionDropdownItem {
 }
 
 interface SelectionDropdownProps {
-  children?: React.ReactNode;
   items: SelectionDropdownItem[];
   hasArrow?: boolean,
   placeArrowOnRight?: boolean;
   placeHolderText?: string;
 }
 
-const SelectionDropdown = ({ children, items, hasArrow=true, placeArrowOnRight=false, placeHolderText='' }: SelectionDropdownProps) => {
+const SelectionDropdown = ({items, hasArrow=true, placeArrowOnRight=false, placeHolderText=''}: SelectionDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(0);
 
@@ -43,9 +42,9 @@ const SelectionDropdown = ({ children, items, hasArrow=true, placeArrowOnRight=f
         {hasArrow && placeArrowOnRight && (
         !isOpen 
         ? 
-        <Image src={`${basePath}/images/right-arrow-image.png`} alt="Right Arrow" width={40} height={40} />
-        :
         <Image src={`${basePath}/images/down-arrow-image.png`} alt="Down Arrow" width={40} height={40} />
+        :
+        <Image src={`${basePath}/images/up-arrow-image.png`} alt="Up Arrow" width={40} height={40} />
         )}
 
         {isOpen && (

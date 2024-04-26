@@ -129,15 +129,17 @@ const WalletPage = () => {
                     <p className='font-semibold'>0 TON</p>
                   </div>
                 </div>
-                <div className='w-full bg-gray-800 h-10 rounded-xl text-white flex items-center gap-3 px-4'>
-                  <div>
-                    <Image src={`${basePath}/images/tokens/BTC-icon.png`} alt='Token Icon' width={20} height={20}></Image>
+                <div className='w-full bg-gray-800 h-10 rounded-xl text-white flex items-center justify-between px-3'>
+                  <div className='flex gap-3 items-center'> 
+                    <div>
+                      <Image src={`${basePath}/images/tokens/BTC-icon.png`} alt='Token Icon' width={20} height={20}></Image>
+                    </div>
+                    <input placeholder='0.00' className='w-80 bg-gray-800 [&::-webkit-inner-spin-button]:appearance-none outline-none' type='number' />
                   </div>
-                  <input placeholder='0.00' className='w-72 bg-gray-800 [&::-webkit-inner-spin-button]:appearance-none outline-none' type='number' />
                   <div className='flex gap-1'> 
-                    <button className='bg-slate-950 w-14 py-1 rounded-lg text-gray-400 hover:border border-blue-50 hover:text-white'>25%</button>
-                    <button className='bg-slate-950 w-14 py-1 rounded-lg text-gray-400 hover:border border-blue-50 hover:text-white'>100%</button>
-                    <button className='bg-slate-950 w-14 py-1 rounded-lg text-gray-400 hover:border border-blue-50 hover:text-white'>50%</button>
+                    <button className='bg-slate-950 w-12 py-1 rounded-lg text-gray-400 hover:border border-blue-50 hover:text-white'>25%</button>
+                    <button className='bg-slate-950 w-12 py-1 rounded-lg text-gray-400 hover:border border-blue-50 hover:text-white'>100%</button>
+                    <button className='bg-slate-950 w-12 py-1 rounded-lg text-gray-400 hover:border border-blue-50 hover:text-white'>50%</button>
                   </div>
                 </div>
                 <div className='flex gap-2 items-center'> 

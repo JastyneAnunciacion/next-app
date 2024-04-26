@@ -40,7 +40,7 @@ const MenuPage = () => {
             <ListContainterWithTitleHeader title='USER'>
               <ListItem imgSrc={`${basePath}/images/pencil-circle-fill.256x256.png`} linkHref='/profile' itemName='Profile'/>
               <ListItem imgSrc={`${basePath}/images/pencil-circle-fill.256x256.png`} linkHref='/wallet' itemName='Wallet'/>
-              <ListItem imgSrc={`${basePath}/images/pencil-circle-fill.256x256.png`} linkHref='' itemName='Settings'/>
+              <ListItem imgSrc={`${basePath}/images/pencil-circle-fill.256x256.png`} linkHref='/settings' itemName='Settings'/>
             </ListContainterWithTitleHeader>
           </div>
         </div>
