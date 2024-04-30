@@ -46,17 +46,17 @@ const BigBannerSlider = () => {
             <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
                 {slides.map((slide, index) => (
                     <div key={index} className='w-full flex-shrink-0 flex justify-center'> 
-                        <div className="w-3/4">
+                        <div className="w-[min(30rem,90%)]">
                             <BigBanner imgSrc={`${slide.imgSrc === "" ? "" : basePath + slide.imgSrc}`} />
                         </div>
                     </div>
                 ))}
             </div>
             <div>
-                <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 cursor-pointer w-8 h-8 bg-gray-900 flex items-center justify-center rounded-full'>
+                <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] left-0 cursor-pointer w-8 h-8 bg-gray-900 flex items-center justify-center rounded-full'>
                     <Image onClick={prevSlide} src={`${basePath}/images/left-arrow-image.png`} alt="Right Arrow" width={30} height={30} />
                 </div>
-                <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 cursor-pointer w-8 h-8 bg-gray-900 flex items-center justify-center rounded-full'>
+                <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] right-0 cursor-pointer w-8 h-8 bg-gray-900 flex items-center justify-center rounded-full'>
                     <Image onClick={nextSlide} src={`${basePath}/images/right-arrow-image.png`} alt="Right Arrow" width={30} height={30} />
                 </div>
             </div>

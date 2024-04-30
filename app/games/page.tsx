@@ -29,7 +29,7 @@ const CasinoPage = () => {
   }}))
 
   return (
-    <div> 
+    <div className="w-[100vw] max-w-[100%] h-[100vh]"> 
         <Header />
           <div className='px-4 mt-4 flex flex-col gap-1 text-sm'>
             <SelectionDropdown items={sort} placeHolderText='Sort:' placeArrowOnRight={true} />

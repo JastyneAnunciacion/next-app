@@ -19,7 +19,7 @@ const SettingsPage = () => {
         
 
   return (
-    <div>
+    <div className="w-[100vw] max-w-[100%] h-[100vh]">
         <Header />
         <div className='p-4'>
             <div>

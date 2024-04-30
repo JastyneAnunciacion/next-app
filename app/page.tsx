@@ -7,8 +7,7 @@ import walletList from "./components/wallet-list.json";
 
 export default function Home() {
   return (
-    <main>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <main className="w-[100vw] max-w-[100%] h-[100vh]">
       <Header />
       <div className="bg-gray-200 px-4 mt-4">
         <div className="">

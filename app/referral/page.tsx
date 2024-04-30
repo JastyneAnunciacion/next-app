@@ -9,7 +9,7 @@ import Dropdown from '../components/Dropdown'
 
 const ReferralPage = () => {
   return (
-    <div>
+    <div className="w-[100vw] max-w-[100%] h-[100vh]">
         <Header />
         <div className='flex justify-center px-5 pt-3 flex-col'>
           <SmallBanner>  

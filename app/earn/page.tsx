@@ -13,7 +13,7 @@ import FAQReferral from '../components/FAQReferral'
 
 const EarnPage = () => {
   return (
-    <div>
+    <div className="w-[100vw] max-w-[100%] h-[100vh]">
         <Header />
         <div className='px-4 flex flex-col gap-2'>
             <p className='my-5'>Rewards</p>

@@ -4,7 +4,7 @@ import SportsHeader from '../components/SportsHeader'
 
 const sportsPage = () => {
   return (
-    <div>
+    <div className="w-[100vw] max-w-[100%] h-[100vh]">
         <SportsHeader />
         <Footer currentPage='Sports' />
     </div>

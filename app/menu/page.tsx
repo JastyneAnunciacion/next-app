@@ -14,7 +14,7 @@ import DropdownListItem from '../components/DropdownListItem'
 
 const MenuPage = () => {
   return (
-    <div>
+    <div className="w-[100vw] max-w-[100%] h-[100vh]">
         <Header />
         <div className='flex justify-center px-3 pt-3 flex-col gap-2'>
           <Serachbar placeholderText='Find a Game' />

@@ -5,7 +5,7 @@ import PromotionTempate from '../components/PromotionTempate'
 
 const PromotionsPage = () => {
   return (
-    <div>
+    <div className="w-[100vw] max-w-[100%] h-[100vh]">
         <Header />
         <div className='p-4 flex flex-col gap-5'>
             <PromotionTempate title='Example Title 1' subTitle='Feeling down on your luck this week?' endDate={new Date('2024-12-08T01:03:20')}  />
