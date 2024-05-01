@@ -19,7 +19,7 @@ const CopyButton = ({textToCopy}: CopyButtonProps) => {
     };
 
     return (
-        <button onClick={copyToClipboard} className='w-7 h-7 bg-gray-900 flex items-center justify-center rounded-lg'>
+        <button onClick={copyToClipboard} className='w-7 h-7 bg-gray-900 flex items-center justify-center rounded- shrink-0 rounded-lg'>
             <div>
                 <Image src={`${basePath}/images/copy-image.png`} alt='Copy Icon' width={16} height={16} />
             </div>

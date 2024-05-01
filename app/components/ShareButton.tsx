@@ -4,8 +4,8 @@ import basePath from '../utilities/basepath'
 
 const ShareButton = () => {
   return (
-    <button className='h-full w-36 bg-gray-900 text-white flex items-center justify-center gap-2 rounded-xl p-1'>
-        <div>
+    <button className='h-full w-28 bg-gray-900 text-white flex items-center justify-center gap-2 rounded-xl p-1'>
+        <div className='text-xs'>
             Share
         </div>
         <div>

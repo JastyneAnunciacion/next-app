@@ -46,7 +46,7 @@ const BigBannerSlider = () => {
             <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
                 {slides.map((slide, index) => (
                     <div key={index} className='w-full flex-shrink-0 flex justify-center'> 
-                        <div className="w-[min(30rem,90%)]">
+                        <div className="w-[min(30rem,100%)]">
                             <BigBanner imgSrc={`${slide.imgSrc === "" ? "" : basePath + slide.imgSrc}`} />
                         </div>
                     </div>

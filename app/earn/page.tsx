@@ -16,7 +16,7 @@ const EarnPage = () => {
     <div className="w-[100vw] max-w-[100%] h-[100vh]">
         <Header />
         <div className='px-4 flex flex-col gap-2'>
-            <p className='my-5'>Rewards</p>
+            <p className='my-5 text-lg font-bold'>Rewards</p>
             <BigBanner />
             <div className='flex items-center gap-3 mt-5 mb-3'>
                 <div>

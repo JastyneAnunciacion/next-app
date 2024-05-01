@@ -2,48 +2,52 @@ import React from 'react'
 import { useState } from 'react';
 import basePath from '../utilities/basepath';
 import Image from 'next/image';
+import SportsHeaderButton from './SportsHeaderButton';
 
-interface SelectionDropdownItem {
-  content: React.ReactNode;
+interface SportItem {
+  sportImgSrc: string
   onClick: () => void;
 }
 
 interface SportsDropdownProps {
-  items: SelectionDropdownItem[];
+  sportsHeaderButton: SportItem[];
 }
 
-const SportsDropdown = ({items}: SportsDropdownProps) => {
+const SportsDropdown = ({sportsHeaderButton}: SportsDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState(0);
+  const [selectedSport, setSelectedItem] = useState(0);
 
   return (
     <div className="relative">
       <button
         onClick={() => setIsOpen(prev => !prev)}
-        className="relative bg-gray-800 text-white p-4 w-full h-10 flex justify-between items-center font-bold rounded-lg"
+        className="relative bg-gray-800 text-white w-16 h-10 flex items-center font-bold rounded-lg justify-center gap-1"
       >
-        <div className='flex gap-1'>
-            {items && items[selectedItem].content}
+        <div>
+            {sportsHeaderButton && <Image src={`${basePath + sportsHeaderButton[selectedSport].sportImgSrc}`} alt="Down Arrow" width={20} height={20} />}
         </div>
         {!isOpen 
-        ? 
-        <Image src={`${basePath}/images/down-arrow-image.png`} alt="Down Arrow" width={40} height={40} />
+        ?
+        <div>
+          <Image src={`${basePath}/images/down-arrow-image.png`} alt="Down Arrow" width={20} height={20} />
+        </div>
         :
-        <Image src={`${basePath}/images/up-arrow-image.png`} alt="Up Arrow" width={40} height={40} />
+        <div>
+          <Image src={`${basePath}/images/up-arrow-image.png`} alt="Up Arrow" width={20} height={20} />
+        </div>
         }
-
         {isOpen && (
-          <div className="bg-gray-800 absolute left-0 top-11 flex flex-col rounded-lg p-2 w-full max-h-[260px] overflow-y-auto z-10 scrollbar scrollbar-thumb-gray-950 scrollbar-track-gray-900">
-            {items.map((item, i) => (
+          <div className="bg-gray-800 absolute left-0 top-[40px] flex flex-col rounded-lg p-2 w-full max-h-[260px] overflow-y-auto z-10 scrollbar scrollbar-thumb-gray-950 scrollbar-track-gray-900">
+            {sportsHeaderButton.map((item, i) => (
               <div
                 onClick={() => {
                     item.onClick();
                     setSelectedItem(i);
                 }}
-                className="flex p-1 gap-2 w-full hover:bg-gray-600 cursor-pointer rounded-lg items-center"
+                className="flex p-1 gap-2 w-full justify-center hover:bg-gray-600 cursor-pointer rounded-lg items-center"
                 key={i}
               >
-                {item.content}
+                <SportsHeaderButton imgSrc={item.sportImgSrc} />
               </div>
             ))}
           </div>
