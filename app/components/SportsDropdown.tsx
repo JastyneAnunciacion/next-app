@@ -21,7 +21,7 @@ const SportsDropdown = ({sportsHeaderButton}: SportsDropdownProps) => {
     <div className="relative">
       <button
         onClick={() => setIsOpen(prev => !prev)}
-        className="relative bg-gray-800 text-white w-16 h-10 flex items-center font-bold rounded-lg justify-center gap-1"
+        className="relative bg-gray-800 text-white w-16 h-10 flex items-center font-bold rounded-lg justify-center gap-2"
       >
         <div>
             {sportsHeaderButton && <Image src={`${basePath + sportsHeaderButton[selectedSport].sportImgSrc}`} alt="Down Arrow" width={20} height={20} />}

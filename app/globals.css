@@ -18,11 +18,14 @@
 
 body {
   background-color: #E2E8F0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 *::-webkit-scrollbar {
   scrollbar-width: thin;
   width: 6px;
+  display: none;
 }
 
 *::-webkit-scrollbar-track {

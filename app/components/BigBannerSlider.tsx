@@ -68,7 +68,7 @@ const BigBannerSlider = () => {
             ))}
         </div>
     </div>
-    );
+    )
 }
 
 export default BigBannerSlider
