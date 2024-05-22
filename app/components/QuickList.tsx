@@ -8,15 +8,15 @@ import basePath from '../utilities/basepath';
 import Link from 'next/link';
 
 interface QuickListProps {
-    headerIconPath: string,
-    title: string,
-    childrenList: ReactNode,
-    gapAmount?: number,
-    viewAllLink?: string
+  headerIconPath: string,
+  title: string,
+  childrenList: ReactNode,
+  gapAmount?: number,
+  viewAllLink?: string
 }
 
-const QuickList = ({headerIconPath: headerImagePath, title, childrenList, gapAmount=0, viewAllLink}: QuickListProps) => {
-  const listRef = useRef<HTMLDivElement  | null>(null);
+const QuickList = ({ headerIconPath: headerImagePath, title, childrenList, gapAmount = 0, viewAllLink }: QuickListProps) => {
+  const listRef = useRef<HTMLDivElement | null>(null);
 
   const scrollTo = (direction: 'left' | 'right') => {
     const list = listRef.current;
@@ -39,33 +39,33 @@ const QuickList = ({headerIconPath: headerImagePath, title, childrenList, gapAmo
 
   return (
     <div className='mt-3 pt-1'>
-        <div className='flex items-center justify-between w-full'>
-          <div className='flex items-center'>
-            <div className='pr-2'>
-              <Image src={basePath + headerImagePath} alt="Quick List Icon" width={24} height={24}></Image>
-            </div>
-            <div className= 'font-bold'>
-              {title}
-            </div>
+      <div className='flex items-center justify-between w-full'>
+        <div className='flex items-center'>
+          <div className='pr-2'>
+            <Image src={basePath + headerImagePath} alt="Quick List Icon" width={24} height={24}></Image>
           </div>
-          <div className='flex items-center text-white'>
-            {viewAllLink && (
-              <Link href={viewAllLink} className='w-16 h-6 bg-gray-800 text-xs rounded-lg mr-2 flex items-center justify-center'>
-                View All
-              </Link>
-            )}
-            
-            <button onClick={() => scrollTo('left')} className='w-6 h-6 bg-gray-800 text-xs rounded-lg mr-2'>
-              <Image src={`${basePath}/images/left-arrow-image.png`} alt="Left Arrow" width={30} height={30} />
-            </button>
-            <button onClick={() => scrollTo('right')} className='w-6 h-6 bg-gray-800 text-xs rounded-lg mr-2'>
-               <Image src={`${basePath}/images/right-arrow-image.png`} alt="Right Arrow" width={30} height={30} />
-            </button>
+          <div className='font-bold'>
+            {title}
           </div>
         </div>
-        <div className={`flex overflow-x-auto scrollbar-none gap-${gapAmount}`} ref={listRef}>
-          {childrenList}
+        <div className='flex items-center text-white'>
+          {viewAllLink && (
+            <Link href={viewAllLink} className='w-16 h-6 bg-gray-800 text-xs rounded-lg mr-2 flex items-center justify-center'>
+              View All
+            </Link>
+          )}
+
+          <button onClick={() => scrollTo('left')} className='w-6 h-6 bg-gray-800 text-xs rounded-lg mr-2'>
+            <Image src={`${basePath}/images/left-arrow-image.png`} alt="Left Arrow" width={30} height={30} />
+          </button>
+          <button onClick={() => scrollTo('right')} className='w-6 h-6 bg-gray-800 text-xs rounded-lg mr-2'>
+            <Image src={`${basePath}/images/right-arrow-image.png`} alt="Right Arrow" width={30} height={30} />
+          </button>
         </div>
+      </div>
+      <div className={`flex overflow-x-auto scrollbar-none gap-${gapAmount}`} ref={listRef}>
+        {childrenList}
+      </div>
     </div>
   )
 }

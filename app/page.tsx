@@ -10,19 +10,17 @@ export default function Home() {
     <main className="w-[100vw] max-w-[100%] h-[100vh]">
       <Header />
       <div className="bg-gray-200 px-4 mt-4">
-        <div className="">
-          <BigBannerSlider />
-        </div>
+        <BigBannerSlider />
         <Serachbar placeholderText='Search Games' />
-        <QuickListGames gameListTitle="Top Games" gameList={walletList}/>
-        <QuickListGames gameListTitle="New" gameList={walletList}/>
-        <QuickListGames gameListTitle="Biggest Multiplier" gameList={walletList}/>
-        <QuickListGames gameListTitle="Bonus Buy" gameList={walletList}/>
-        <QuickListGames gameListTitle="Crypto Games" gameList={walletList}/>
-        <QuickListGames gameListTitle="Table Games" gameList={walletList}/>
-        <QuickListGames gameListTitle="Game Shows" gameList={walletList}/>
+        <QuickListGames gameListTitle="Top Games" gameList={walletList} />
+        <QuickListGames gameListTitle="New" gameList={walletList} />
+        <QuickListGames gameListTitle="Biggest Multiplier" gameList={walletList} />
+        <QuickListGames gameListTitle="Bonus Buy" gameList={walletList} />
+        <QuickListGames gameListTitle="Crypto Games" gameList={walletList} />
+        <QuickListGames gameListTitle="Table Games" gameList={walletList} />
+        <QuickListGames gameListTitle="Game Shows" gameList={walletList} />
       </div>
-      <Footer currentPage="Casino"/>
+      <Footer currentPage="Casino" />
     </main>
   )
 }

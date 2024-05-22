@@ -14,7 +14,7 @@ const SportsPopularSection = () => {
             <p className='text-xl'>Popular</p>
         </div>
         <SportsPopularSortButtons />
-        <SportsBetCard />
+        <SportsBetCard gameType='Winner' />
     </div>
   )
 }

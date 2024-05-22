@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import basePath from '../utilities/basepath'
+import SportsBetCardBetButton from './SportsBetCardBetButton'
 
 interface TeamProps {
     teamImgSrc: string,
@@ -46,19 +47,10 @@ const SportsQuickBetCard = () => {
             </div>
         </div>
 
-        <div className='flex justify-between gap-2 text-xs my-2'>
-            <button className='bg-gray-600 p-1 w-full h-8 flex justify-between items-center rounded-lg'>
-                <p>1</p>
-                <p>1.50</p>
-            </button>
-            <button className='bg-gray-600 p-1 w-full h-8 flex justify-between items-center rounded-lg'>
-                <p>draw</p>
-                <p>4.40</p>
-            </button>
-            <button className='bg-gray-600 p-1 w-full h-8 flex justify-between items-center rounded-lg'>
-                <p>2</p>
-                <p>6.20</p>
-            </button>
+        <div className='flex justify-between gap-2 text-xs my-2 w-full h-8'>
+            <SportsBetCardBetButton labelText='1' amount={1.5} />
+            <SportsBetCardBetButton labelText='draw' amount={4.4} />
+            <SportsBetCardBetButton labelText='2' amount={6.20} />
         </div>
     </div>
   )
