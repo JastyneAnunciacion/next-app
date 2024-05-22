@@ -8,16 +8,16 @@ import Image from 'next/image';
 
 const slides = [
     {
-        imgSrc: ''
+        imgSrc: '/images/big-image-1.jpg'
     },
     {
-        imgSrc: ''
+        imgSrc: '/images/big-image-2.jpg'
     },
     {
-        imgSrc: ''
+        imgSrc: '/images/big-image-1.jpg'
     },
     {
-        imgSrc: ''
+        imgSrc: '/images/big-image-2.jpg'
     }
 ];
 
@@ -47,7 +47,7 @@ const BigBannerSlider = () => {
                     {slides.map((slide, index) => (
                         <div key={index} className='w-full flex-shrink-0 flex justify-center'>
                             <div className="w-[min(30rem,100%)]">
-                                <BigBanner imgSrc={`${slide.imgSrc === "" ? "" : basePath + slide.imgSrc}`} />
+                                <BigBanner imgSrc={`${slide.imgSrc && basePath + slide.imgSrc}`} />
                             </div>
                         </div>
                     ))}
