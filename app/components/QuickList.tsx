@@ -48,7 +48,7 @@ const QuickList = ({ headerIconPath: headerImagePath, title, childrenList, gapAm
             {title}
           </div>
         </div>
-        <div className='flex items-center text-white'>
+        <div className='flex items-center'>
           {viewAllLink && (
             <Link href={viewAllLink} className='w-16 h-6 bg-gray-800 text-xs rounded-lg mr-2 flex items-center justify-center'>
               View All

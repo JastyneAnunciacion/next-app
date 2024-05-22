@@ -17,9 +17,10 @@
 }
 
 body {
-  background-color: #E2E8F0;
+  background-color: #000000;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  color: #FF6600;
 }
 
 *::-webkit-scrollbar {

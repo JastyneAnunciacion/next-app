@@ -8,7 +8,7 @@ import basePath from '../utilities/basepath';
 const Header = () => {
   return (
     <header>
-      <div className='p-2 flex items-center bg-gray-700'>
+      <div className='p-2 flex items-center bg-black'>
         <Link href="/">
           <Image className='rounded-full' src={`${basePath}/images/phx-gamble-logo.jpeg`} alt="Header Main Logo" width={40} height={40} />
         </Link>

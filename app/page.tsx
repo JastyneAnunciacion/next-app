@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className="w-[100vw] max-w-[100%] h-[100vh]">
       <Header />
-      <div className="bg-gray-200 px-4 mt-4">
+      <div className="px-4 mt-4">
         <BigBannerSlider />
         <Serachbar placeholderText='Search Games' />
         <QuickListGames gameListTitle="Top Games" gameList={walletList} />

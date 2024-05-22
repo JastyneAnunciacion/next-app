@@ -14,20 +14,20 @@ const FooterButton = ({ buttonName, iconSrc, pageHref, active }: FooterButtonPro
   return (
     <div>
       {active ? (
-        <div className={`relative text-white p-3 text-sm flex flex-col items-center bg-gray-900 rounded-full`}>
+        <div className={`relative p-3 text-sm flex flex-col items-center bg-gray-900 rounded-full`}>
           <div>
             <Image src={basePath + iconSrc} alt='Footer Button Image' width={30} height={30}></Image>
           </div>
-          <div className='absolute top-16 text-white font-bold text-xs'>
+          <div className='absolute top-16 font-bold text-xs'>
             {buttonName}
           </div>
         </div>
       ) : (
-        <Link href={pageHref} className={`relative text-white p-3 text-sm flex flex-col items-center`}>
+        <Link href={pageHref} className={`relative p-3 text-sm flex flex-col items-center`}>
           <div>
             <Image src={basePath + iconSrc} alt='Footer Button Image' width={30} height={30}></Image>
           </div>
-          <div className='absolute top-16 text-white font-bold text-xs'>
+          <div className='absolute top-16 font-bold text-xs'>
             {buttonName}
           </div>
         </Link>

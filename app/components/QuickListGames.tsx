@@ -34,8 +34,8 @@ const QuickListGames = ({ gameListTitle, gameList }: QuickListGamesProps) => {
               />
             </button>
             <div className='text-sm'>
-              <p className='font-bold text-black'>{item.name ? item.name : 'Game Name'}</p>
-              <p className='text-black'>{item.provider ? item.provider : 'Provider'}</p>
+              <p className='font-bold '>{item.name ? item.name : 'Game Name'}</p>
+              <p className=''>{item.provider ? item.provider : 'Provider'}</p>
             </div>
           </div>
         );
