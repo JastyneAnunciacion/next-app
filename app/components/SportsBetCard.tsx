@@ -12,11 +12,11 @@ interface TeamProps {
 }
 
 interface SportsBetCardProps {
-    sportImgSrc: string;
-    league: string;
-    date: Date;
-    team1: TeamProps;
-    team2: TeamProps;
+    sportImgSrc?: string;
+    league?: string;
+    date?: Date;
+    team1?: TeamProps;
+    team2?: TeamProps;
     drawAmount?: number;
     gameType: '1x2' | 'Winner' | 'Total' | 'Winner (incl. overtime)';
 }
@@ -32,7 +32,7 @@ const SportsBetCard = ({ sportImgSrc, league, date, team1, team2, drawAmount, ga
     };
 
     return (
-        <div className='bg-gray-400 w-full rounded-xl p-2 font-semibold text-sm text-white flex flex-col gap-[6px] overflow-hidden' style={{ height: dropdownHeightStyle, transition: 'height 0.3s ease-in-out'}}>
+        <div className='bg-gray-400 w-full rounded-xl p-2 font-semibold text-sm text-white flex flex-col gap-[6px] overflow-hidden' style={{ height: dropdownHeightStyle, transition: 'height 0.3s ease-in-out' }}>
             <div className='flex justify-between items-center text-gray-300'>
                 <div className='flex gap-1 items-center'>
                     <div>
