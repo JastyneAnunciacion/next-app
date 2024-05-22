@@ -10,7 +10,7 @@ const Header = () => {
     <header>
       <div className='p-2 flex items-center bg-black'>
         <Link href="/">
-          <Image className='rounded-full' src={`${basePath}/images/phx-gamble-logo.jpeg`} alt="Header Main Logo" width={40} height={40} />
+          <Image className='rounded-full' src={`${basePath}/images/phx-gamble-logo.png`} alt="Header Main Logo" width={45} height={45} />
         </Link>
         <div className='flex ml-auto gap-2'>
           <div className='w-40'>
@@ -18,7 +18,7 @@ const Header = () => {
           </div>
           <Link href="/wallet" className='w-10 h-10 bg-gray-900 rounded-xl text-white flex items-center justify-center text-3xl font-bold pb-[4px]'>+</Link>
           <div className='w-10 h-10 bg-gray-900 rounded-xl text-white flex items-center justify-center text-3xl font-bold pb-[4px]'>
-            <Image className='rounded-full' src={`${basePath}/images/phx-gamble-logo.jpeg`} alt="Header Main Logo" width={30} height={30} />
+            <Image className='rounded-full' src={`${basePath}/images/phx-gamble-logo.png`} alt="Header Main Logo" width={45} height={45} />
           </div>
           <ProfileButton />
         </div>
