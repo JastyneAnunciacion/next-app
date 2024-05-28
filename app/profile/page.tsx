@@ -37,7 +37,7 @@ const ProfilePage = () => {
           <p className='text-white'>Edit</p>
         </div>
         <div className='w-full flex flex-col items-center mt-2 text-white'>
-          <Image src={`${basePath}/images/blank-account-icon.png`} alt='Large Profile Icon' width={90} height={90}></Image>
+          <Image src={`${basePath}/images/profile-image.jpg`} alt='Large Profile Icon' width={90} height={90}></Image>
           <p className='text-lg'>Username</p>
           <p className='text-lg'>@Username</p>
         </div>
