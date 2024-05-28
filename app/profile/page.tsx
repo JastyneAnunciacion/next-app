@@ -32,13 +32,17 @@ const ProfilePage = () => {
     <div className="w-[100vw] max-w-[100%] h-[100vh]">
       <Header />
       <div className='px-4 pt-4'>
-        <p className='font-bold text-lg'>Profile</p>
+        <div className='font-bold text-lg flex w-full justify-between border-b p-1'>
+          <p>Profile</p>
+          <p className='text-white'>Edit</p>
+        </div>
+        <div className='w-full flex flex-col items-center mt-2 text-white'>
+          <Image src={`${basePath}/images/blank-account-icon.png`} alt='Large Profile Icon' width={90} height={90}></Image>
+          <p className='text-lg'>Username</p>
+          <p className='text-lg'>@Username</p>
+        </div>
         <div className='flex items-center gap-3 mt-10 mb-3'>
-          <div>
-            <Image src={`${basePath}/images/blank-account-icon.png`} alt='Large Profile Icon' width={90} height={90}></Image>
-          </div>
           <div className='w-full'>
-            <p className='font-bold text-lg'>Username</p>
             <Level />
           </div>
         </div>
@@ -48,8 +52,8 @@ const ProfilePage = () => {
           <MostWageredGames />
           <TransactionHistoryTable />
         </div>
-        </div>
-      <Footer currentPage='Profile'/>
+      </div>
+      <Footer currentPage='Profile' />
     </div>
   )
 }
