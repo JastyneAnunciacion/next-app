@@ -3,13 +3,13 @@
 import React from 'react'
 import { useState } from 'react'
 import Image from 'next/image'
-import basePath from '../utilities/basepath'
+import basePath from '../../utilities/basepath'
 
 interface CopyButtonProps {
     textToCopy: string
 }
 
-const CopyButton = ({textToCopy}: CopyButtonProps) => {
+const CopyButton = ({ textToCopy }: CopyButtonProps) => {
     const [copied, setCopied] = useState(false);
 
     const copyToClipboard = () => {

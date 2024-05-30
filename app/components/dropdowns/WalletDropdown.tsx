@@ -1,8 +1,8 @@
 'use client';
 import React, { useState } from 'react'
-import list from './wallet-list.json'
+import list from '../temporaryJsons/wallet-list.json'
 import Image from 'next/image';
-import basePath from '../utilities/basepath';
+import basePath from '../../utilities/basepath';
 
 const WalletDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);

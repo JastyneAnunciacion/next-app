@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
-import basePath from '../utilities/basepath';
+import basePath from '../../utilities/basepath';
 
 interface FooterButtonProps {
   buttonName: string;

@@ -2,9 +2,9 @@
 
 import React from 'react'
 import { useState } from 'react'
-import basePath from '../utilities/basepath';
-import BigBanner from './BigBanner';
+import basePath from '../../utilities/basepath';
 import Image from 'next/image';
+import BigBanner from './BigBanner';
 
 const slides = [
     {

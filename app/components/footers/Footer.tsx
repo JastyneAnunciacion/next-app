@@ -1,6 +1,8 @@
 'use client'
 
-import FooterButton from './FooterButton'
+import FooterButton from "./FooterButton";
+
+
 
 interface FooterProps {
   currentPage?: string;

@@ -4,7 +4,7 @@ import { ReactNode } from 'react'
 import { useRef } from 'react';
 import Image from 'next/image'
 import React from 'react'
-import basePath from '../utilities/basepath';
+import basePath from '../../../utilities/basepath';
 import Link from 'next/link';
 
 interface QuickListProps {

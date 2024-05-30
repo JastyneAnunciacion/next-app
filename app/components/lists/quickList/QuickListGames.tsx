@@ -1,6 +1,6 @@
 import React from 'react'
 import QuickList from './QuickList'
-import basePath from '../utilities/basepath';
+import basePath from '../../../utilities/basepath';
 import Image from 'next/image';
 
 interface GameCard {

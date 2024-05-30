@@ -1,9 +1,9 @@
-import BigBannerSlider from "./components/BigBannerSlider";
-import Footer from "./components/Footer";
+import BigBannerSlider from "./components/banners/BigBannerSlider";
+import Footer from "./components/footers/Footer";
 import Header from "./components/Header";
-import QuickListGames from "./components/QuickListGames";
+import QuickListGames from "./components/lists/quickList/QuickListGames";
 import Serachbar from "./components/Serachbar";
-import walletList from "./components/wallet-list.json";
+import walletList from "./components/temporaryJsons/wallet-list.json";
 
 export default function Home() {
   return (

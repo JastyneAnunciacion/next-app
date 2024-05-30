@@ -2,10 +2,10 @@
 
 import React from 'react'
 import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Footer from '../components/footers/Footer'
 import Image from 'next/image'
 import { useState } from 'react'
-import languages from '../components/language-list.json'
+import languages from '../components/temporaryJsons/language-list.json'
 import basePath from '../utilities/basepath'
 import Level from '../components/Level'
 import Statistics from '../components/Statistics'

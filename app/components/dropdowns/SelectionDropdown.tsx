@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import basePath from '../utilities/basepath';
+import basePath from '../../utilities/basepath';
 
 interface SelectionDropdownItem {
   content: React.ReactNode;
@@ -14,7 +14,7 @@ interface SelectionDropdownProps {
   placeHolderText?: string;
 }
 
-const SelectionDropdown = ({items, hasArrow=true, placeArrowOnRight=false, placeHolderText=''}: SelectionDropdownProps) => {
+const SelectionDropdown = ({ items, hasArrow = true, placeArrowOnRight = false, placeHolderText = '' }: SelectionDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(0);
 
@@ -25,26 +25,26 @@ const SelectionDropdown = ({items, hasArrow=true, placeArrowOnRight=false, place
         className="relative bg-gray-800 text-white p-4 w-full h-10 flex justify-between items-center font-bold rounded-lg"
       >
         {hasArrow && !placeArrowOnRight && (
-        !isOpen 
-        ? 
-        <Image src={`${basePath}/images/right-arrow-image.png`} alt="Right Arrow" width={40} height={40} />
-        :
-        <Image src={`${basePath}/images/down-arrow-image.png`} alt="Down Arrow" width={40} height={40} />
+          !isOpen
+            ?
+            <Image src={`${basePath}/images/right-arrow-image.png`} alt="Right Arrow" width={40} height={40} />
+            :
+            <Image src={`${basePath}/images/down-arrow-image.png`} alt="Down Arrow" width={40} height={40} />
         )}
         <div className='flex gap-1'>
           {placeHolderText && (
-          <div className='text-gray-400'>
+            <div className='text-gray-400'>
               {placeHolderText}
-          </div>
+            </div>
           )}
-            {items && items[selectedItem].content}
+          {items && items[selectedItem].content}
         </div>
         {hasArrow && placeArrowOnRight && (
-        !isOpen 
-        ? 
-        <Image src={`${basePath}/images/down-arrow-image.png`} alt="Down Arrow" width={40} height={40} />
-        :
-        <Image src={`${basePath}/images/up-arrow-image.png`} alt="Up Arrow" width={40} height={40} />
+          !isOpen
+            ?
+            <Image src={`${basePath}/images/down-arrow-image.png`} alt="Down Arrow" width={40} height={40} />
+            :
+            <Image src={`${basePath}/images/up-arrow-image.png`} alt="Up Arrow" width={40} height={40} />
         )}
 
         {isOpen && (
@@ -52,8 +52,8 @@ const SelectionDropdown = ({items, hasArrow=true, placeArrowOnRight=false, place
             {items.map((item, i) => (
               <div
                 onClick={() => {
-                    item.onClick();
-                    setSelectedItem(i);
+                  item.onClick();
+                  setSelectedItem(i);
                 }}
                 className="flex p-1 gap-2 w-full hover:bg-gray-600 cursor-pointer rounded-lg items-center"
                 key={i}

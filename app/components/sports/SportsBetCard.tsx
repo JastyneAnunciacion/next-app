@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import basePath from '../utilities/basepath';
+import basePath from '../../utilities/basepath';
 import SportsBetCardOverButtons from './SportsBetCardOverButtons';
 
 interface TeamProps {

@@ -1,6 +1,6 @@
 import React from 'react'
-import ListContainterWithTitleHeader from './ListContainterWithTitleHeader'
-import DropdownListItem from './DropdownListItem'
+import ListContainterWithTitleHeader from './lists/ListContainterWithTitleHeader'
+import DropdownListItem from './dropdowns/DropdownListItem'
 
 const FAQReferral = () => {
   return (

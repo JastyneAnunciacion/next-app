@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import WalletDropdown from './WalletDropdown';
+import WalletDropdown from './dropdowns/WalletDropdown';
 import ProfileButton from './ProfileButton';
 import basePath from '../utilities/basepath';
 
