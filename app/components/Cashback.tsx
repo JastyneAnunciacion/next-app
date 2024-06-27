@@ -5,15 +5,13 @@ import basePath from '../utilities/basepath'
 const Cashback = () => {
   return (
     <div>
-      <div className='flex gap-1 items-center'>
-        <div>
-          <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Cashback Icon' width={20} height={20}></Image>
-        </div>
-        <p className='font-semibold'>Cashback</p>
+      <div className='flex gap-1 items-center justify-center'>
+        <p className='text-[#b575e1] text-xl'>Cashback</p>
       </div>
-      <div className='w-full h-[70px] bg-gray-700 rounded-lg p-2 mt-3 flex gap-3 items-center'>
+      <div className='w-full h-[70px] bg-[#241b42] rounded-lg p-2 mt-3 flex gap-3 items-center'>
         <div>
-          <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Big Cashback icon' width={45} height={45}></Image>
+          <div className='h-12 w-12 bg-[#8645f6] rounded-full' />
+          {/* <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Big Cashback icon' width={45} height={45}></Image> */}
         </div>
         <div>
           <p className='text-sm'>Your cashback:</p>

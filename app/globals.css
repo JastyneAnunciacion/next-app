@@ -17,10 +17,10 @@
 }
 
 body {
-  background-color: #000000;
+  background-color: #201434;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  color: #FF6600;
+  color: #ffffff;
 }
 
 *::-webkit-scrollbar {
@@ -34,7 +34,7 @@ body {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #2a3441;
+  background-color: #1a1337;
   border-radius: 5px;
 }
 

@@ -64,7 +64,7 @@ const BigBannerSlider = () => {
             </div>
             <div className="flex items-center justify-center mt-1 gap-1">
                 {slides.map((slide, index) => (
-                    <button key={index} onClick={() => goToSlide(index)} className={`rounded-full flex items-center justify-center ${currentSlide === index ? 'bg-gray-600 cursor-default w-3 h-3' : 'bg-gray-900 w-2 h-2 cursor-pointer'}`} />
+                    <button key={index} onClick={() => goToSlide(index)} className={`rounded-full flex items-center justify-center ${currentSlide === index ? 'bg-[#e302ac] cursor-default w-3 h-3' : 'bg-[#4a3f84] w-2 h-2 cursor-pointer'}`} />
                 ))}
             </div>
         </div>

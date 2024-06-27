@@ -8,20 +8,18 @@ import basePath from '../utilities/basepath';
 const Header = () => {
   return (
     <header>
-      <div className='p-2 flex items-center bg-black'>
+      <div className='p-2 pt-4 flex items-center justify-center gap-2'>
         <Link href="/">
-          <Image className='rounded-full' src={`${basePath}/images/phx-gamble-logo.png`} alt="Header Main Logo" width={45} height={45} />
+          <Image className='rounded-full' src={`${basePath}/images/phx-gamble-logo.png`} alt="Header Main Logo" width={50} height={50} />
         </Link>
-        <div className='flex ml-auto gap-2'>
-          <div className='w-40'>
-            <WalletDropdown />
-          </div>
-          <Link href="/wallet" className='w-10 h-10 bg-gray-900 rounded-xl text-white flex items-center justify-center text-3xl font-bold pb-[4px]'>+</Link>
-          <div className='w-10 h-10 bg-gray-900 rounded-xl text-white flex items-center justify-center text-3xl font-bold pb-[4px]'>
-            <Image className='rounded-full' src={`${basePath}/images/question-image.png`} alt="Question Logo" width={30} height={30} />
-          </div>
-          <ProfileButton />
+        <div className='w-48'>
+          <WalletDropdown />
         </div>
+        <Link href="/wallet" className='w-11 h-11 bg-[#241a46] rounded-xl flex items-center justify-center text-5xl font-thin text-violet-600 pb-[8px]'>+</Link>
+        <div className='w-11 h-11 bg-[#241a46] rounded-xl flex items-center justify-center text-3xl font-bold pb-[4px]'>
+          <Image className='rounded-full' src={`${basePath}/images/question-image.png`} alt="Question Logo" width={24} height={24} />
+        </div>
+        <ProfileButton />
       </div>
     </header>
   )
