@@ -7,34 +7,27 @@ const ReferralsTable = () => {
     <div>
       <div className='flex gap-1 items-center'>
         <div>
-          <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Referral Icon' width={20} height={20}></Image>
+          <div className='h-6 w-6 bg-[#8645f6] rounded-full' />
+          {/* <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Referral Icon' width={20} height={20}></Image> */}
         </div>
-        <p className='font-semibold'>Your Referrals</p>
+        <p>Your Referrals</p>
       </div>
-      <div className='flex flex-col mt-2 bg-gray-500 h-64 rounded-xl overflow-hidden'>
-        <div className='flex w-full bg-gray-600 justify-between text-white text-sm font'>
-          <p className='p-2'>Type</p>
-          <p className='p-2'>Amount</p>
-          <p className='p-2'>Status</p>
-        </div>
-        <div className='flex flex-col items-center justify-center gap-3 p-4 my-auto'>
-          <div>
-            <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='No Referrals Icon' width={50} height={50}></Image>
-          </div>
-          <div className='flex flex-col items-center justify-center text-white'>
-            <p className='font-bold'>No Referrals</p>
-            <p className='text-sm'>Share your code with friends and earn.</p>
-          </div>
+      <div className='flex flex-col mt-2 bg-[#241b42] h-64 rounded-xl overflow-hidden'>
+        <div className='flex bg-[#6b6483] justify-between text-white text-sm font'>
+          <p className='w-full p-2'>Type</p>
+          <p className='w-full p-2'>Amount</p>
+          <p className='w-full p-2'>Status</p>
         </div>
       </div>
-      <div className='flex items-center justify-center mt-3 gap-1'>
-        <button className='bg-gray-700 text-gray-400 rounded-xl w-10 h-10 p-1 flex justify-between items-center'>
+
+      <div className='flex items-center justify-center mt-3 gap-2'>
+        <button className='bg-gradient-to-l from-[#8558d9] to-[#782bf6] rounded-xl w-10 h-10 p-1 flex justify-between items-center'>
           <Image src={`${basePath}/images/left-arrow-image.png`} alt="Left Arrow" width={30} height={30} />
         </button>
-        <div className='bg-gray-500 text-gray-300 rounded-xl w-10 h-10 flex items-center justify-center'>
+        <div className='bg-[#8558d9] text-white rounded-xl w-10 h-10 flex items-center justify-center'>
           1
         </div>
-        <button className='bg-gray-700 text-gray-400 rounded-xl w-10 h-10 p-1 flex justify-between items-center'>
+        <button className='bg-gradient-to-r from-[#8558d9] to-[#782bf6] rounded-xl w-10 h-10 p-1 flex justify-between items-center'>
           <Image src={`${basePath}/images/right-arrow-image.png`} alt="Right Arrow" width={30} height={30} />
         </button>
       </div>

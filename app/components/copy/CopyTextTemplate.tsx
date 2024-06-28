@@ -7,7 +7,7 @@ interface CopyTextTemplate {
 
 const CopyTextTemplate = ({ textToCopy }: CopyTextTemplate) => {
   return (
-    <div className='bg-gray-700 text-white h-full w-full rounded-xl flex justify-between p-4 items-center gap-2'>
+    <div className='bg-[#241b42] text-white h-full w-full rounded-xl flex justify-between p-4 items-center gap-2'>
       <div className='text-xs'>
         {textToCopy}
       </div>

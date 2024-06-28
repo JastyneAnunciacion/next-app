@@ -4,14 +4,16 @@ import basePath from '../utilities/basepath'
 
 const ShareButton = () => {
   return (
-    <button className='h-full w-28 bg-gray-900 text-white flex items-center justify-center gap-2 rounded-xl p-1'>
-        <div className='text-xs'>
-            Share
-        </div>
+    <div className='bg-gradient-to-r from-[#926dca] to-[#926dca]/0 w-28 h-11 p-[1px] rounded-lg'>
+      <button className='h-full w-full bg-gradient-to-r from-[#412974] to-[#231d42] text-white flex items-center gap-1 rounded-lg p-3'>
         <div>
-            <Image src={`${basePath}/images/share-image.png`} alt='Share Icon' width={15} height={15} />
+          <Image src={`${basePath}/images/share-image.png`} alt='Share Icon' width={15} height={15} />
         </div>
-    </button>
+        <div className='text-xs'>
+          Share
+        </div>
+      </button>
+    </div>
   )
 }
 

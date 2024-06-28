@@ -7,25 +7,20 @@ interface InvitesPromoProps {
     maxInvites: number;
 }
 
-const InvitesPromo = ({currentInvites, maxInvites}: InvitesPromoProps) => {
-  return (
-    <div className='flex flex-col gap-4'>
-        <div className='flex justify-between items-center'>
-            <p>Invite {maxInvites} Friends get {maxInvites} Freespins</p>
-            <p>{currentInvites}/{maxInvites}</p>
-        </div>
-        <div>
-            <div className='relative w-full h-3 bg-gray-600 rounded-full text-white font-bold flex items-center'>
-                <div className='h-full bg-gray-900 rounded-full' style={{ width: `${(currentInvites / maxInvites) * 100}%` }}/>
-                <p className='absolute' style={{left: '30%'}}>3</p>
-                <p className='absolute' style={{ left: '60%'}}>6</p>
-                <div className='absolute' style={{ right: '0%'}}>
-                    <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Token Bets Icon' width={30} height={30}></Image>
+const InvitesPromo = ({ currentInvites, maxInvites }: InvitesPromoProps) => {
+    return (
+        <div className='flex flex-col'>
+            <div>
+                <div className='relative w-full h-8 p-3 bg-[#241b42] rounded-full text-white font-bold flex items-center'>
+                    <div className='h-2 bg-gradient-to-r from-[#238ce3] to-[#c33afe] rounded-full' style={{ width: `${(currentInvites / maxInvites) * 100}%` }} />
                 </div>
             </div>
+            <div className='flex justify-between items-center px-3'>
+                <p className='text-[#b575e1]'>Invite {maxInvites} Friends get {maxInvites} Freespins</p>
+                <p>{currentInvites}/{maxInvites}</p>
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default InvitesPromo

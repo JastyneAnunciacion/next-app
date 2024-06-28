@@ -11,10 +11,11 @@ interface ListContainterWithTitleHeaderProps {
 
 const ListContainterWithTitleHeader = ({ title, children, imgSrc }: ListContainterWithTitleHeaderProps) => {
   return (
-    <div>
-      <div className='flex gap-1 items-center'>
+    <div className='flex flex-col gap-3'>
+      <div className='flex gap-1 items-center px-3'>
         {imgSrc && (
-          <Image src={`${basePath + imgSrc}`} alt='Referral Icon' width={20} height={20}></Image>
+          <div className='h-6 w-6 bg-[#8645f6] rounded-full' />
+          // <Image src={`${basePath + imgSrc}`} alt='Referral Icon' width={20} height={20}></Image>
         )}
         <div>
         </div>

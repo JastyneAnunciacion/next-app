@@ -14,8 +14,6 @@ const TransactionHistoryTable = () => {
                     <p className='w-full p-2'>Amount</p>
                     <p className='w-full p-2'>Status</p>
                 </div>
-                <div className='flex flex-col items-center justify-center gap-2 p-4 font-bold text-white my-auto'>
-                </div>
             </div>
             <div className='flex items-center justify-center mt-3'>
                 <button className='bg-gray-700 text-gray-400 rounded-xl p-3 h-10 flex items-center'>

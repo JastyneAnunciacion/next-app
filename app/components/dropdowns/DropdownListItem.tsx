@@ -17,13 +17,13 @@ const DropdownListItem = ({ title, children, imgSrc, arrowIsRightSide = false }:
 
     return (
         <div>
-            <button className={`flex w-full items-center px-3 rounded-lg ${isOpen ? 'bg-gray-400' : 'bg-gray-300'} ${arrowIsRightSide ? 'justify-between' : 'gap-2'}`} onClick={() => setIsOpen((prev) => !prev)}>
+            <button className={`flex w-full items-center px-3 rounded-lg ${isOpen ? 'bg-[#2a1b55]' : 'bg-[#241a43]'} ${arrowIsRightSide ? 'justify-between' : 'gap-2'}`} onClick={() => setIsOpen((prev) => !prev)}>
                 {!arrowIsRightSide && (
                     !isOpen
                         ?
-                        <Image src={`${basePath}/images/right-arrow-black-image.png`} alt="Right Arrow" width={40} height={40} />
+                        <Image src={`${basePath}/images/right-arrow-image.png`} alt="Right Arrow" width={40} height={40} />
                         :
-                        <Image src={`${basePath}/images/down-arrow-black-image.png`} alt="Down Arrow" width={40} height={40} />
+                        <Image src={`${basePath}/images/down-arrow-image.png`} alt="Down Arrow" width={40} height={40} />
                 )}
                 <div className='flex gap-2'>
                     {imgSrc && (
@@ -36,9 +36,9 @@ const DropdownListItem = ({ title, children, imgSrc, arrowIsRightSide = false }:
                 {arrowIsRightSide && (
                     !isOpen
                         ?
-                        <Image src={`${basePath}/images/down-arrow-black-image.png`} alt="Down Arrow" width={40} height={40} />
+                        <Image src={`${basePath}/images/down-arrow-image.png`} alt="Down Arrow" width={40} height={40} />
                         :
-                        <Image src={`${basePath}/images/up-arrow-black-image.png`} alt="Up Arrow" width={40} height={40} />
+                        <Image src={`${basePath}/images/up-arrow-image.png`} alt="Up Arrow" width={40} height={40} />
                 )}
             </button>
             {isOpen && (
