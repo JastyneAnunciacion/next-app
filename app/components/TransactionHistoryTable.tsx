@@ -16,7 +16,7 @@ const TransactionHistoryTable = () => {
                 </div>
             </div>
             <div className='flex items-center justify-center mt-3'>
-                <button className='border-[#332a61] border rounded-xl p-7 h-10 flex items-center'>
+                <button className='border-[#332a61] border rounded-lg p-7 h-10 flex items-center'>
                     Load More
                 </button>
             </div>

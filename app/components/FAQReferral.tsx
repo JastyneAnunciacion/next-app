@@ -37,7 +37,7 @@ const FAQReferral = () => {
         <DropdownExpand title='How does house edge work?'>
           {`House edge is the casino's profit margin. For example, a 5% house edge on slots means the casino keeps 5 TON for every 100 TON wagered. And you would receive 10% of that house edge from every referral.`}
         </DropdownExpand>
-        <DropdownExpand title='Need more info?'>
+        <DropdownExpand title='Need more info?' position='Bottom'>
           {`Please see our T&Cs or contact @examplebot.`}
         </DropdownExpand>
       </ListContainterWithTitleHeader>

@@ -10,7 +10,7 @@ const WalletDropdown = () => {
 
   const selectedWallet = list[currentlySelected];
   return (
-    <div className='bg-gradient-to-r from-[#926dca] to-[#926dca]/0 w-full h-11 p-[1px] rounded-lg'>
+    <div className='bg-gradient-to-r from-[#926dca] to-[#926dca]/0 w-full h-full p-[1px] rounded-lg'>
       <button onClick={() => setIsOpen((prev) => !prev)} className="bg-gradient-to-r from-[#412974] to-[#231d42] w-full h-full text-white p-2 pr-4 flex items-center justify-between text-lg rounded-lg">
         {selectedWallet && (
           <div className='flex items-center gap-3'>

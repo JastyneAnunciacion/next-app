@@ -30,20 +30,24 @@ const WalletPage = () => {
     <div>
       <Header />
       <div className='px-4'>
-        <div className='my-7 font-bold'>Wallet</div>
-        <div className='flex justify-between mb-5'>
-          <div className='flex w-full items-center font-bold gap-1'>
+        <div className='text-lg flex items-center justify-between w-full h-14 rounded-lg px-4 bg-[#241b42]'>
+          <p className='flex justify-center items-center w-full text-[#b575e1] text-xl'>Wallet</p>
+        </div>
+        <div className='flex justify-between my-5'>
+          <div className='flex w-full items-center gap-1 text-[#b575e1]'>
             <button onClick={() => changeOption(0)}
-              className={`bg-${option === 0 ? 'gray-800' : 'gray-50'} text-${option === 0 ? 'white' : 'black'} h-10 w-full rounded-xl flex justify-center items-center gap-3`}>
+              className={`${option === 0 ? 'bg-[#402977] rounded-md' : 'border-[#352f54] border rounded-md'}  h-10 w-full flex justify-center items-center gap-3`}>
               <div>
-                <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Deposit Icon' width={20} height={20}></Image>
+                <div className='h-6 w-6 bg-[#8645f6] rounded-full' />
+                {/* <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Deposit Icon' width={20} height={20}></Image> */}
               </div>
               Deposit
             </button>
             <button onClick={() => changeOption(1)}
-              className={`bg-${option === 1 ? 'gray-800' : 'gray-50'} text-${option === 1 ? 'white' : 'black'} h-10 w-full rounded-xl flex justify-center items-center gap-3`}>
+              className={`${option === 1 ? 'bg-[#402977] rounded-md' : 'border-[#352f54] border rounded-md'}  h-10 w-full flex justify-center items-center gap-3`}>
               <div>
-                <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Withdraw Icon' width={20} height={20}></Image>
+                <div className='h-6 w-6 bg-[#8645f6] rounded-full' />
+                {/* <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Withdraw Icon' width={20} height={20}></Image> */}
               </div>
               Withdraw
             </button>
@@ -51,32 +55,45 @@ const WalletPage = () => {
         </div>
         {option === 0 ? (
           <div className='flex flex-col gap-6'>
-            <div>
+            <div className='flex flex-col gap-2'>
               <p>Select Currency</p>
-              <WalletDropdown />
+              <div className='h-14'>
+                <WalletDropdown />
+              </div>
             </div>
 
-            <div>
+            <div className='flex flex-col gap-2'>
               <p>Select Network</p>
-              <SelectionDropdown items={networks} placeArrowOnRight={true} />
+              <div className='h-14'>
+                <SelectionDropdown items={networks} placeArrowOnRight={true} />
+              </div>
             </div>
 
-            <div>
+            <div className='flex flex-col gap-2'>
               <div className='flex gap-2 items-center'>
                 <div>
-                  <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Express Deposit Icon' width={20} height={20}></Image>
+                  <div className='h-6 w-6 bg-[#8645f6] rounded-full' />
+                  {/* <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Express Deposit Icon' width={20} height={20}></Image> */}
                 </div>
-                <p className='font-semibold'>Express Deposit</p>
+                <p>Express Deposit</p>
               </div>
-              <div className='text-sm text-gray-500'>
+              <div className='text-sm text-[#b575e1]'>
                 <p>You can deposit through Telegram Bots. Choose one of the bots shown below and deposit without delay.</p>
               </div>
               <div className='flex w-full items-center text-sm gap-1 text-white'>
-                <button className={`bg-gray-800 h-10 w-full rounded-xl flex justify-center items-center gap-3`}>
-                  @Wallet
+                <button className={`border-[#352f54] border rounded-md h-10 w-full flex justify-center items-center gap-3`}>
+                  <div>
+                    <div className='h-6 w-6 bg-[#8645f6] rounded-full' />
+                    {/* <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Deposit Throught Blockchain Icon' width={20} height={20}></Image> */}
+                  </div>
+                  <p className='text-[#b575e1]'>@Wallet</p>
                 </button>
-                <button className={`bg-gray-800 h-10 w-full rounded-xl flex justify-center items-center gap-3`}>
-                  @CryptoBot
+                <button className={`border-[#352f54] border rounded-md h-10 w-full flex justify-center items-center gap-3`}>
+                  <div>
+                    <div className='h-6 w-6 bg-[#8645f6] rounded-full' />
+                    {/* <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Deposit Throught Blockchain Icon' width={20} height={20}></Image> */}
+                  </div>
+                  <p className='text-[#b575e1]'>@CryptoBot</p>
                 </button>
               </div>
             </div>
@@ -84,12 +101,13 @@ const WalletPage = () => {
             <div>
               <div className='flex gap-2 items-center'>
                 <div>
-                  <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Deposit Throught Blockchain Icon' width={20} height={20}></Image>
+                  <div className='h-6 w-6 bg-[#8645f6] rounded-full' />
+                  {/* <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Deposit Throught Blockchain Icon' width={20} height={20}></Image> */}
                 </div>
-                <p className='font-semibold'>Deposit through Blockchain</p>
+                <p>Deposit through Blockchain</p>
               </div>
-              <div className='text-sm text-gray-500'>
-                <p>Direct deposits trough blockchain can take up to 10 minutes. Please be patient!</p>
+              <div className='text-sm'>
+                <p className='text-[#b575e1]'>Direct deposits trough blockchain can take up to 10 minutes. Please be patient!</p>
                 <p>Your personal Deposit address:</p>
               </div>
               <div className='flex flex-col gap-2'>

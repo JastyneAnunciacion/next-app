@@ -19,10 +19,10 @@ const SelectionDropdown = ({ items, hasArrow = true, placeArrowOnRight = false, 
   const [selectedItem, setSelectedItem] = useState(0);
 
   return (
-    <div className="relative">
+    <div className="relative h-full">
       <button
         onClick={() => setIsOpen(prev => !prev)}
-        className="relative bg-gray-800 text-white p-4 w-full h-10 flex justify-between items-center font-bold rounded-lg"
+        className="relative bg-[#241b42] text-white p-4 w-full h-full flex justify-between items-center font-bold rounded-lg"
       >
         {hasArrow && !placeArrowOnRight && (
           !isOpen
@@ -48,14 +48,14 @@ const SelectionDropdown = ({ items, hasArrow = true, placeArrowOnRight = false, 
         )}
 
         {isOpen && (
-          <div className="bg-gray-800 absolute left-0 top-11 flex flex-col rounded-lg p-2 w-full max-h-[260px] overflow-y-auto z-10 scrollbar scrollbar-thumb-gray-950 scrollbar-track-gray-900">
+          <div className="bg-[#241b42] absolute left-0 top-11 flex flex-col rounded-lg p-2 w-full max-h-[260px] overflow-y-auto z-10 scrollbar scrollbar-thumb-gray-950 scrollbar-track-gray-900">
             {items.map((item, i) => (
               <div
                 onClick={() => {
                   item.onClick();
                   setSelectedItem(i);
                 }}
-                className="flex p-1 gap-2 w-full hover:bg-gray-600 cursor-pointer rounded-lg items-center"
+                className="flex p-1 gap-2 w-full hover:bg-[#402977] cursor-pointer rounded-lg items-center"
                 key={i}
               >
                 {item.content}
