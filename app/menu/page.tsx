@@ -15,11 +15,16 @@ const MenuPage = () => {
     <div className="w-[100vw] max-w-[100%] h-[100vh]">
       <Header />
       <div className='flex justify-center px-3 pt-3 flex-col gap-2'>
-        <Serachbar placeholderText='Find a Game' />
+        <div className='h-10'>
+          <Serachbar placeholderText='Find a Game' />
+        </div>
         <SmallBanner>
-          <div className='text-white flex flex-col gap-3 text-sm'>
-            <p className='w-3/5 text-wrap'>Site Promotions and Other Bonuses Offered at PHX Gamble</p>
-            <p className='text-xl font-bold'>PHX.GAMBLE</p>
+          <div className='flex gap-3 items-center'>
+            <div className='h-14 w-14 bg-[#8645f6] rounded-full' />
+            <div className='text-white flex flex-col gap-2 text-sm'>
+              <p className='w-3/5 text-nowrap text-3xl font-bold'>Sports Tab</p>
+              <p className='text-[#b575e1]'>In Development</p>
+            </div>
           </div>
         </SmallBanner>
         <div className='flex flex-col gap-2'>

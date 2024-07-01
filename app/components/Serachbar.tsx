@@ -8,11 +8,11 @@ interface SerachbarProps {
 
 const Serachbar = ({ placeholderText }: SerachbarProps) => {
   return (
-    <div className='relative'>
-      <input placeholder={placeholderText} className='mt-4 w-full bg-[#241b42] h-10 rounded-xl text-white pl-12' />
-      <div className='absolute left-3 top-6'>
+    <div className='flex gap-2 h-full rounded-lg p-4 bg-[#241b42] items-center justify-start'>
+      <div className='flex-shrink-0'>
         <Image src={`${basePath}/images/search-image.png`} alt='Search Icon' width={24} height={24} />
       </div>
+      <input placeholder={placeholderText} className='w-full bg-transparent text-white [&::-webkit-inner-spin-button]:appearance-none outline-none' />
     </div>
   )
 }

@@ -28,7 +28,8 @@ const DropdownListItem = ({ title, children, imgSrc, arrowIsRightSide = false }:
                 <div className='flex gap-2'>
                     {imgSrc && (
                         <div>
-                            <Image src={`${basePath + imgSrc}`} alt='list item' width={22} height={22} />
+                            <div className='h-6 w-6 bg-[#8645f6] rounded-full' />
+                            {/* <Image src={`${basePath + imgSrc}`} alt='list item' width={22} height={22} /> */}
                         </div>
                     )}
                     <p className={`${isOpen ? 'font-bold' : ''}`}>{title}</p>
