@@ -7,7 +7,7 @@ const ProfileButton = () => {
   return (
     <div>
       <Link href="/earn">
-        <Image className='relative rounded-lg cursor-pointer' src={`${basePath}/images/profile-image.jpg`} alt="Player" width={40} height={40}></Image>
+        <Image className='relative rounded-lg cursor-pointer' src={`${basePath}/images/temporary-profile-small-image.png`} alt="Player" width={49} height={49}></Image>
       </Link>
     </div>
   )

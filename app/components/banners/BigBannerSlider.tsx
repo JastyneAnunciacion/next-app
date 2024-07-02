@@ -1,10 +1,8 @@
 'use client'
 
-import React from 'react'
-import { useState } from 'react'
-import basePath from '../../utilities/basepath';
-import Image from 'next/image';
+import React, { useState, useEffect, useRef } from 'react'
 import BigBanner from './BigBanner';
+import basePath from '@/app/utilities/basepath';
 
 const slides = [
     {
@@ -21,54 +19,58 @@ const slides = [
     }
 ];
 
-
 const BigBannerSlider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
-
-    const prevSlide = () => {
-        const isFirstSlide = currentSlide === 0;
-        const newIndex = isFirstSlide ? slides.length - 1 : currentSlide - 1;
-        setCurrentSlide(newIndex);
-    }
-
-    const nextSlide = () => {
-        const isLastSlide = currentSlide === slides.length - 1;
-        const newIndex = isLastSlide ? 0 : currentSlide + 1;
-        setCurrentSlide(newIndex);
-    }
+    const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
     const goToSlide = (index: number) => {
         setCurrentSlide(index);
+        resetTimer();
     };
+
+    const resetTimer = () => {
+        if (timerRef.current) {
+            clearInterval(timerRef.current);
+        }
+        timerRef.current = setInterval(() => {
+            setCurrentSlide(prev => (prev === slides.length - 1 ? 0 : prev + 1));
+        }, 5500); //
+    };
+
+    useEffect(() => {
+        resetTimer();
+        return () => {
+            if (timerRef.current) {
+                clearInterval(timerRef.current);
+            }
+        };
+    }, []);
+
     return (
-        <div className='flex items-center justify-center flex-col'>
-            <div className="relative overflow-hidden w-full">
+        <div className='flex gap-[11px] mb-[26px] items-center justify-center flex-col w-full'>
+            <div className="overflow-hidden w-full h-full]">
                 <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
                     {slides.map((slide, index) => (
                         <div key={index} className='w-full flex-shrink-0 flex justify-center'>
-                            <div className="w-[min(30rem,100%)]">
-                                <BigBanner imgSrc={`${slide.imgSrc && basePath + slide.imgSrc}`} />
+                            <div className="w-full">
+                                <BigBanner imgSrc={`${slide.imgSrc === "" ? "" : basePath + slide.imgSrc}`} />
                             </div>
                         </div>
                     ))}
                 </div>
-                <div>
-                    <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] left-0 cursor-pointer w-8 h-8 bg-gray-900 flex items-center justify-center rounded-full'>
-                        <Image onClick={prevSlide} src={`${basePath}/images/left-arrow-image.png`} alt="Right Arrow" width={30} height={30} />
-                    </div>
-                    <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] right-0 cursor-pointer w-8 h-8 bg-gray-900 flex items-center justify-center rounded-full'>
-                        <Image onClick={nextSlide} src={`${basePath}/images/right-arrow-image.png`} alt="Right Arrow" width={30} height={30} />
-                    </div>
-                </div>
-
             </div>
-            <div className="flex items-center justify-center mt-1 gap-1">
+
+            <div className="flex justify-center gap-[5px]">
                 {slides.map((slide, index) => (
-                    <button key={index} onClick={() => goToSlide(index)} className={`rounded-full flex items-center justify-center ${currentSlide === index ? 'bg-[#e302ac] cursor-default w-3 h-3' : 'bg-[#4a3f84] w-2 h-2 cursor-pointer'}`} />
+                    <button
+                        key={index}
+                        onClick={() => goToSlide(index)}
+                        className={`rounded-full flex ${currentSlide === index ? 'bg-[#E302AC] cursor-default w-[10px] h-[10px]' : 'bg-[#4B3E84] w-[8px] h-[8px] cursor-pointer'}`}
+                    />
                 ))}
             </div>
         </div>
-    )
+    );
 }
 
-export default BigBannerSlider
+export default BigBannerSlider;

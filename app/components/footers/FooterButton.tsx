@@ -13,25 +13,14 @@ interface FooterButtonProps {
 const FooterButton = ({ buttonName, iconSrc, pageHref, active }: FooterButtonProps) => {
   return (
     <div>
-      {active ? (
-        <div className={`relative p-3 text-sm flex flex-col items-center bg-gray-900 rounded-full`}>
-          <div>
-            <Image src={basePath + iconSrc} alt='Footer Button Image' width={30} height={30}></Image>
-          </div>
-          <div className='absolute top-16 font-bold text-xs'>
-            {buttonName}
-          </div>
+      <Link href={pageHref} className={`${active && 'border rounded-full pointer-events-none'} p-2 flex flex-col items-center gap-1`}>
+        <div className='flex-shrink-0'>
+          <Image src={basePath + iconSrc} alt='Footer Button Image' width={30} height={30}></Image>
         </div>
-      ) : (
-        <Link href={pageHref} className={`relative p-3 text-sm flex flex-col items-center`}>
-          <div>
-            <Image src={basePath + iconSrc} alt='Footer Button Image' width={30} height={30}></Image>
-          </div>
-          <div className='absolute top-16 font-bold text-xs'>
-            {buttonName}
-          </div>
-        </Link>
-      )}
+        <div className='text-xs'>
+          {buttonName}
+        </div>
+      </Link>
     </div>
   )
 }

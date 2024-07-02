@@ -20,7 +20,7 @@ const WalletDropdown = () => {
         )}
 
         {!isOpen ?
-          <Image className='bg-[#925cf7] h-7 w-7 rounded-lg pr' src={`${basePath}/images/down-arrow-image.png`} alt="Down Arrow" width={40} height={40} />
+          <Image className='bg-gradient-to-b from-[#9C6EF7] to-[#7727F7] h-7 w-7 rounded-lg pr' src={`${basePath}/images/down-thin-arrow-image.png`} alt="Down Arrow" width={40} height={40} />
           :
           <Image src={`${basePath}/images/up-arrow-image.png`} alt="Up Arrow" width={40} height={40} />
         }
