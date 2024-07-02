@@ -11,22 +11,26 @@ const WalletDropdown = () => {
   const selectedWallet = list[currentlySelected];
   return (
     <div className='bg-gradient-to-r from-[#926dca] to-[#926dca]/0 w-full h-full p-[1px] rounded-lg'>
-      <button onClick={() => setIsOpen((prev) => !prev)} className="bg-gradient-to-r from-[#412974] to-[#231d42] w-full h-full text-white p-2 pr-4 flex items-center justify-between text-lg rounded-lg">
+      <button onClick={() => setIsOpen((prev) => !prev)} className="bg-gradient-to-r from-[#412974] to-[#231d42] w-full h-full text-white px-[15px] flex items-center justify-between text-lg rounded-lg">
         {selectedWallet && (
-          <div className='flex items-center gap-3'>
+          <div className='flex items-center gap-[11px]'>
             <Image src={basePath + selectedWallet.TokenIconSrc} alt="Token Icon" width={25} height={25}></Image>
             <h3>{selectedWallet.Amount}</h3>
           </div>
         )}
 
         {!isOpen ?
-          <Image className='bg-gradient-to-b from-[#9C6EF7] to-[#7727F7] h-7 w-7 rounded-lg pr' src={`${basePath}/images/down-thin-arrow-image.png`} alt="Down Arrow" width={40} height={40} />
+          <div className='flex-shrink-0 bg-gradient-to-b from-[#9C6EF7] to-[#7727F7] h-7 w-7 rounded-lg items-center justify-center flex'>
+            <Image src={`${basePath}/images/down-thin-arrow-image.png`} alt="Down Arrow" width={10} height={13} />
+          </div>
           :
-          <Image src={`${basePath}/images/up-arrow-image.png`} alt="Up Arrow" width={40} height={40} />
+          <div className='flex-shrink-0 bg-gradient-to-b from-[#9C6EF7] to-[#7727F7] h-7 w-7 rounded-lg items-center justify-center flex'>
+            <Image src={`${basePath}/images/up-thin-arrow-image.png`} alt="Up Arrow" width={10} height={13} />
+          </div>
         }
 
         {isOpen && (
-          <div className="bg-gray-800 absolute left-0 top-11 flex flex-col rounded-lg p-2 w-full h-[260px] overflow-y-auto z-10 scrollbar scrollbar-thumb-gray-950 scrollbar-track-gray-900">
+          <div className="bg-gray-800 absolute left-0 top-16 flex flex-col rounded-lg p-2 w-full h-[260px] overflow-y-auto z-10 scrollbar scrollbar-thumb-gray-950 scrollbar-track-gray-900">
             {list.map((item, i) => (
               <button onClick={(() => setCurrentlySelected(i))} className='flex p-1 gap-2 w-full hover:bg-gray-600 cursor-pointer rounded-lg items-center' key={i}>
                 <Image src={basePath + item.TokenIconSrc} alt="Token Icon" width={20} height={20}></Image>

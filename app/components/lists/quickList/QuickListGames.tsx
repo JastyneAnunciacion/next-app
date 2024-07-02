@@ -21,22 +21,18 @@ const QuickListGames = ({ gameListTitle, gameList }: QuickListGamesProps) => {
       gapAmount={3}
       viewAllLink='/games'
       childrenList={gameList.map((item, i) => {
-        const imageIndex = (i % 5) + 1;
+        const imageIndex = Math.floor(Math.random() * 7) + 1;
         return (
           <div key={i}>
-            <button className='bg-gray-600 w-[158px] h-[100px] rounded-lg mt-2 cursor-pointer'>
+            <button className='bg-gray-600 w-[198px] h-[251px] rounded-lg mt-2 cursor-pointer'>
               <Image
-                src={`${basePath}/images/small-image-${imageIndex}.jpg`}
+                src={`${basePath}/images/game-icon-${imageIndex}.png`}
                 alt="Banner"
                 width={20}
                 height={20}
                 className="w-full h-full rounded-lg"
               />
             </button>
-            <div className='text-sm'>
-              <p className='font-bold text-[#BEDB39]'>{item.name ? item.name : 'Game Name'}</p>
-              <p className='text-[#859927]'>{item.provider ? item.provider : 'Provider'}</p>
-            </div>
           </div>
         );
       })}

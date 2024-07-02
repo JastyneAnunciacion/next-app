@@ -9,18 +9,22 @@ export default function Home() {
   return (
     <main className="w-[100vw] max-w-[100%] h-[100vh]">
       <Header />
-      <div className="px-4 mt-4 flex flex-col">
-        <div className="w-[441px] self-center">
+      <div className="px-4 mt-4 flex flex-col items-center">
+        <div className="w-[441px]">
           <BigBannerSlider />
         </div>
-        <Serachbar placeholderText='Search Games' />
-        <QuickListGames gameListTitle="Top Games" gameList={walletList} />
-        <QuickListGames gameListTitle="New" gameList={walletList} />
-        <QuickListGames gameListTitle="Biggest Multiplier" gameList={walletList} />
-        <QuickListGames gameListTitle="Bonus Buy" gameList={walletList} />
-        <QuickListGames gameListTitle="Crypto Games" gameList={walletList} />
-        <QuickListGames gameListTitle="Table Games" gameList={walletList} />
-        <QuickListGames gameListTitle="Game Shows" gameList={walletList} />
+        <div className="w-[441px] h-[50px]">
+          <Serachbar placeholderText='Search Games' />
+        </div>
+        <div className="w-[441px]">
+          <QuickListGames gameListTitle="Top Games" gameList={walletList} />
+          <QuickListGames gameListTitle="New" gameList={walletList} />
+          <QuickListGames gameListTitle="Biggest Multiplier" gameList={walletList} />
+          <QuickListGames gameListTitle="Bonus Buy" gameList={walletList} />
+          <QuickListGames gameListTitle="Crypto Games" gameList={walletList} />
+          <QuickListGames gameListTitle="Table Games" gameList={walletList} />
+          <QuickListGames gameListTitle="Game Shows" gameList={walletList} />
+        </div>
       </div>
       <Footer currentPage="Casino" />
     </main>
