@@ -16,7 +16,7 @@ export default function Home() {
         <div className="w-[441px] h-[50px]">
           <Serachbar placeholderText='Search Games' />
         </div>
-        <div className="w-[441px]">
+        <div className="w-[441px] mt-[17px] flex flex-col gap-[30px]">
           <QuickListGames gameListTitle="Top Games" gameList={walletList} />
           <QuickListGames gameListTitle="New" gameList={walletList} />
           <QuickListGames gameListTitle="Biggest Multiplier" gameList={walletList} />

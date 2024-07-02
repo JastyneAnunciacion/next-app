@@ -10,11 +10,11 @@ interface QuickListProps {
   headerIconPath: string,
   title: string,
   childrenList: ReactNode,
-  gapAmount?: number,
+  gapAmountPixel?: number,
   viewAllLink?: string
 }
 
-const QuickList = ({ headerIconPath: headerImagePath, title, childrenList, gapAmount = 0, viewAllLink }: QuickListProps) => {
+const QuickList = ({ headerIconPath, title, childrenList, gapAmountPixel = 0, viewAllLink }: QuickListProps) => {
   const listRef = useRef<HTMLDivElement | null>(null);
   const [isAtStart, setIsAtStart] = useState(true);
   const [isAtEnd, setIsAtEnd] = useState(false);
@@ -62,12 +62,12 @@ const QuickList = ({ headerIconPath: headerImagePath, title, childrenList, gapAm
   }, []);
 
   return (
-    <div className='mt-3 pt-1'>
+    <div className='flex flex-col gap-[14px]'>
       <div className='flex w-full items-center justify-between'>
 
         <div className='flex flex-grow items-center gap-[10px]'>
           <div>
-            <SmallIcon width={30} height={30} />
+            <SmallIcon widthPixel={30} heightPixel={30} iconSrc={headerIconPath} />
           </div>
           <p className='text-nowrap text-[20px]'>{title}</p>
         </div>
@@ -87,20 +87,24 @@ const QuickList = ({ headerIconPath: headerImagePath, title, childrenList, gapAm
               className={`w-[40px] h-[40px] flex items-center justify-center text-xs rounded-l-2xl ${isAtStart ? 'bg-[#231d42]/70' : 'bg-[#2a2444]'}`}
               disabled={isAtStart}
             >
-              <Image src={`${basePath}/images/left-arrow-image.png`} alt="Left Arrow" width={30} height={30} />
+              <p className={`text-[22px] font-mono ${isAtStart ? 'text-gray-400' : 'text-gray-300'}`}>&lt;</p>
+              {/* <Image src={`${basePath}/images/left-arrow-image.png`} alt="Left Arrow" width={30} height={30} /> */}
             </button>
             <button
               onClick={() => scrollTo('right')}
               className={`w-[40px] h-[40px] flex items-center justify-center text-xs rounded-r-2xl ${isAtEnd ? 'bg-[#231d42]/70' : 'bg-[#2a2444]'}`}
               disabled={isAtEnd}
             >
-              <Image src={`${basePath}/images/right-arrow-image.png`} alt="Right Arrow" width={30} height={30} />
+              <p className={`text-[22px] font-mono ${isAtEnd ? 'text-gray-400' : 'text-gray-300'}`}>&gt;</p>
+              {/* <Image src={`${basePath}/images/right-arrow-image.png`} alt="Right Arrow" width={30} height={30} /> */}
             </button>
           </div>
         </div>
       </div>
 
-      <div className={`flex overflow-x-auto scrollbar-none gap-${gapAmount}`} ref={listRef}>
+      <div
+        style={{ gap: `${gapAmountPixel}px` }}
+        className={`flex overflow-x-auto scrollbar-non`} ref={listRef}>
         {childrenList}
       </div>
     </div>

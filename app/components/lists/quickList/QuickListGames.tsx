@@ -16,9 +16,9 @@ interface QuickListGamesProps {
 const QuickListGames = ({ gameListTitle, gameList }: QuickListGamesProps) => {
   return (
     <QuickList
-      headerIconPath="/images/pencil-circle-fill.256x256.png"
+      headerIconPath=""
       title={gameListTitle}
-      gapAmount={3}
+      gapAmountPixel={15}
       viewAllLink='/games'
       childrenList={gameList.map((item, i) => {
         const imageIndex = Math.floor(Math.random() * 7) + 1;
