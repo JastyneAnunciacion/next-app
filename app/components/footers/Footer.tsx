@@ -21,7 +21,7 @@ const Footer = ({ currentPage = '' }: FooterProps) => {
     <div>
       <div className='w-full pointer-events-none' />
       <div className='flex items-center justify-center'>
-        <div className={`${isMenuExpanded ? 'px-[34px] w-[335px] justify-between' : 'w-[72px] justify-center'} py-[14px] flex items-center bg-[#1F2937] h-[72px] fixed rounded-full bottom-[52px] z-20 transition-all duration-300`}>
+        <div className={`${isMenuExpanded ? 'px-[34px] w-[403px] justify-between' : 'w-[72px] justify-center'} py-[14px] flex items-center bg-[#1F2937] h-[72px] fixed rounded-full bottom-[52px] z-20 transition-all duration-300`}>
           <button className={`${!isMenuExpanded && 'w-full'} p-2 flex flex-col items-center justify-center`} onClick={toggleMenu}>
             {isMenuExpanded ?
               <div>
@@ -55,6 +55,14 @@ const Footer = ({ currentPage = '' }: FooterProps) => {
                 pageHref='/'
                 buttonName='Games'
                 active={currentPage === 'Casino'}
+              />
+              <FooterButton
+                iconSrc='/images/sports-image.png'
+                iconActiveSrc='/images/sports-selected-image.png'
+                activeTextColor='#D187FF'
+                pageHref='/sports'
+                buttonName='Games'
+                active={currentPage === 'Sports'}
               />
               <FooterButton
                 iconSrc='/images/rewards-image.png'

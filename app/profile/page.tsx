@@ -34,11 +34,18 @@ const ProfilePage = () => {
       <div className='px-4 pt-4'>
         <div className='text-lg flex items-center justify-between w-full h-14 rounded-lg px-4 bg-[#241b42]'>
           <p className='absolute left-1/2 transform -translate-x-1/2 text-[#b575e1] text-xl'>Profile</p>
-          <div className='h-8 w-8 bg-[#8645f6] rounded-full ml-auto' />
+          <div className='flex-shrink-0 ml-auto'>
+            <Image src={`${basePath}/images/cog-image.png`} alt='Profile Settings Icon' width={25} height={25} />
+          </div>
         </div>
+
         <div className='w-full flex flex-col gap-2 items-center mt-6 text-white'>
+          <div className='absolute w-full h-[295.08px] flex-shrink-0 border'>
+            <Image className='rounded-full' src={`${basePath}/images/profile-page-bg-design.png`} alt='Large Profile Icon' width={137} height={137}>
+            </Image>
+          </div>
           <div className='flex-shrink-0'>
-            <Image className='rounded-lg w-36' src={`${basePath}/images/profile-image.jpg`} alt='Large Profile Icon' width={120} height={120}></Image>
+            <Image className='rounded-full' src={`${basePath}/images/temporary-profile-large-image.png`} alt='Large Profile Icon' width={137} height={137} />
           </div>
           <p className='text-lg'>Username</p>
         </div>
