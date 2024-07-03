@@ -19,6 +19,7 @@ const Footer = ({ currentPage = '' }: FooterProps) => {
 
   return (
     <div>
+      <div className='h-40' />
       <div className='w-full pointer-events-none' />
       <div className='flex items-center justify-center'>
         <div className={`${isMenuExpanded ? 'px-[34px] w-[403px] justify-between' : 'w-[72px] justify-center'} py-[14px] flex items-center bg-[#1F2937] h-[72px] fixed rounded-full bottom-[52px] z-20 transition-all duration-300`}>

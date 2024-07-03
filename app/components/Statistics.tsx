@@ -1,42 +1,34 @@
 import React from 'react'
 import Image from 'next/image'
 import basePath from '../utilities/basepath'
+import SmallIcon from './SmallIcon'
 
 const Statistics = () => {
     return (
-        <div>
-            <div className='flex gap-1 mt-3 items-center justify-center'>
+        <div className='mb-[35px]'>
+            <div className='flex items-center justify-center mb-[9px]'>
                 <p className='text-[#b575e1] text-xl'>Statistics</p>
             </div>
-            <div className='w-full flex flex-col gap-2 mt-3 text-white'>
+            <div className='w-full flex flex-col gap-2 text-white'>
                 <div className='flex gap-2'>
-                    <div className='w-7/12 shrink-0 h-[70px] bg-[#241b42] rounded-lg p-2'>
-                        <div className='flex gap-1 items-center'>
-                            <div>
-                                <div className='h-6 w-6 bg-[#8645f6] rounded-full' />
-                                {/* <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Total Wagered Icon' width={20} height={20}></Image> */}
-                            </div>
+                    <div className='flex flex-col gap-[15px] w-7/12 shrink-0 h-[87px] bg-[#241b42] rounded-lg p-[11px]'>
+                        <div className='flex gap-[10px] items-center'>
+                            <SmallIcon />
                             <p>Total Wagered</p>
                         </div>
                         <p>0.00</p>
                     </div>
-                    <div className='w-full h-[70px] bg-[#241b42] rounded-lg p-2'>
-                        <div className='flex gap-1 items-center'>
-                            <div>
-                                <div className='h-6 w-6 bg-[#8645f6] rounded-full' />
-                                {/* <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Total Bets Icon' width={20} height={20}></Image> */}
-                            </div>
+                    <div className='flex flex-col gap-[15px] w-full h-[87px] bg-[#241b42] rounded-lg p-[11px]'>
+                        <div className='flex gap-[10px] items-center'>
+                            <SmallIcon />
                             <p>Total Bets</p>
                         </div>
                         <p>0.00</p>
                     </div>
                 </div>
-                <div className='w-full h-[70px] bg-[#241b42] rounded-lg p-2'>
-                    <div className='flex gap-1 items-center'>
-                        <div>
-                            <div className='h-6 w-6 bg-[#8645f6] rounded-full' />
-                            {/* <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Total Wins Icon' width={20} height={20}></Image> */}
-                        </div>
+                <div className='flex flex-col gap-[15px] w-full h-[87px] bg-[#241b42] rounded-lg p-[11px]'>
+                    <div className='flex gap-[10px] items-center'>
+                        <SmallIcon />
                         <p>Total Wins</p>
                     </div>
                     <p>0.00</p>

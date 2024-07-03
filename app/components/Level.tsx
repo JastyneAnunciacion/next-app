@@ -11,10 +11,10 @@ interface LevelProps {
 const Level = ({ level = 1, levelImgSrc = '/images/level-image.png', currentXP = 3, XPrequirement = 10 }: LevelProps) => {
     return (
         <div>
-            <div className='w-full h-12 rounded-lg'>
+            <div className='w-full mb-[35px]'>
                 <div className='flex gap-3 items-center'>
-                    <div className='w-full flex flex-col gap-1'>
-                        <div className='h-9 w-full bg-[#241b42] rounded-full items-center flex justify-center p-1'>
+                    <div className='w-full flex flex-col gap-[5px]'>
+                        <div className='h-[38px] w-full bg-[#241b42] rounded-full items-center flex justify-center p-1'>
                             <div className='h-2 w-full bg-[#241b42] rounded-full'>
                                 <div className='h-full bg-[#1fe384] rounded-full'
                                     style={{ width: `${(currentXP / XPrequirement) * 100}%` }}
