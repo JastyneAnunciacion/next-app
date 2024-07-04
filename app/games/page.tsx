@@ -2,12 +2,13 @@
 
 import React from 'react'
 import Header from '../components/Header'
-import Footer from '../components/footers/Footer'
+import Footer from '../components/footers/QuickMenu'
 import SelectionDropdown from '../components/dropdowns/SelectionDropdown'
 import providerList from '../components/temporaryJsons/provider-list.json'
 import GridList from '../components/GridList'
 import walletList from '../components/temporaryJsons/wallet-list.json'
 import Serachbar from '../components/Serachbar'
+import MainComponents from '../components/MainComponents'
 
 const CasinoPage = () => {
   const sortOptions = [
@@ -31,8 +32,7 @@ const CasinoPage = () => {
   }))
 
   return (
-    <div className="w-[100vw] max-w-[100%] h-[100vh]">
-      <Header />
+    <MainComponents footerPage='Games'>
       <div className='px-4 mt-4 flex flex-col gap-1 text-sm'>
         <SelectionDropdown items={sort} placeHolderText='Sort:' placeArrowOnRight={true} />
         <SelectionDropdown items={providers} placeHolderText='Provider:' placeArrowOnRight={true} />
@@ -40,9 +40,7 @@ const CasinoPage = () => {
         <GridList list={walletList} />
         <div className='h-20' />
       </div>
-
-      <Footer currentPage='Casino' />
-    </div>
+    </MainComponents>
   )
 }
 

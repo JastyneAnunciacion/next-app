@@ -1,12 +1,13 @@
 'use client'
 
 import React, { useState } from 'react'
-import Footer from '../components/footers/Footer'
+import Footer from '../components/footers/QuickMenu'
 import Header from '../components/Header'
 import Image from 'next/image'
 import basePath from '../utilities/basepath'
 import SelectionDropdown from '../components/dropdowns/SelectionDropdown'
 import languages from '../components/temporaryJsons/language-list.json'
+import MainComponents from '../components/MainComponents'
 
 const SettingsPage = () => {
     const [option, changeOption] = useState(0);
@@ -18,10 +19,8 @@ const SettingsPage = () => {
         }
     }));
 
-
     return (
-        <div className="w-[100vw] max-w-[100%] h-[100vh]">
-            <Header />
+        <MainComponents>
             <div className='p-4'>
                 <div>
                     <div className='flex gap-2 items-center'>
@@ -114,8 +113,7 @@ const SettingsPage = () => {
                     </div>
                 )}
             </div>
-            <Footer />
-        </div>
+        </MainComponents>
     )
 }
 

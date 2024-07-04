@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import basePath from '@/app/utilities/basepath';
-import FooterButton from './FooterButton';
+import FooterButton from './QuickMenuButton';
 import Image from 'next/image';
 import FullMenu from '../FullMenu';
 
@@ -55,23 +55,23 @@ const Footer = ({ currentPage = '' }: FooterProps) => {
                 activeTextColor='#D187FF'
                 pageHref='/'
                 buttonName='Games'
-                active={currentPage === 'Casino'}
+                active={currentPage === 'Games'}
               />
               <FooterButton
                 iconSrc='/images/sports-image.png'
                 iconActiveSrc='/images/sports-selected-image.png'
-                activeTextColor='#D187FF'
+                activeTextColor='#FFF387'
                 pageHref='/sports'
-                buttonName='Games'
+                buttonName='Sports'
                 active={currentPage === 'Sports'}
               />
               <FooterButton
                 iconSrc='/images/rewards-image.png'
                 iconActiveSrc='/images/rewards-selected-image.png'
                 activeTextColor='#87FFD4'
-                pageHref='/earn'
+                pageHref='/rewards'
                 buttonName='Rewards'
-                active={currentPage === 'Earn'}
+                active={currentPage === 'Rewards'}
               />
               <FooterButton
                 iconSrc='/images/wallet-image.png'

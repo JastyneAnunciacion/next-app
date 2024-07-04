@@ -1,14 +1,14 @@
 import BigBannerSlider from "./components/banners/BigBannerSlider";
-import Footer from "./components/footers/Footer";
+import Footer from "./components/footers/QuickMenu";
 import Header from "./components/Header";
 import QuickListGames from "./components/lists/quickList/QuickListGames";
+import MainComponents from "./components/MainComponents";
 import Serachbar from "./components/Serachbar";
 import walletList from "./components/temporaryJsons/wallet-list.json";
 
 export default function Home() {
   return (
-    <main className="w-[100vw] max-w-[100%] h-[100vh]">
-      <Header />
+    <MainComponents footerPage="Games">
       <div className="px-4 mt-4 flex flex-col items-center">
         <div className="w-[441px]">
           <BigBannerSlider />
@@ -26,7 +26,6 @@ export default function Home() {
           <QuickListGames gameListTitle="Game Shows" gameList={walletList} />
         </div>
       </div>
-      <Footer currentPage="Casino" />
-    </main>
+    </MainComponents>
   )
 }

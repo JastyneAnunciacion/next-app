@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Header from '../components/Header'
-import Footer from '../components/footers/Footer'
+import Footer from '../components/footers/QuickMenu'
 import Image from 'next/image'
 import { useState } from 'react'
 import languages from '../components/temporaryJsons/language-list.json'
@@ -12,6 +12,7 @@ import Statistics from '../components/Statistics'
 import Cashback from '../components/Cashback'
 import TransactionHistoryTable from '../components/TransactionHistoryTable'
 import MostWageredGames from '../components/MostWageredGames'
+import MainComponents from '../components/MainComponents'
 
 interface ProfileProps {
   username: string,
@@ -29,8 +30,7 @@ const ProfilePage = () => {
   const [option, changeOption] = useState(0);
 
   return (
-    <div className="w-[100vw] max-w-[100%] h-[100vh]">
-      <Header />
+    <MainComponents footerPage='Profile'>
       <div className='px-4'>
         <div className='relative text-lg flex items-center justify-between w-full h-14 rounded-lg px-4 bg-[#241A43] z-10'>
           <p className='absolute left-1/2 transform -translate-x-1/2 text-[#b575e1] text-xl'>Profile</p>
@@ -63,8 +63,7 @@ const ProfilePage = () => {
           <TransactionHistoryTable />
         </div>
       </div>
-      <Footer currentPage='Profile' />
-    </div>
+    </MainComponents>
   )
 }
 

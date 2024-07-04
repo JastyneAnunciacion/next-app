@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Header from '../components/Header'
-import Footer from '../components/footers/Footer'
+import Footer from '../components/footers/QuickMenu'
 import SmallBanner from '../components/banners/SmallBanner'
 import Serachbar from '../components/Serachbar'
 import ListContainterWithTitleHeader from '../components/lists/ListContainterWithTitleHeader'

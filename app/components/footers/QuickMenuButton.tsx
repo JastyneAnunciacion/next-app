@@ -2,8 +2,6 @@ import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import basePath from '../../utilities/basepath';
-import { act } from 'react-dom/test-utils';
-import { text } from 'stream/consumers';
 
 interface FooterButtonProps {
   buttonName: string;
