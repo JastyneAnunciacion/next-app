@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Header from '../components/Header'
-import Footer from '../components/footers/QuickMenu'
+import QuickMenu from '../components/footers/QuickMenu'
 import SmallBanner from '../components/banners/SmallBanner'
 import Serachbar from '../components/Serachbar'
 import ListContainterWithTitleHeader from '../components/lists/ListContainterWithTitleHeader'
@@ -47,7 +47,7 @@ const MenuPage = () => {
           </ListContainterWithTitleHeader>
         </div>
       </div>
-      <Footer currentPage="Menu" />
+      <QuickMenu currentPage="Menu" />
     </div>
   )
 }

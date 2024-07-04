@@ -1,5 +1,5 @@
 import BigBannerSlider from "./components/banners/BigBannerSlider";
-import Footer from "./components/footers/QuickMenu";
+import QuickMenu from "./components/footers/QuickMenu";
 import Header from "./components/Header";
 import QuickListGames from "./components/lists/quickList/QuickListGames";
 import MainComponents from "./components/MainComponents";

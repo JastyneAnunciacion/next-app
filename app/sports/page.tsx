@@ -1,5 +1,5 @@
 import React from 'react'
-import Footer from '../components/footers/QuickMenu'
+import QuickMenu from '../components/footers/QuickMenu'
 import SportsHeader from '../components/sports/SportsHeader'
 import SportsHomeTabButtons from '../components/sports/SportsHomeTabButtons'
 import MediumBanner from '../components/banners/MediumBanner'
@@ -16,7 +16,7 @@ const sportsPage = () => {
         <SportsQuickBetCardSlides />
         <SportsPopularSection />
       </div>
-      <Footer currentPage='Sports' />
+      <QuickMenu currentPage='Sports' />
     </div>
   )
 }

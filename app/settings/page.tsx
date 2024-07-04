@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import Footer from '../components/footers/QuickMenu'
+import QuickMenu from '../components/footers/QuickMenu'
 import Header from '../components/Header'
 import Image from 'next/image'
 import basePath from '../utilities/basepath'

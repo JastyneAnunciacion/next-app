@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import Header from './Header'
-import Footer from './footers/QuickMenu'
+import QuickMenu from './footers/QuickMenu'
 
 interface MainComponentsProps {
     children: ReactNode;
@@ -12,7 +12,7 @@ const MainComponents = ({ children, footerPage }: MainComponentsProps) => {
         <main className="w-[100vw] max-w-[100%] h-[100vh]">
             <Header />
             {children}
-            <Footer currentPage={footerPage} />
+            <QuickMenu currentPage={footerPage} />
         </main>
     )
 }

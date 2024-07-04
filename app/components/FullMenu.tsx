@@ -14,7 +14,7 @@ interface FullMenuProps {
 
 const FullMenu = ({ isExpanded }: FullMenuProps) => {
     return (
-        <div className={`fixed top-[74px] w-full h-full bg-[#201434] transition-all duration-300 transform ${isExpanded ? 'translate-x-0' : '-translate-x-full'}`}>
+        <div className={`fixed top-[74px] w-full h-full bg-[#201434] transition-all duration-700 transform ${isExpanded ? 'translate-x-0' : '-translate-x-full'}`}>
             <div className='flex justify-center px-3 pt-3 flex-col gap-2'>
                 <div className='h-10'>
                     <Serachbar placeholderText='Find a Game' />

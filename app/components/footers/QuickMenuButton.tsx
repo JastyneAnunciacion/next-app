@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import basePath from '../../utilities/basepath';
 
-interface FooterButtonProps {
+interface QuickMenuButtonProps {
   buttonName: string;
   iconSrc: string;
   iconActiveSrc: string;
@@ -12,14 +12,14 @@ interface FooterButtonProps {
   active: boolean;
 }
 
-const FooterButton = ({ buttonName, iconSrc, iconActiveSrc, activeTextColor, pageHref, active }: FooterButtonProps) => {
+const QuickMenuButton = ({ buttonName, iconSrc, iconActiveSrc, activeTextColor, pageHref, active }: QuickMenuButtonProps) => {
   const iconStatus = active ? iconActiveSrc : iconSrc;
   const textColor = active ? activeTextColor : '#00000'
   return (
     <div>
-      <Link href={pageHref} className={`${active && 'pointer-events-none'} p-2 flex flex-col items-center`}>
+      <Link href={pageHref} className={`${active && 'pointer-events-none'} p-2 flex flex-col gap-1 items-center`}>
         <div className='flex-shrink-0'>
-          <Image src={basePath + iconStatus} alt='Footer Button Image' width={30} height={30}></Image>
+          <Image src={basePath + iconStatus} alt='Footer Button Image' width={22} height={22}></Image>
         </div>
         <div className='text-[10px]' style={{ color: textColor }}>
           {buttonName}
@@ -29,4 +29,4 @@ const FooterButton = ({ buttonName, iconSrc, iconActiveSrc, activeTextColor, pag
   )
 }
 
-export default FooterButton
+export default QuickMenuButton

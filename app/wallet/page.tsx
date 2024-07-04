@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import Header from '../components/Header'
-import Footer from '../components/footers/QuickMenu'
+import QuickMenu from '../components/footers/QuickMenu'
 import WalletDropdown from '../components/dropdowns/WalletDropdown'
 import Image from 'next/image'
 import basePath from '../utilities/basepath'

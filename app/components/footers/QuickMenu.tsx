@@ -2,16 +2,16 @@
 
 import React, { useState } from 'react';
 import basePath from '@/app/utilities/basepath';
-import FooterButton from './QuickMenuButton';
+import QuickMenuButton from './QuickMenuButton';
 import Image from 'next/image';
 import FullMenu from '../FullMenu';
 
-interface FooterProps {
+interface QuickMenuProps {
   currentPage?: string;
 }
 
-const Footer = ({ currentPage = '' }: FooterProps) => {
-  const [isMenuExpanded, setIsMenuExpanded] = useState(true);
+const QuickMenu = ({ currentPage = '' }: QuickMenuProps) => {
+  const [isMenuExpanded, setIsMenuExpanded] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuExpanded(!isMenuExpanded);
@@ -22,34 +22,34 @@ const Footer = ({ currentPage = '' }: FooterProps) => {
       <div className='h-40' />
       <div className='w-full pointer-events-none' />
       <div className='flex items-center justify-center'>
-        <div className={`${isMenuExpanded ? 'px-[34px] w-[403px] justify-between' : 'w-[72px] justify-center'} py-[14px] flex items-center bg-[#1F2937] h-[72px] fixed rounded-full bottom-[52px] z-20 transition-all duration-300`}>
-          <button className={`${!isMenuExpanded && 'w-full'} p-2 flex flex-col items-center justify-center`} onClick={toggleMenu}>
+        <div className={`${isMenuExpanded ? 'w-[72px] justify-center duration-500' : 'px-[34px] w-[403px] justify-between duration-700'} py-[14px] flex items-center bg-[#1F2937] h-[72px] fixed rounded-full bottom-[52px] z-20 transition-all `}>
+          <button className={`${isMenuExpanded && 'w-full'}  p-2 flex flex-col items-center justify-center`} onClick={toggleMenu}>
             {isMenuExpanded ?
               <div>
-                <div className='flex-shrink-0'>
+                <div className='text-[10px]'>
+                  <p className='font-bold text-[20px] text-[#FF8787]'>X</p>
+                </div>
+              </div>
+              :
+              <div>
+                <div className='flex-shrink-0 flex flex-col gap-1 items-center'>
                   <Image
                     src={basePath + '/images/menu-image.png'}
                     alt='Footer Button Image'
-                    width={30}
-                    height={30}
+                    width={22}
+                    height={22}
                   />
                   <div className='text-[10px]'>
                     <p>Menu</p>
                   </div>
                 </div>
               </div>
-              :
-              <div>
-                <div className='text-[10px]'>
-                  <p className='font-bold text-[25px] text-[#FF8787]'>X</p>
-                </div>
-              </div>
             }
           </button>
 
-          {isMenuExpanded &&
+          {!isMenuExpanded &&
             <>
-              <FooterButton
+              <QuickMenuButton
                 iconSrc='/images/games-image.png'
                 iconActiveSrc='/images/games-selected-image.png'
                 activeTextColor='#D187FF'
@@ -57,7 +57,7 @@ const Footer = ({ currentPage = '' }: FooterProps) => {
                 buttonName='Games'
                 active={currentPage === 'Games'}
               />
-              <FooterButton
+              <QuickMenuButton
                 iconSrc='/images/sports-image.png'
                 iconActiveSrc='/images/sports-selected-image.png'
                 activeTextColor='#FFF387'
@@ -65,7 +65,7 @@ const Footer = ({ currentPage = '' }: FooterProps) => {
                 buttonName='Sports'
                 active={currentPage === 'Sports'}
               />
-              <FooterButton
+              <QuickMenuButton
                 iconSrc='/images/rewards-image.png'
                 iconActiveSrc='/images/rewards-selected-image.png'
                 activeTextColor='#87FFD4'
@@ -73,7 +73,7 @@ const Footer = ({ currentPage = '' }: FooterProps) => {
                 buttonName='Rewards'
                 active={currentPage === 'Rewards'}
               />
-              <FooterButton
+              <QuickMenuButton
                 iconSrc='/images/wallet-image.png'
                 iconActiveSrc='/images/wallet-selected-image.png'
                 activeTextColor='#9FFF87'
@@ -81,7 +81,7 @@ const Footer = ({ currentPage = '' }: FooterProps) => {
                 buttonName='Wallet'
                 active={currentPage === 'Wallet'}
               />
-              <FooterButton
+              <QuickMenuButton
                 iconSrc='/images/profile-image.png'
                 iconActiveSrc='/images/profile-selected-image.png'
                 activeTextColor='#87C5FF'
@@ -92,11 +92,11 @@ const Footer = ({ currentPage = '' }: FooterProps) => {
             </>
           }
         </div>
-        <FullMenu isExpanded={!isMenuExpanded} />
+        <FullMenu isExpanded={isMenuExpanded} />
       </div>
       <div className='fixed bg-gradient-to-t from-gray-900/100 to-gray-200/0 w-full h-36 bottom-0 z-0 pointer-events-none' />
     </div>
   );
 };
 
-export default Footer;
+export default QuickMenu;

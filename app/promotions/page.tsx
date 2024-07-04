@@ -1,5 +1,5 @@
 import React from 'react'
-import Footer from '../components/footers/QuickMenu'
+import QuickMenu from '../components/footers/QuickMenu'
 import Header from '../components/Header'
 import PromotionTempate from '../components/PromotionTempate'
 import MainComponents from '../components/MainComponents'
