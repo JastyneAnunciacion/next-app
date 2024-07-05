@@ -1,6 +1,9 @@
+'use client'
+
 import React, { ReactNode } from 'react'
 import Header from './Header'
 import QuickMenu from './footers/QuickMenu'
+import { useState, useEffect } from 'react'
 
 interface MainComponentsProps {
     children: ReactNode;
@@ -8,11 +11,29 @@ interface MainComponentsProps {
 }
 
 const MainComponents = ({ children, footerPage }: MainComponentsProps) => {
+    const [isMenuExpanded, setIsMenuExpanded] = useState(false);
+    const onExpand = (bool: boolean) => {
+        setIsMenuExpanded(bool);
+    };
+
+    useEffect(() => {
+        if (isMenuExpanded) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isMenuExpanded]);
+
+
     return (
-        <main className="w-[100vw] max-w-[100%] h-[100vh]">
+        <main className={`${isMenuExpanded && ''} w-[100vw] max-w-[100%] h-[100vh]`}>
             <Header />
             {children}
-            <QuickMenu currentPage={footerPage} />
+            <QuickMenu currentPage={footerPage} onExpand={onExpand} />
         </main>
     )
 }

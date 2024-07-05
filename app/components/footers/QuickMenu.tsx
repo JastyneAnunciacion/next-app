@@ -8,13 +8,18 @@ import FullMenu from '../FullMenu';
 
 interface QuickMenuProps {
   currentPage?: string;
+  onExpand?: (bool: boolean) => void;
 }
 
-const QuickMenu = ({ currentPage = '' }: QuickMenuProps) => {
+const QuickMenu = ({ currentPage = '', onExpand }: QuickMenuProps) => {
   const [isMenuExpanded, setIsMenuExpanded] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuExpanded(!isMenuExpanded);
+    const toggleBool = !isMenuExpanded;
+    setIsMenuExpanded(toggleBool);
+    if (onExpand) {
+      onExpand(toggleBool);
+    }
   };
 
   return (
@@ -23,7 +28,7 @@ const QuickMenu = ({ currentPage = '' }: QuickMenuProps) => {
       <div className='w-full pointer-events-none' />
       <div className='flex items-center justify-center'>
         <div className={`${isMenuExpanded ? 'w-[72px] justify-center duration-500' : 'px-[34px] w-[403px] justify-between duration-700'} py-[14px] flex items-center bg-[#1F2937] h-[72px] fixed rounded-full bottom-[52px] z-20 transition-all `}>
-          <button className={`${isMenuExpanded && 'w-full'}  p-2 flex flex-col items-center justify-center`} onClick={toggleMenu}>
+          <button className={`${isMenuExpanded && 'w-full'} p-2 flex flex-col items-center justify-center`} onClick={toggleMenu}>
             {isMenuExpanded ?
               <div>
                 <div className='text-[10px]'>

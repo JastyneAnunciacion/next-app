@@ -19,15 +19,17 @@ const DropdownExpand = ({ title, children, isArrowOnRight = true, position = 'Mi
         const content = contentRef.current;
         if (content) {
             if (isOpen) {
-                content.style.maxHeight = `${content.scrollHeight}px`;
+                content.style.maxHeight = `${content.scrollHeight + 16}px`;
+                content.style.padding = '8px';
             } else {
                 content.style.maxHeight = '0px';
+                content.style.padding = '0px';
             }
         }
     }, [isOpen, children]);
 
     return (
-        <div className={`w-full transition-all duration-500 ${position === 'Top' && 'rounded-t-lg'} ${position === 'Bottom' && 'rounded-b-lg'} border border-[#241a43] bg-black overflow-hidden`}>
+        <div className={`w-full transition-all duration-500 ${position === 'Top' && 'rounded-t-lg'} ${position === 'Bottom' && 'rounded-b-lg'} border border-[#241a43] overflow-hidden`}>
             <button
                 onClick={() => setOpen(prev => !prev)}
                 className={`w-full h-16 flex items-center justify-between px-4 bg-[#241a43] text-left text-[#c681f2] ${position === 'Top' && 'rounded-t-lg border-b'} ${position === 'Middle' && 'border-b'} border-[#4b3785] py-3`}>
@@ -51,7 +53,7 @@ const DropdownExpand = ({ title, children, isArrowOnRight = true, position = 'Mi
                     </>
                 )}
             </button>
-            <div ref={contentRef} className="transition-max-height duration-500 overflow-hidden" style={{ maxHeight: '0px' }}>
+            <div ref={contentRef} className={`px-4 transition-max-height duration-500 overflow-hidden`} style={{ maxHeight: '0px' }}>
                 {children}
             </div>
         </div>
