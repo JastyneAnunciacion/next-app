@@ -1,7 +1,5 @@
 import React from 'react'
 import { ReactNode } from 'react'
-import Image from 'next/image'
-import basePath from '../../utilities/basepath'
 import SmallIcon from '../SmallIcon'
 
 interface ListContainterWithTitleHeaderProps {
@@ -15,7 +13,7 @@ const ListContainterWithTitleHeader = ({ title, children, imgSrc }: ListContaint
     <div>
       <div className='flex w-full gap-1 items-center text-[20px] text-w px-3'>
         {imgSrc && (
-          <SmallIcon circleWidthPixel={30} circleHeightPixel={30} iconSrc={imgSrc} iconWidthPixel={30} iconHeightPixel={30} />
+          <SmallIcon circleWidthPixel={30} circleHeightPixel={30} iconSrc={imgSrc} iconWidthPixel={17} iconHeightPixel={17} />
         )}
         <div>
         </div>
