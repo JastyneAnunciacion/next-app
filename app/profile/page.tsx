@@ -31,7 +31,7 @@ const ProfilePage = () => {
 
   return (
     <MainComponents footerPage='Profile'>
-      <div className='px-4'>
+      <div className='w-full'>
         <div className='relative text-lg flex items-center justify-between w-full h-14 rounded-lg px-4 bg-[#241A43] z-10'>
           <p className='absolute left-1/2 transform -translate-x-1/2 text-[#b575e1] text-xl'>Profile</p>
           <div className='flex-shrink-0 ml-auto'>

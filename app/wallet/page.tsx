@@ -29,7 +29,7 @@ const WalletPage = () => {
 
   return (
     <MainComponents footerPage='Wallet'>
-      <div className='px-4'>
+      <div className='w-full'>
         <div className='text-lg flex items-center justify-between w-full h-14 rounded-lg px-4 bg-[#241b42]'>
           <p className='flex justify-center items-center w-full text-[#b575e1] text-xl'>Wallet</p>
         </div>

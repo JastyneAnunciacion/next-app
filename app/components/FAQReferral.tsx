@@ -1,11 +1,10 @@
 import React from 'react'
 import ListContainterWithTitleHeader from './lists/ListContainterWithTitleHeader'
-import DropdownListItem from './dropdowns/DropdownListItem'
 import DropdownExpand from './dropdowns/DropdownExpand'
 
 const FAQReferral = () => {
   return (
-    <div>
+    <div className='w-full'>
       <ListContainterWithTitleHeader title='Frequently Asked Questions' imgSrc='/images/pencil-circle-fill.256x256.png'>
         <DropdownExpand title='What is the @PHX-Gamble Refer-a-Friend program?' position='Top'>
           {`Earn BTC by inviting friends to @PHX-Gamble`}

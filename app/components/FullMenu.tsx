@@ -24,7 +24,7 @@ const FullMenu = ({ isExpanded }: FullMenuProps) => {
                 </div>
                 <SmallBanner>
                     <div className='flex gap-3 items-center'>
-                        <SmallIcon circleWidthPixel={52} circleHeightPixel={52} iconSrc='sports-notification-image' iconWidthPixel={34} iconHeightPixel={34} />
+                        <SmallIcon circleWidthPixel={52} circleHeightPixel={52} iconSrc='/images/sports-notification-image.png' iconWidthPixel={34} iconHeightPixel={34} />
                         <div className='text-white flex flex-col gap-2 text-sm'>
                             <p className='w-3/5 text-nowrap text-[20px]'>Sports News</p>
                             <p className='text-[#b575e1] text-[16px]'>Best Bets</p>
@@ -37,7 +37,7 @@ const FullMenu = ({ isExpanded }: FullMenuProps) => {
                         <ListItem imgSrc={`${basePath}/images/sports-selected-image.png`} linkHref='/sports' itemName='Sports' textHexColor='#FFF387' />
                     </ListContainterWithTitleHeader>
                     <ListContainterWithTitleHeader title='MORE'>
-                        <ListItem imgSrc={`${basePath}/images/rewards-selected-image.png`} linkHref='/earn' itemName='Rewards' textHexColor='#87FFD4' />
+                        <ListItem imgSrc={`${basePath}/images/rewards-selected-image.png`} linkHref='/rewards' itemName='Rewards' textHexColor='#87FFD4' />
                         <ListItem imgSrc={`${basePath}/images/promotion-selected-image.png`} linkHref='/promotions' itemName='Promotions' textHexColor='#878CFF' />
                     </ListContainterWithTitleHeader>
                     <ListContainterWithTitleHeader title='USER'>

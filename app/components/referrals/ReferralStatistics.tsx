@@ -4,52 +4,52 @@ import basePath from '../../utilities/basepath'
 
 const ReferralStatistics = () => {
     return (
-        <div>
-            <div className='w-full flex flex-col gap-2 mt-3'>
-                <div className='flex gap-2'>
-                    <div className='w-full h-[70px] bg-[#241b42] rounded-lg p-2 flex flex-col gap-1'>
-                        <p>Referrals</p>
-                        <div className='flex gap-1 items-center'>
-                            <div>
-                                <Image src={`${basePath}/images/tokens/BTC-icon.png`} alt='Token Wagered Icon' width={20} height={20}></Image>
-                            </div>
-                            <p>0.00</p>
-                        </div>
-                    </div>
-                    <div className='w-full h-[70px] bg-[#241b42] rounded-lg p-2 flex flex-col gap-1'>
-                        <p>Referrals Wagered</p>
-                        <div className='flex gap-1 items-center'>
-                            <div>
-                                <Image src={`${basePath}/images/tokens/BTC-icon.png`} alt='Token Bets Icon' width={20} height={20}></Image>
-                            </div>
-                            <p>0.00</p>
-                        </div>
-                    </div>
-                </div>
-                <div className='w-full h-[70px] bg-[#241b42] rounded-lg p-2 flex flex-col gap-1'>
-                    <p>Total Earned</p>
-                    <div className='flex gap-1 items-center'>
+        <div className='w-full flex flex-col gap-[10px] mb-[10px]'>
+            <div className='flex gap-2'>
+                <div className='w-full h-[87px] bg-[#241b42] rounded-lg px-[11px] py-[9px] flex flex-col gap-[12px]'>
+                    <p className='text-[16px]'>Referrals</p>
+                    <div className='flex gap-[7px] items-center'>
                         <div>
-                            <Image src={`${basePath}/images/tokens/BTC-icon.png`} alt='Token Icon' width={20} height={20}></Image>
+                            <Image src={`${basePath}/images/tokens/BTC-outline-icon.png`} alt='Token Icon' width={30} height={30}></Image>
                         </div>
                         <p>0.00</p>
                     </div>
                 </div>
-                <div className='w-full h-[70px] bg-[#241b42] rounded-lg p-2 flex justify-between'>
-                    <div className='flex flex-col gap-1'>
-                        <p>Claimable Earnings</p>
-                        <div className='flex gap-1 items-center'>
-                            <div>
-                                <Image src={`${basePath}/images/tokens/BTC-icon.png`} alt='Token Icon' width={20} height={20}></Image>
-                            </div>
-                            <p>0.00</p>
+                <div className='w-full h-[87px] bg-[#241b42] rounded-lg px-[11px] py-[9px] flex flex-col gap-[12px]'>
+                    <p className='text-[16px]'>Referrals Wagered</p>
+                    <div className='flex gap-[7px] items-center'>
+                        <div>
+                            <Image src={`${basePath}/images/tokens/BTC-outline-icon.png`} alt='Token Icon' width={30} height={30}></Image>
                         </div>
+                        <p>0.00</p>
                     </div>
-                    <button className='border flex items-center justify-center gap-2 border-[#332a61] text-[#b575e1] w-44 h-10 self-center rounded-lg mr-10'>
-                        <div className='h-6 w-6 bg-[#8645f6] rounded-full' />
-                        <p>Claim Earnings</p>
-                    </button>
                 </div>
+            </div>
+            <div className='w-full h-[87px] bg-[#241b42] rounded-lg px-[11px] py-[9px] flex flex-col gap-[12px]'>
+                <p className='text-[16px]'>Total Earned</p>
+                <div className='flex gap-[7px] items-center'>
+                    <div>
+                        <Image src={`${basePath}/images/tokens/BTC-outline-icon.png`} alt='Token Icon' width={30} height={30}></Image>
+                    </div>
+                    <p>0.00</p>
+                </div>
+            </div>
+            <div className='w-full h-[87px] bg-[#241b42] rounded-lg px-[11px] py-[9px] flex justify-between'>
+                <div className='flex flex-col gap-[12px]'>
+                    <p className='text-[16px]'>Claimable Earnings</p>
+                    <div className='flex gap-[7px] items-center'>
+                        <div>
+                            <Image src={`${basePath}/images/tokens/BTC-outline-icon.png`} alt='Token Icon' width={30} height={30} />
+                        </div>
+                        <p>0.00</p>
+                    </div>
+                </div>
+                <button className='border flex items-center justify-center gap-3  border-[#332a61] text-[#b575e1] w-[187px] h-[49px] self-center rounded-lg mr-10'>
+                    <div>
+                        <Image src={`${basePath}/images/tokens/claim-earning-image.png`} alt='Token Icon' width={15} height={21} />
+                    </div>
+                    <p>Claim Earnings</p>
+                </button>
             </div>
         </div>
     )

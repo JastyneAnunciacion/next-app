@@ -30,9 +30,11 @@ const MainComponents = ({ children, footerPage }: MainComponentsProps) => {
 
 
     return (
-        <main className={`${isMenuExpanded && ''} w-[100vw] max-w-[100%] h-[100vh]`}>
+        <main className={`${isMenuExpanded && ''} w-[100vw] flex flex-col max-w-[100%] h-[100vh]`}>
             <Header />
-            {children}
+            <div className='w-[441px] flex justify-center self-center'>
+                {children}
+            </div>
             <QuickMenu currentPage={footerPage} onExpand={onExpand} />
         </main>
     )

@@ -1,15 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
 import basePath from '../../utilities/basepath'
+import SmallIcon from '../SmallIcon'
 
 const ReferralsTable = () => {
   return (
-    <div>
-      <div className='flex gap-1 items-center'>
-        <div>
-          <div className='h-6 w-6 bg-[#8645f6] rounded-full' />
-          {/* <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Referral Icon' width={20} height={20}></Image> */}
-        </div>
+    <div className='w-full mb-[56px]'>
+      <div className='flex gap-[7px] items-center'>
+        <SmallIcon circleWidthPixel={30} circleHeightPixel={30} iconSrc='/images/your-referrals-images.png' iconWidthPixel={15} iconHeightPixel={15} />
         <p>Your Referrals</p>
       </div>
       <div className='flex flex-col mt-2 bg-[#241b42] h-64 rounded-xl overflow-hidden'>
