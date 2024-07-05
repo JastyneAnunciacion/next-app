@@ -24,7 +24,7 @@ const FullMenu = ({ isExpanded }: FullMenuProps) => {
                 </div>
                 <SmallBanner>
                     <div className='flex gap-3 items-center'>
-                        <SmallIcon widthPixel={52} heightPixel={52} />
+                        <SmallIcon circleWidthPixel={52} circleHeightPixel={52} iconSrc='sports-notification-image' iconWidthPixel={34} iconHeightPixel={34} />
                         <div className='text-white flex flex-col gap-2 text-sm'>
                             <p className='w-3/5 text-nowrap text-[20px]'>Sports News</p>
                             <p className='text-[#b575e1] text-[16px]'>Best Bets</p>

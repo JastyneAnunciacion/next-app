@@ -10,7 +10,7 @@ const Cashback = () => {
         <p className='text-[#b575e1] text-xl'>Cashback</p>
       </div>
       <div className='w-full h-[70px] bg-[#241b42] rounded-lg p-[11px] mt-3 flex gap-[11px] items-center'>
-        <SmallIcon widthPixel={52} heightPixel={52} />
+        <SmallIcon circleWidthPixel={52} circleHeightPixel={52} />
         <div className='flex w-full justify-between items-centertext-[16px]'>
           <p>Your cashback:</p>
           <p className='mr-[40px]'>5%</p>

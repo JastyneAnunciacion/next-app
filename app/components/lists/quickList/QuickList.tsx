@@ -67,7 +67,7 @@ const QuickList = ({ headerIconPath, title, childrenList, gapAmountPixel = 0, vi
 
         <div className='flex flex-grow items-center gap-[10px]'>
           <div>
-            <SmallIcon widthPixel={30} heightPixel={30} iconSrc={headerIconPath} />
+            <SmallIcon circleWidthPixel={30} circleHeightPixel={30} iconSrc={headerIconPath} />
           </div>
           <p className='text-nowrap text-[20px]'>{title}</p>
         </div>
