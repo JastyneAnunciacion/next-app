@@ -7,14 +7,14 @@ const ReferralInfo = () => {
     return (
         <div className='flex h-[109px] w-full items-center gap-[15px] mb-[33px] bg-[#241b42] px-5 py-[13px] rounded-lg'>
             <div>
-                <Image src={`${basePath}/images/temporary-profile-medium-image.jpg`} alt='Medium Profile Icon' width={83} height={84} className='rounded-full' />
+                <Image src={`${basePath}/images/temporary-profile-medium-image.png`} alt='Medium Profile Icon' width={83} height={84} className='rounded-full' />
             </div>
             <div className='w-full flex items-center justify-between'>
                 <div className='flex flex-col gap-2'>
                     <p className='font-[24px]'>Username</p>
                     <div className='flex gap-[10px] items-center'>
                         <div>
-                            <SmallIcon circleWidthPixel={30} circleHeightPixel={30} iconSrc='/images/referral-rank-icon.png' />
+                            <SmallIcon circleWidthPixel={30} circleHeightPixel={30} iconSrc='/images/referral-rank-icon.png' iconWidthPixel={16} iconHeightPixel={16} />
                         </div>
                         <p className='text-[16px] text-[#D187FF]'>Referral Rank</p>
                     </div>

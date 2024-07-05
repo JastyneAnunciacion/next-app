@@ -18,7 +18,7 @@ const MediumBanner = ({ hasSeparateButton, buttonText, imgSrc }: MediumBannerPro
                     <button className='bg-gray-800 text-white text-lg rounded-3xl w-[min(90%,30rem)] h-14 absolute bottom-4'>{buttonText}</button>
                 </div>
             ) : (
-                <button style={{ backgroundImage: `${imgSrc}` }} className='bg-gray-400/20 h-[213px] flex justify-center rounded-2xl w-full'>
+                <button style={{ backgroundImage: `${imgSrc}` }} className='bg-gray-400/20 h-[213px] flex justify-center items-center rounded-2xl w-full'>
                     <div style={{ position: 'relative', width: '100%', height: '100%' }}>
                         {imgSrc && (
                             <Image src={imgSrc} alt="Banner" layout="fill" objectFit="cover" className="rounded-lg" />

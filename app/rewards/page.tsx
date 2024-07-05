@@ -18,7 +18,7 @@ const RewardsPage = () => {
           <p className='flex justify-center items-center w-full text-[#b575e1] text-xl'>Rewards</p>
         </div>
         <div className='w-full my-[20px]'>
-          <MediumBanner imgSrc='/images/medium0-banner-image-1' />
+          <MediumBanner imgSrc='/images/medium-banner-image-1.png' />
         </div>
         <ReferralInfo />
         <ReferralLink />
