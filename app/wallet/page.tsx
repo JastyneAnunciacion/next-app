@@ -14,33 +14,37 @@ const WalletPage = () => {
   return (
     <MainComponents footerPage='Wallet'>
       <div className='w-full'>
-        <div className='text-lg flex items-center justify-between w-full h-14 rounded-lg px-4 bg-[#241b42]'>
+        <div className='text-lg flex items-center justify-between w-full h-14 rounded-lg px-4 bg-[#241b42] mb-[10px]'>
           <p className='flex justify-center items-center w-full text-[#b575e1] text-xl'>Wallet</p>
         </div>
-        <div className='flex justify-between my-5'>
-          <div className='flex w-full h-[49px] items-center gap-1 border border-[#3B335D] rounded-lg'>
-            <button onClick={() => changeOption(0)}
-              className={`${option === 0 ? 'bg-gradient-to-r from-[#B89BDC] to-[#664195] rounded-lg' : 'rounded-lg'}  h-full w-full flex justify-center items-center gap-3`}>
-              <div className='shrink-0 '>
-                <Image src={`${basePath}/images/safe-image.png`} alt='Deposit Icon' width={20} height={20} />
-              </div>
-              Deposit
-            </button>
-            <button onClick={() => changeOption(1)}
-              className={`${option === 1 ? 'bg-gradient-to-r from-[#DCA39B] to-[#765753] rounded-lg' : 'rounded-lg'}  h-full w-full flex justify-center items-center gap-3`}>
-              <div className='shrink-0 '>
-                <Image src={`${basePath}/images/tip-jar-colored-image.png`} alt='Deposit Icon' width={21} height={21} />
-              </div>
-              Withdraw
-            </button>
-            <button onClick={() => changeOption(2)}
-              className={`${option === 2 ? 'bg-gradient-to-r from-[#8CCEF4] to-[#4C8293] rounded-lg' : 'rounded-lg'}  h-full w-full flex justify-center items-center gap-3`}>
-              <div>
-                <div className='h-6 w-6 bg-[#8645f6] rounded-full' />
-                {/* <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Withdraw Icon' width={20} height={20}></Image> */}
-              </div>
-              Withdraw
-            </button>
+        <div className='flex justify-between mb-[24px]'>
+          <div className='flex w-full h-[49px] items-center border border-[#3B335D] rounded-lg'>
+
+            <div className={`${option === 0 && 'bg-gradient-to-r from-[#64596C] via-[#BCA9CB] to-[#5E5465] p-[1px] rounded-lg'} w-full h-full`}>
+              <button onClick={() => changeOption(0)}
+                className={`${option === 0 ? 'bg-gradient-to-r from-[#B89BDC] to-[#664195] rounded-lg text-white' : 'rounded-lg text-[#D187FF]'}  h-full w-full flex justify-center items-center gap-[10px]`}>                <div className='shrink-0 '>
+                  <Image src={`${basePath}/images/${option === 0 ? 'safe-image.png' : 'safe-purple-image.png'}`} alt='Deposit Icon' width={20} height={20} />
+                </div>
+                <p>Deposit</p>
+              </button>
+            </div>
+            <div className={`${option === 1 && 'bg-gradient-to-r from-[#736260] via-[#CBADA9] to-[#655654] p-[1px] rounded-lg'} w-full h-full`}>
+              <button onClick={() => changeOption(1)}
+                className={`${option === 1 ? 'bg-gradient-to-r from-[#DCA39B] to-[#765753] rounded-lg text-white' : 'rounded-lg text-[#D187FF]'}  h-full w-full flex justify-center items-center gap-[10px]`}>
+                <div className='shrink-0 '>
+                  <Image src={`${basePath}/images/${option === 1 ? 'tip-jar-image.png' : 'tip-jar-purple-image.png'}`} alt='Deposit Icon' width={21} height={21} />
+                </div>
+                <p>Withdraw</p>
+              </button>
+            </div>
+            <div className={`${option === 2 && 'bg-gradient-to-r from-[#607073] via-[#A9C7CB] to-[#546265] p-[1px] rounded-lg'} w-full h-full`}>
+              <button onClick={() => changeOption(2)}
+                className={`${option === 2 ? 'bg-gradient-to-r from-[#8CCEF4] to-[#4C8293] rounded-lg text-white' : 'rounded-lg text-[#D187FF]'}  h-full w-full flex justify-center items-center gap-[10px]`}>
+                <div className='shrink-0 '>
+                  <Image src={`${basePath}/images/tokens/${option === 2 ? 'BTC-fancy-outline-icon.png' : 'BTC-fancy-outline-purple-icon.png'}`} alt='Buy Crypto Icon' width={20} height={20} />                </div>
+                <p>Buy Crypto</p>
+              </button>
+            </div>
           </div>
         </div>
         {option === 0 && <Deposit />}

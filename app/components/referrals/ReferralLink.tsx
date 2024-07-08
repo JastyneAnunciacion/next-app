@@ -9,7 +9,7 @@ const ReferralLink = () => {
       <p className='text-[#b575e1] text-[20px]'>Your Referral Link</p>
       <div className='flex w-full gap-2 h-[60px] items-center justify-center'>
         <div className='w-[268px]'>
-          <CopyTextTemplate textToCopy='https://phx.gamble/examplereferralcode' />
+          <CopyTextTemplate textToCopy='https://phx.gamble/examplereferralcode' textWidth='w-[181px]' />
         </div>
         <div className='h-[49px] w-[193px]'>
           <ShareButton />

@@ -7,7 +7,7 @@ const ReferralsTable = () => {
   return (
     <div className='w-full mb-[56px]'>
       <div className='flex gap-[7px] items-center'>
-        <SmallIcon circleWidthPixel={30} circleHeightPixel={30} iconSrc='/images/your-referrals-image.png' iconWidthPixel={15} iconHeightPixel={15} />
+        <SmallIcon circleWidthPixel={30} circleHeightPixel={30} iconSrc='/images/credit-card-image.png' iconWidthPixel={15} iconHeightPixel={15} />
         <p>Your Referrals</p>
       </div>
       <div className='flex flex-col mt-2 bg-[#241b42] h-64 rounded-xl overflow-hidden'>
