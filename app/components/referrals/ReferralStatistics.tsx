@@ -46,7 +46,7 @@ const ReferralStatistics = () => {
                 </div>
                 <button className='border flex items-center justify-center gap-3  border-[#332a61] text-[#b575e1] w-[187px] h-[49px] self-center rounded-lg mr-10'>
                     <div>
-                        <Image src={`${basePath}/images/tokens/claim-earning-image.png`} alt='Token Icon' width={15} height={21} />
+                        <Image src={`${basePath}/images/tokens/tip-jar-purple-image.png`} alt='Token Icon' width={15} height={21} />
                     </div>
                     <p>Claim Earnings</p>
                 </button>
