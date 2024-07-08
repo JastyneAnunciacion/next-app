@@ -58,7 +58,7 @@ const Deposit = () => {
                         circleHeightPixel={30}
                         iconWidthPixel={15}
                         iconHeightPixel={11}
-                        iconSrc='images/credit-card-image.png'
+                        iconSrc='/images/credit-card-image.png'
                     />
                     <p className='text-[20px]'>Express Deposit</p>
                 </div>
@@ -87,7 +87,7 @@ const Deposit = () => {
                             circleHeightPixel={30}
                             iconWidthPixel={15}
                             iconHeightPixel={11}
-                            iconSrc='images/credit-card-image.png'
+                            iconSrc='/images/credit-card-image.png'
                         />
                         <p className='text-[20px]'>Deposit through Blockchain</p>
                     </div>

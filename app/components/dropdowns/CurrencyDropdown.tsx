@@ -5,8 +5,8 @@ import Image from 'next/image';
 import basePath from '../../utilities/basepath';
 
 interface CurrencyDropdownProps {
-  bitCoinWidthPixel?: number,
-  bitCoinHeightPixel?: number,
+  currencyIconWidthPixel?: number,
+  currencyIconHeightPixel?: number,
   dropDownButtonWidthPixel?: number,
   dropDownButtonHeightPixel?: number,
   dropDownArrowWidthPixel?: number,
@@ -15,8 +15,8 @@ interface CurrencyDropdownProps {
 }
 
 const CurrencyDropdown = ({
-  bitCoinWidthPixel = 25,
-  bitCoinHeightPixel = 25,
+  currencyIconWidthPixel = 25,
+  currencyIconHeightPixel = 25,
   dropDownButtonWidthPixel = 28,
   dropDownButtonHeightPixel = 28,
   dropDownArrowWidthPixel = 10,
@@ -33,15 +33,17 @@ const CurrencyDropdown = ({
       <button onClick={() => setIsOpen((prev) => !prev)} className="bg-gradient-to-r from-[#412974] to-[#231d42] w-full h-full text-white px-[15px] flex items-center justify-between text-lg rounded-lg">
         {selectedCurrency && (
           <div className='flex items-center gap-[11px]'>
-            <Image src={basePath + selectedCurrency.CountryIconSrc} alt="Token Icon" width={bitCoinWidthPixel} height={bitCoinHeightPixel}></Image>
-            <h3>{selectedCurrency.Amount}</h3>
+            <Image src={basePath + selectedCurrency.CountryIconSrc} alt="Currency Icon" width={currencyIconWidthPixel} height={currencyIconHeightPixel}></Image>
+            <p className='text-[20px]'>{selectedCurrency.Amount}</p>
           </div>
         )}
 
-        <div className='flex gap-[19px] '>
-          <div className='flex gap-[11px]'>
-            <Image src={basePath + selectedCurrency.CountryIconSrc} alt="Token Icon" width={bitCoinWidthPixel} height={bitCoinHeightPixel}></Image>
-            <h3>{selectedCurrency.Currency}</h3>
+        <div className='flex gap-[19px]'>
+          <div className='flex gap-[11px] items-center'>
+            <div className='shrink-0'>
+              <Image src={basePath + selectedCurrency.CountryIconSrc} alt="Currency Icon" width={currencyIconWidthPixel} height={currencyIconHeightPixel}></Image>
+            </div>
+            <p className='text-[20px]'>{selectedCurrency.Currency}</p>
           </div>
           {!isOpen ?
             <div
@@ -69,7 +71,7 @@ const CurrencyDropdown = ({
                   setCurrentlySelected(i);
                   setIsOpen(false);
                 }} className='flex p-1 gap-2 w-full hover:bg-gray-600 cursor-pointer rounded-lg items-center' key={i}>
-                  <Image src={basePath + item.CountryIconSrc} alt="Token Icon" width={20} height={20}></Image>
+                  <Image src={basePath + item.CountryIconSrc} alt="Currency Icon" width={20} height={20}></Image>
                   <h3>{item.Amount}</h3>
                 </button>
               ))}

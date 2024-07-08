@@ -14,7 +14,7 @@ const BuyCrypto = () => {
                         circleHeightPixel={30}
                         iconWidthPixel={15}
                         iconHeightPixel={11}
-                        iconSrc='images/credit-card-image.png'
+                        iconSrc='/images/credit-card-image.png'
                     />
                     <p className='text-[20px]'>Buy Crypto</p>
                 </div>
@@ -24,7 +24,14 @@ const BuyCrypto = () => {
             <div className='flex flex-col gap-[10px]'>
                 <p className='text-[16px] ml-[6px] text-[#C4C4C4]'>Your Pay</p>
                 <div className='h-[63px] w-full'>
-                    <CurrencyDropdown />
+                    <CurrencyDropdown
+                        currencyIconWidthPixel={30}
+                        currencyIconHeightPixel={30}
+                        dropDownButtonWidthPixel={36}
+                        dropDownButtonHeightPixel={36}
+                        dropDownArrowWidthPixel={12}
+                        dropDownArrowHeightPixel={15}
+                    />
                 </div>
             </div>
 

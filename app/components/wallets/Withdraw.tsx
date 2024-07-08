@@ -28,7 +28,7 @@ const Withdraw = () => {
                         circleHeightPixel={30}
                         iconWidthPixel={15}
                         iconHeightPixel={11}
-                        iconSrc='images/credit-card-image.png'
+                        iconSrc='/images/credit-card-image.png'
                     />
                     <p className='text-[20px]'>Withdraw through Blockchain</p>
                 </div>
