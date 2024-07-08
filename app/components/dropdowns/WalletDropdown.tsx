@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import list from '../temporaryJsons/wallet-list.json'
 import Image from 'next/image';
 import basePath from '../../utilities/basepath';
+import Toggle from '../Toggle';
 
 interface WalletDropdownProps {
   bitCoinWidthPixel?: number,
@@ -26,6 +27,10 @@ const WalletDropdown = ({
   const [isOpen, setIsOpen] = useState(false);
   const [currentlySelected, setCurrentlySelected] = useState(0);
 
+  const handleItemClick = (index: number) => {
+    setCurrentlySelected(index);
+    setIsOpen(false);
+  };
 
   const selectedWallet = list[currentlySelected];
   return (
@@ -53,23 +58,39 @@ const WalletDropdown = ({
             <Image src={`${basePath}/images/up-thin-arrow-image.png`} alt="Up Arrow" width={dropDownArrowWidthPixel} height={dropDownArrowHeightPixel} />
           </div>
         }
+      </button>
 
-        {isOpen && (
-          <div className="bg-gray-800 w-full absolute left-0 bottom-0 z-20" style={{ transform: `translateY(calc(100% + ${dropDownOffset}px))` }}>
-            <div className="flex flex-col rounded-lg p-2 w-full max-h-[260px] overflow-y-auto z-10 scrollbar scrollbar-thumb-gray-950 scrollbar-track-gray-900">
-              {list.map((item, i) => (
-                <button onClick={() => {
-                  setCurrentlySelected(i);
-                  setIsOpen(false);
-                }} className='flex p-1 gap-2 w-full hover:bg-gray-600 cursor-pointer rounded-lg items-center' key={i}>
-                  <Image src={basePath + item.TokenIconSrc} alt="Token Icon" width={20} height={20}></Image>
-                  <h3>{item.Amount}</h3>
-                </button>
-              ))}
+      {isOpen && (
+        <div
+          style={{ transform: `translateY(calc(100% + ${dropDownOffset}px))` }}
+          className='absolute bg-[#1A1E27] w-full left-0 bottom-0 flex flex-col overflow-hidden z-20 rounded-xl'
+        >
+          <div className="h-[260px] overflow-y-auto z-10 text-white border-b border-[#252A35]">
+            {list.map((item, i) => (
+              <button onClick={(() => handleItemClick(i))} className='flex gap-2 w-full px-4 hover:bg-[#272d3a] cursor-pointer items-center justify-between' key={i}>
+                <h3>{item.Amount}</h3>
+                <div className='flex items-center gap-2'>
+                  <h3 className='text-left'>{item.Token}</h3>
+                  <div className='shrink-0'>
+                    <Image src={basePath + item.TokenIconSrc} alt="Token Icon" width={20} height={20} />
+                  </div>
+                </div>
+              </button>
+            ))}
+          </div>
+
+          <div className='py-[20px] px-3 flex flex-col justify-center'>
+            <div className='text-white text-sm flex justify-between'>
+              <p>Hide 0 balances</p>
+              <Toggle bgIsDark={true} />
+            </div>
+            <div className='text-white text-sm flex justify-between'>
+              <p>Display in USD</p>
+              <Toggle bgIsDark={true} />
             </div>
           </div>
-        )}
-      </button>
+        </div>
+      )}
     </div>
   )
 }

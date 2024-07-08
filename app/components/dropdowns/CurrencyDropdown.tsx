@@ -64,8 +64,8 @@ const CurrencyDropdown = ({
 
 
         {isOpen && (
-          <div className="bg-gray-800 w-full absolute left-0 bottom-0 z-20" style={{ transform: `translateY(calc(100% + ${dropDownOffset}px))` }}>
-            <div className="flex flex-col rounded-lg p-2 w-full max-h-[260px] overflow-y-auto z-10 scrollbar scrollbar-thumb-gray-950 scrollbar-track-gray-900">
+          <div className="bg-[#1A1E27] w-full absolute left-0 bottom-0 z-20" style={{ transform: `translateY(calc(100% + ${dropDownOffset}px))` }}>
+            <div className="flex flex-col rounded-lg p-2 w-full max-h-[260px] overflow-y-auto z-10">
               {list.map((item, i) => (
                 <button onClick={() => {
                   setCurrentlySelected(i);
