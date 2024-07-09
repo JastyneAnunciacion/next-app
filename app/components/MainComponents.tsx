@@ -31,7 +31,7 @@ const MainComponents = ({ children, footerPage }: MainComponentsProps) => {
     return (
         <main className={`w-full flex flex-col max-w-full h-full ${isMenuExpanded ? 'overflow-hidden' : ''}`}>
             <Header />
-            <div className='w-full max-w-md flex justify-center self-center p-4'>
+            <div className='w-full max-w-full flex justify-center self-center p-4'>
                 {children}
             </div>
             <QuickMenu currentPage={footerPage} onExpand={onExpand} />
