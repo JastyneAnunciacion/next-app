@@ -6,22 +6,34 @@ import basePath from '@/app/utilities/basepath';
 
 const slides = [
     {
-        imgSrc: '/images/big-image-1.jpg'
+        imgSrc: '/images/game-icon-1.png'
     },
     {
-        imgSrc: '/images/big-image-2.jpg'
+        imgSrc: '/images/game-icon-2.png'
     },
     {
-        imgSrc: '/images/big-image-1.jpg'
+        imgSrc: '/images/game-icon-3.png'
     },
     {
-        imgSrc: '/images/big-image-2.jpg'
-    }
+        imgSrc: '/images/game-icon-4.png'
+    },
+    {
+        imgSrc: '/images/game-icon-5.png'
+    },
+    {
+        imgSrc: '/images/game-icon-6.png'
+    },
+    {
+        imgSrc: '/images/game-icon-7.png'
+    },
+
 ];
 
 const BigBannerSlider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
+    const sliderRef = useRef<HTMLDivElement>(null);
     const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+    const widthSizePx = 217;
 
     const goToSlide = (index: number) => {
         setCurrentSlide(index);
@@ -33,26 +45,23 @@ const BigBannerSlider = () => {
             clearInterval(timerRef.current);
         }
         timerRef.current = setInterval(() => {
-            setCurrentSlide(prev => (prev === slides.length - 1 ? 0 : prev + 1));
+            setCurrentSlide(prev => (prev === Math.ceil(slides.length / 2) - 1 ? 0 : prev + 1));
         }, 5500); //
     };
 
     useEffect(() => {
-        resetTimer();
-        return () => {
-            if (timerRef.current) {
-                clearInterval(timerRef.current);
-            }
-        };
-    }, []);
+        if (sliderRef.current) {
+            sliderRef.current.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+    }, [currentSlide]);
 
     return (
         <div className='flex gap-[11px] mb-[26px] items-center justify-center flex-col w-full'>
-            <div className="overflow-hidden w-full h-full]">
-                <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+            <div className="overflow-hidden w-full h-full">
+                <div className="flex" ref={sliderRef} style={{ transition: 'transform 0.5s ease' }}>
                     {slides.map((slide, index) => (
-                        <div key={index} className='w-full flex-shrink-0 flex justify-center'>
-                            <div className="w-full">
+                        <div key={index} className='w-[50%] flex-shrink-0 flex justify-center'>
+                            <div style={{ width: widthSizePx }}>
                                 <BigBanner imgSrc={`${slide.imgSrc === "" ? "" : basePath + slide.imgSrc}`} />
                             </div>
                         </div>
@@ -60,8 +69,8 @@ const BigBannerSlider = () => {
                 </div>
             </div>
 
-            <div className="flex justify-center gap-[5px]">
-                {slides.map((slide, index) => (
+            <div className="flex justify-center gap-[5px] items-center">
+                {slides.slice(0, Math.ceil(slides.length / 2)).map((slide, index) => (
                     <button
                         key={index}
                         onClick={() => goToSlide(index)}

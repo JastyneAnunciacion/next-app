@@ -16,6 +16,10 @@
   }
 }
 
+.responsive-text {
+  @apply text-responsive-xs sm:text-responsive-sm md:text-responsive-md lg:text-responsive-lg;
+}
+
 body {
   background-color: #201434;
   -ms-overflow-style: none;

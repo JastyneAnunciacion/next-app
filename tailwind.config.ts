@@ -13,10 +13,16 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontSize: {
+        'responsive-xs': 'calc(0.75rem + 1vw)',
+        'responsive-sm': 'calc(1rem + 1vw)',
+        'responsive-md': 'calc(1.25rem + 1vw)',
+        'responsive-lg': 'calc(1.5rem + 1vw)',
+      },
     },
   },
   plugins: [
-     require('tailwind-scrollbar')
+    require('tailwind-scrollbar')
   ],
 }
 export default config

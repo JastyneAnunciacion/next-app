@@ -1,8 +1,6 @@
 'use client'
 
 import { ReactNode, useRef, useState, useEffect } from 'react';
-import Image from 'next/image';
-import basePath from '../../../utilities/basepath';
 import Link from 'next/link';
 import SmallIcon from '../../SmallIcon';
 
@@ -53,7 +51,7 @@ const QuickList = ({ headerIconPath, title, childrenList, gapAmountPixel = 0, vi
     const list = listRef.current;
     if (list) {
       list.addEventListener('scroll', handleScroll);
-      handleScroll(); // Initialize state based on initial scroll position
+      handleScroll();
 
       return () => {
         list.removeEventListener('scroll', handleScroll);
@@ -65,11 +63,11 @@ const QuickList = ({ headerIconPath, title, childrenList, gapAmountPixel = 0, vi
     <div className='flex flex-col gap-[14px]'>
       <div className='flex w-full items-center justify-between'>
 
-        <div className='flex flex-grow items-center gap-[10px]'>
+        <div className='w-full flex items-center gap-[10px]'>
           <div>
             <SmallIcon circleWidthPixel={30} circleHeightPixel={30} iconSrc={headerIconPath} />
           </div>
-          <p className='text-nowrap shrink text-[20px]'>{title}</p>
+          <p className='responsive-text w-full text-nowrap'>{title}</p>
         </div>
 
         <div className='flex items-center'>
@@ -104,7 +102,7 @@ const QuickList = ({ headerIconPath, title, childrenList, gapAmountPixel = 0, vi
 
       <div
         style={{ gap: `${gapAmountPixel}px` }}
-        className={`flex overflow-x-auto scrollbar-non`} ref={listRef}>
+        className={`flex w-full overflow-x-auto scrollbar-none`} ref={listRef}>
         {childrenList}
       </div>
     </div>

@@ -9,7 +9,7 @@ import walletList from "./components/temporaryJsons/wallet-list.json";
 export default function Home() {
   return (
     <MainComponents footerPage="Games">
-      <div className=" mt-4 flex flex-col w-full items-center">
+      <div className="flex flex-col w-full items-center">
         <BigBannerSlider />
         <div className="w-full h-[50px]">
           <Serachbar placeholderText='Search Games' />
