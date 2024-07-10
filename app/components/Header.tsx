@@ -15,7 +15,9 @@ const Header = () => {
         <div className='w-[193px] h-[49px]'>
           <WalletDropdown />
         </div>
-        <Link href="/wallet" className='w-[49px] h-[49px] bg-[#241a46] rounded-xl flex items-center justify-center text-5xl font-thin text-violet-600 pb-[8px]'>+</Link>
+        <button className='w-[49px] h-[49px] bg-[#241a46] rounded-xl flex items-center justify-center'>
+          <Image className='rounded-full' src={`${basePath}/images/plus-purple-image.png`} alt="Header Main Logo" width={25} height={25} />
+        </button>
         <div className='w-[49px] h-[49px] bg-[#241a46] rounded-xl flex items-center justify-center text-3xl font-bold pb-[4px]'>
           <Image className='rounded-full' src={`${basePath}/images/purple-question-image.png`} alt="Question Logo" width={25} height={25} />
         </div>
