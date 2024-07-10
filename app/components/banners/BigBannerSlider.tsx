@@ -58,9 +58,9 @@ const BigBannerSlider = () => {
     return (
         <div className='flex gap-[11px] mb-[26px] items-center justify-center flex-col w-full'>
             <div className="overflow-hidden w-full h-full">
-                <div className="flex" ref={sliderRef} style={{ transition: 'transform 0.5s ease' }}>
+                <div className="flex gap-[7px]" ref={sliderRef} style={{ transition: 'transform 0.5s ease' }}>
                     {slides.map((slide, index) => (
-                        <div key={index} className='w-[50%] flex-shrink-0 flex justify-center'>
+                        <div key={index} className='w-[50%] flex justify-center'>
                             <div style={{ width: widthSizePx }}>
                                 <BigBanner imgSrc={`${slide.imgSrc === "" ? "" : basePath + slide.imgSrc}`} />
                             </div>
