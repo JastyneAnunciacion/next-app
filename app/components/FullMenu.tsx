@@ -1,14 +1,10 @@
 'use client'
 
-import React, { useState } from 'react';
 import Serachbar from './Serachbar';
-import SmallBanner from './banners/SmallBanner';
 import ListContainterWithTitleHeader from './lists/ListContainterWithTitleHeader';
-import DropdownListItem from './dropdowns/DropdownListItem';
 import ListItem from './lists/ListItem';
 import basePath from '../utilities/basepath';
 import Header from './Header';
-import SmallIcon from './SmallIcon';
 
 interface FullMenuProps {
     isExpanded: boolean;
@@ -22,15 +18,6 @@ const FullMenu = ({ isExpanded }: FullMenuProps) => {
                 <div className='h-10'>
                     <Serachbar placeholderText='Find a Game' />
                 </div>
-                <SmallBanner>
-                    <div className='flex gap-3 items-center'>
-                        <SmallIcon circleWidthPixel={52} circleHeightPixel={52} iconSrc='/images/sports-notification-image.png' iconWidthPixel={34} iconHeightPixel={34} />
-                        <div className='text-white flex flex-col gap-2 text-sm'>
-                            <p className='w-3/5 text-nowrap text-[20px]'>Sports News</p>
-                            <p className='text-[#b575e1] text-[16px]'>Best Bets</p>
-                        </div>
-                    </div>
-                </SmallBanner>
                 <div className='flex flex-col gap-2'>
                     <ListContainterWithTitleHeader title='GAMES'>
                         <ListItem imgSrc={`${basePath}/images/games-selected-image.png`} linkHref='/games' itemName='Casino' textHexColor='#D187FF' />
