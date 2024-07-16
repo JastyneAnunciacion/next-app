@@ -29,9 +29,9 @@ const MainComponents = ({ children, footerPage }: MainComponentsProps) => {
     }, [isMenuExpanded]);
 
     return (
-        <main className={`flex flex-col max-w-full h-screen w-screen items-center ${isMenuExpanded && 'overflow-hidden'}`}>
-            <Header />
+        <main className={`flex flex-col max-w-full h-screen w-screen ${isMenuExpanded && 'overflow-hidden'}`}>
             <div className='w-full max-w-[91.88%] flex flex-col justify-center self-center'>
+                <Header />
                 {children}
             </div>
             <QuickMenu currentPage={footerPage} onExpand={onExpand} />

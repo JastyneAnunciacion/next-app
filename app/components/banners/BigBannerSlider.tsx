@@ -1,8 +1,7 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import BigBanner from './BigBanner';
-import basePath from '@/app/utilities/basepath';
+import Image from 'next/image';
 
 const slides = [
     {
@@ -33,7 +32,6 @@ const BigBannerSlider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const sliderRef = useRef<HTMLDivElement>(null);
     const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-    const widthSizePx = 217;
 
     const goToSlide = (index: number) => {
         setCurrentSlide(index);
@@ -58,13 +56,11 @@ const BigBannerSlider = () => {
     return (
         <div className='flex gap-[11px] mb-[26px] items-center justify-center flex-col w-full'>
             <div className="overflow-hidden w-full h-full">
-                <div className="flex gap-[7px]" ref={sliderRef} style={{ transition: 'transform 0.5s ease' }}>
+                <div className="flex w-full" ref={sliderRef} style={{ transition: 'transform 0.5s ease' }}>
                     {slides.map((slide, index) => (
-                        <div key={index} className='w-[50%] flex justify-center'>
-                            <div style={{ width: widthSizePx }}>
-                                <BigBanner imgSrc={`${slide.imgSrc === "" ? "" : basePath + slide.imgSrc}`} />
-                            </div>
-                        </div>
+                        <button className={`${index % 2 == 0 ? 'ml-[1%] mr-[0.75%]' : 'ml-[0.75%] mr-[1%]'} shrink-0 w-[48.25%] h-auto flex items-center justify-center`}>
+                            <Image src={slide.imgSrc} alt='Banner Image' layout='responsive' width={100} height={100} className='rounded-lg' />
+                        </button>
                     ))}
                 </div>
             </div>
