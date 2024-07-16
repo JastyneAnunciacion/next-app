@@ -35,29 +35,21 @@ const WalletDropdown = ({
   const selectedWallet = list[currentlySelected];
   return (
     <div className='relative bg-gradient-to-r from-[#926dca] to-[#926dca]/0 w-full h-full p-[1px] flex items-center justify-center rounded-lg'>
-      <button onClick={() => setIsOpen((prev) => !prev)} className="bg-gradient-to-r from-[#412974] to-[#231d42] w-full h-full text-white px-[15px] flex items-center justify-between text-lg rounded-lg">
+      <button onClick={() => setIsOpen((prev) => !prev)} className="bg-gradient-to-r from-[#412974] to-[#231d42] w-full h-full text-white px-[7.77%] flex items-center justify-between text-lg rounded-lg">
         {selectedWallet && (
-          <div className='flex items-center gap-[11px]'>
+          <div className='flex h-full w-full items-center gap-[5.7%]'>
             <Image src={basePath + selectedWallet.TokenIconSrc} alt="Token Icon" width={bitCoinWidthPixel} height={bitCoinHeightPixel}></Image>
-            <h3>{selectedWallet.Amount}</h3>
+            <p className='responsive-text overflow-hidden text-ellipsis whitespace-nowrap w-full text-left'>{selectedWallet.Amount}</p>
           </div>
         )}
 
-        {!isOpen ?
-          <div
-            style={{ width: `${dropDownButtonWidthPixel}px`, height: `${dropDownButtonHeightPixel}px` }}
-            className='flex-shrink-0 bg-gradient-to-b from-[#9C6EF7] to-[#7727F7] h-7 w-7 rounded-lg items-center justify-center flex'
-          >
-            <Image src={`${basePath}/images/down-thin-arrow-image.png`} alt="Down Arrow" width={dropDownArrowWidthPixel} height={dropDownArrowHeightPixel} />
-          </div>
-          :
-          <div
-            style={{ width: `${dropDownButtonWidthPixel}px`, height: `${dropDownButtonHeightPixel}px` }}
-            className='flex-shrink-0 bg-gradient-to-b from-[#9C6EF7] to-[#7727F7] h-7 w-7 rounded-lg items-center justify-center flex'
-          >
-            <Image src={`${basePath}/images/up-thin-arrow-image.png`} alt="Up Arrow" width={dropDownArrowWidthPixel} height={dropDownArrowHeightPixel} />
-          </div>
-        }
+        <div
+          style={{ width: `${dropDownButtonWidthPixel}px`, height: `${dropDownButtonHeightPixel}px` }}
+          className='flex-shrink-0 bg-gradient-to-b from-[#9C6EF7] to-[#7727F7] h-[61.22%] w-7 rounded-lg items-center justify-center flex'
+        >
+          <Image src={`${basePath}/images/${isOpen ? 'up' : 'down'}-thin-arrow-image.png`} alt="Arrows" width={dropDownArrowWidthPixel} height={dropDownArrowHeightPixel} />
+        </div>
+
       </button>
 
       {isOpen && (
