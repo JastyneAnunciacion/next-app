@@ -33,7 +33,7 @@ const MainComponents = ({ children, footerPage }: MainComponentsProps) => {
             <div className='w-full max-w-[91.88%] flex justify-center self-center h-[441px] mt-[11px] mb-[10px]'>
                 <Header />
             </div>
-            <div className='w-full max-w-[91.88%] flex flex-col justify-center self-center'>
+            <div className='w-full flex flex-col items-center self-center'>
                 {children}
             </div>
             <QuickMenu currentPage={footerPage} onExpand={onExpand} />

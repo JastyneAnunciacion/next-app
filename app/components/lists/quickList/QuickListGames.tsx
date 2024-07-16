@@ -23,17 +23,16 @@ const QuickListGames = ({ gameListTitle, gameList }: QuickListGamesProps) => {
       childrenList={gameList.map((item, i) => {
         const imageIndex = Math.floor(Math.random() * 7) + 1;
         return (
-          <div key={i}>
-            <button className='bg-gray-600 w-[198px] h-[251px] rounded-lg mt-2 cursor-pointer'>
-              <Image
-                src={`${basePath}/images/game-icon-${imageIndex}.png`}
-                alt="Banner"
-                width={20}
-                height={20}
-                className="w-full h-full rounded-lg"
-              />
-            </button>
-          </div>
+          <button key={i} className={`bg-gray-600 w-[41.25%] shrink-0 h-auto rounded-lg cursor-pointer`}>
+            <Image
+              src={`${basePath}/images/game-icon-${imageIndex}.png`}
+              alt="Game Banner"
+              layout='responsive'
+              width={100}
+              height={100}
+              className="w-full h-full rounded-lg"
+            />
+          </button>
         );
       })}
     />

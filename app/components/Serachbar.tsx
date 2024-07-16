@@ -8,7 +8,7 @@ interface SerachbarProps {
 
 const Serachbar = ({ placeholderText }: SerachbarProps) => {
   return (
-    <div className='flex gap-2 h-full rounded-lg p-4 bg-[#241A43] items-center justify-start'>
+    <div className='flex gap-2 h-full w-full rounded-lg p-4 bg-[#241A43] items-center justify-start'>
       <div className='flex-shrink-0'>
         <Image src={`${basePath}/images/search-purple-image.png`} alt='Search Icon' width={25} height={25} />
       </div>

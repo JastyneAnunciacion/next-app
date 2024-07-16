@@ -32,7 +32,7 @@ const SelectionDropdown = ({
   const [selectedItem, setSelectedItem] = useState(0);
 
   return (
-    <div className="relative h-full">
+    <div className="relative w-full h-full">
       <button
         onClick={() => setIsOpen(prev => !prev)}
         className="relative bg-[#241b42] text-white p-4 w-full h-full flex justify-between items-center rounded-lg"

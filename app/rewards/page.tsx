@@ -13,7 +13,7 @@ import MediumBanner from '../components/banners/MediumBanner'
 const RewardsPage = () => {
   return (
     <MainComponents footerPage='Rewards'>
-      <div className='flex flex-col items-center w-full'>
+      <div className='flex flex-col items-center w-full max-w-[91.88%]'>
         <div className='text-lg flex items-center justify-between w-full h-14 rounded-lg px-4 bg-[#241b42]'>
           <p className='flex justify-center items-center w-full text-[#b575e1] text-xl'>Rewards</p>
         </div>

@@ -32,13 +32,12 @@ const CasinoPage = () => {
   }))
 
   return (
-    <MainComponents footerPage='Games'>
-      <div className='px-4 mt-4 flex flex-col gap-1 text-sm'>
+    <MainComponents>
+      <div className='w-full max-w-[91.88%] flex flex-col gap-1 reponsive-text'>
         <SelectionDropdown items={sort} placeHolderText='Sort:' placeArrowOnRight={true} />
         <SelectionDropdown items={providers} placeHolderText='Provider:' placeArrowOnRight={true} />
         <Serachbar placeholderText='Search Games' />
         <GridList list={walletList} />
-        <div className='h-20' />
       </div>
     </MainComponents>
   )

@@ -9,7 +9,7 @@ interface QuickListProps {
   title: string,
   childrenList: ReactNode,
   gapAmountPixel?: number,
-  viewAllLink?: string
+  viewAllLink?: string,
 }
 
 const QuickList = ({ headerIconPath, title, childrenList, gapAmountPixel = 0, viewAllLink }: QuickListProps) => {
@@ -60,8 +60,8 @@ const QuickList = ({ headerIconPath, title, childrenList, gapAmountPixel = 0, vi
   }, []);
 
   return (
-    <div className='flex flex-col gap-[14px]'>
-      <div className='flex w-full items-center justify-between'>
+    <div className={`flex flex-col gap-[11px] items-center`}>
+      <div className='flex w-full items-center justify-between max-w-[91.88%]'>
 
         <div className='w-full flex items-center gap-[10px]'>
           <div>
@@ -86,7 +86,6 @@ const QuickList = ({ headerIconPath, title, childrenList, gapAmountPixel = 0, vi
               disabled={isAtStart}
             >
               <p className={`text-[22px] font-mono ${isAtStart ? 'text-gray-400' : 'text-gray-300'}`}>&lt;</p>
-              {/* <Image src={`${basePath}/images/left-arrow-image.png`} alt="Left Arrow" width={30} height={30} /> */}
             </button>
             <button
               onClick={() => scrollTo('right')}
@@ -94,18 +93,17 @@ const QuickList = ({ headerIconPath, title, childrenList, gapAmountPixel = 0, vi
               disabled={isAtEnd}
             >
               <p className={`text-[22px] font-mono ${isAtEnd ? 'text-gray-400' : 'text-gray-300'}`}>&gt;</p>
-              {/* <Image src={`${basePath}/images/right-arrow-image.png`} alt="Right Arrow" width={30} height={30} /> */}
             </button>
           </div>
         </div>
       </div>
 
       <div
-        style={{ gap: `${gapAmountPixel}px` }}
+        style={{ gap: `${gapAmountPixel}px`, paddingLeft: `${gapAmountPixel}px` }}
         className={`flex w-full overflow-x-auto scrollbar-none`} ref={listRef}>
         {childrenList}
       </div>
-    </div>
+    </div >
   )
 }
 
