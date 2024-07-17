@@ -1,5 +1,5 @@
 import React from 'react'
-import QuickMenu from '../../components/footers/QuickMenu'
+import QuickMenu from '../../components/quickMenu/QuickMenu'
 import SportsHeader from '../../components/sports/SportsHeader'
 import SportsHomeTabButtons from '../../components/sports/SportsHomeTabButtons'
 import MediumBanner from '../../components/banners/MediumBanner'
