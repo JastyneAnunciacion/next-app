@@ -2,11 +2,11 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
-import basePath from '../utilities/basepath'
-import MainComponents from '../components/MainComponents'
-import Deposit from '../components/wallets/Deposit'
-import Withdraw from '../components/wallets/Withdraw'
-import BuyCrypto from '../components/wallets/BuyCrypto'
+import basePath from '../../utilities/basepath'
+import MainComponents from '../../components/MainComponents'
+import Deposit from '../../components/wallets/Deposit'
+import Withdraw from '../../components/wallets/Withdraw'
+import BuyCrypto from '../../components/wallets/BuyCrypto'
 
 const WalletPage = () => {
   const [option, changeOption] = useState(0);
