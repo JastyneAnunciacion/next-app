@@ -15,7 +15,7 @@ const Header = () => {
         <div className='w-[43.76%] h-[49px] responsive-text'>
           <WalletDropdown bitCoinHeightPixel={30} bitCoinWidthPixel={30} />
         </div>
-        <Link href={'/wallet'} className='w-[49px] h-[49px] bg-[#241a46] rounded-xl flex items-center justify-center'>
+        <Link href='/pages/wallet' className='w-[49px] h-[49px] bg-[#241a46] rounded-xl flex items-center justify-center'>
           <Image className='rounded-full' src={`${basePath}/images/plus-purple-image.png`} alt="Header Main Logo" width={25} height={25} />
         </Link>
         <div className='w-[49px] h-[49px] bg-[#241a46] rounded-xl flex items-center justify-center text-3xl font-bold'>
