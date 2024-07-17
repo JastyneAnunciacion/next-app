@@ -32,7 +32,7 @@ const ProfilePage = () => {
   return (
     <MainComponents footerPage='Profile'>
       <div className='absolute w-full h-[295.08px] flex-shrink-0 top-[130px] z-0'>
-        <Image className='z-0' src={`${basePath}/images/profile-page-bg-design.png`} alt='Large Profile BG' width={561.36} height={295.08} />
+        <Image className='z-0' src={`${basePath}/images/profile-page-bg-design.png`} alt='Large Profile BG ' layout='responsive' width={100} height={100} />
       </div>
       <div className='w-full max-w-[91.88%]'>
         <div className='relative text-lg flex items-center justify-between w-full h-14 rounded-lg px-4 bg-[#241A43] z-10'>

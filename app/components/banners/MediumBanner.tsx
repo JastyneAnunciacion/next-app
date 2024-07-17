@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import basePath from '@/app/utilities/basepath'
 
 interface MediumBannerProps {
     hasSeparateButton?: boolean,
@@ -21,7 +22,7 @@ const MediumBanner = ({ hasSeparateButton, buttonText, imgSrc }: MediumBannerPro
                 <button style={{ backgroundImage: `${imgSrc}` }} className='bg-gray-400/20 h-[213px] flex justify-center items-center rounded-2xl w-full'>
                     <div style={{ position: 'relative', width: '100%', height: '100%' }}>
                         {imgSrc && (
-                            <Image src={imgSrc} alt="Banner" layout="fill" objectFit="cover" className="rounded-lg" />
+                            <Image src={basePath + imgSrc} alt="Banner" layout="fill" objectFit="cover" className="rounded-lg" />
                         )}
                     </div>
                 </button>

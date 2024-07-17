@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image';
+import basePath from '@/app/utilities/basepath';
 
 const slides = [
     {
@@ -59,7 +60,7 @@ const BigBannerSlider = () => {
                 <div className="flex w-full" ref={sliderRef} style={{ transition: 'transform 0.5s ease' }}>
                     {slides.map((slide, index) => (
                         <button key={index} className={`${index % 2 == 0 ? 'ml-[1%] mr-[0.75%]' : 'ml-[0.75%] mr-[1%]'} shrink-0 w-[48.25%] h-auto flex items-center justify-center`}>
-                            <Image src={slide.imgSrc} alt='Banner Image' layout='responsive' width={100} height={100} className='rounded-lg' />
+                            <Image src={basePath + slide.imgSrc} alt='Banner Image' layout='responsive' width={100} height={100} className='rounded-lg' />
                         </button>
                     ))}
                 </div>
