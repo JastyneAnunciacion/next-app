@@ -12,7 +12,7 @@ interface FullMenuProps {
 
 const FullMenu = ({ isExpanded }: FullMenuProps) => {
     return (
-        <div className={`fixed overflow-y-auto top-0 w-full h-full bg-[#201434] transition-all duration-700 transform ${isExpanded ? 'translate-x-0' : '-translate-x-full'}`}>
+        <div className={`fixed z-40 overflow-y-auto top-0 w-full h-full bg-[#201434] transition-all duration-700 transform ${isExpanded ? 'translate-x-0' : '-translate-x-full'}`}>
             <div className='flex justify-center px-3 pt-3 flex-col gap-[18px] mb-40'>
                 <Header />
                 <div className='h-10'>
