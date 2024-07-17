@@ -44,7 +44,7 @@ const ProfilePage = () => {
 
         <div className='relative w-full flex flex-col gap-2 items-center text-white'>
 
-          <div className='mt-[34px]'>
+          <div className='mt-[34px] flex flex-col items-center'>
             <div className='flex-shrink-0'>
               <Image className='rounded-full' src={`${basePath}/images/temporary-profile-large-image.png`} alt='Large Profile Icon' width={137} height={137} />
             </div>
