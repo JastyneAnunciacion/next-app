@@ -1,14 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
-import basePath from '../utilities/basepath'
-import ReferralInfo from '../components/referrals/ReferralInfo'
-import ReferralLink from '../components/referrals/ReferralLink'
-import ReferralStatistics from '../components/referrals/ReferralStatistics'
-import InvitesPromo from '../components/InvitesPromo'
-import ReferralsTable from '../components/referrals/ReferralsTable'
-import FAQReferral from '../components/FAQReferral'
-import MainComponents from '../components/MainComponents'
-import MediumBanner from '../components/banners/MediumBanner'
+import basePath from '../../utilities/basepath'
+import ReferralInfo from '../../components/referrals/ReferralInfo'
+import ReferralLink from '../../components/referrals/ReferralLink'
+import ReferralStatistics from '../../components/referrals/ReferralStatistics'
+import InvitesPromo from '../../components/InvitesPromo'
+import ReferralsTable from '../../components/referrals/ReferralsTable'
+import FAQReferral from '../../components/FAQReferral'
+import MainComponents from '../../components/MainComponents'
+import MediumBanner from '../../components/banners/MediumBanner'
 
 const RewardsPage = () => {
   return (

@@ -67,7 +67,7 @@ const QuickMenu = ({ currentPage = '', onExpand }: QuickMenuProps) => {
                   iconSrc='/images/sports-image.png'
                   iconActiveSrc='/images/sports-selected-image.png'
                   activeTextColor='#FFF387'
-                  pageHref='/sports'
+                  pageHref='/pages/sports'
                   buttonName='Sports'
                   active={currentPage === 'Sports'}
                 />
@@ -75,7 +75,7 @@ const QuickMenu = ({ currentPage = '', onExpand }: QuickMenuProps) => {
                   iconSrc='/images/rewards-image.png'
                   iconActiveSrc='/images/rewards-selected-image.png'
                   activeTextColor='#87FFD4'
-                  pageHref='/rewards'
+                  pageHref='/pages/rewards'
                   buttonName='Rewards'
                   active={currentPage === 'Rewards'}
                 />
@@ -83,7 +83,7 @@ const QuickMenu = ({ currentPage = '', onExpand }: QuickMenuProps) => {
                   iconSrc='/images/wallet-image.png'
                   iconActiveSrc='/images/wallet-selected-image.png'
                   activeTextColor='#9FFF87'
-                  pageHref='/wallet'
+                  pageHref='/pages/wallet'
                   buttonName='Wallet'
                   active={currentPage === 'Wallet'}
                 />
@@ -91,7 +91,7 @@ const QuickMenu = ({ currentPage = '', onExpand }: QuickMenuProps) => {
                   iconSrc='/images/profile-image.png'
                   iconActiveSrc='/images/profile-selected-image.png'
                   activeTextColor='#87C5FF'
-                  pageHref='/profile'
+                  pageHref='/pages/profile'
                   buttonName='Profile'
                   active={currentPage === 'Profile'}
                 />

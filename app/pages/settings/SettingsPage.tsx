@@ -1,13 +1,13 @@
 'use client'
 
 import React, { useState } from 'react'
-import QuickMenu from '../components/footers/QuickMenu'
-import Header from '../components/Header'
+import QuickMenu from '../../components/footers/QuickMenu'
+import Header from '../../components/Header'
 import Image from 'next/image'
-import basePath from '../utilities/basepath'
-import SelectionDropdown from '../components/dropdowns/SelectionDropdown'
-import languages from '../components/temporaryJsons/language-list.json'
-import MainComponents from '../components/MainComponents'
+import basePath from '../../utilities/basepath'
+import SelectionDropdown from '../../components/dropdowns/SelectionDropdown'
+import languages from '../../components/temporaryJsons/language-list.json'
+import MainComponents from '../../components/MainComponents'
 
 const SettingsPage = () => {
     const [option, changeOption] = useState(0);

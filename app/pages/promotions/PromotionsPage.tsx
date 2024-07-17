@@ -1,8 +1,8 @@
 import React from 'react'
-import QuickMenu from '../components/footers/QuickMenu'
-import Header from '../components/Header'
-import PromotionTempate from '../components/PromotionTempate'
-import MainComponents from '../components/MainComponents'
+import QuickMenu from '../../components/footers/QuickMenu'
+import Header from '../../components/Header'
+import PromotionTempate from '../../components/PromotionTempate'
+import MainComponents from '../../components/MainComponents'
 
 const PromotionsPage = () => {
   return (

@@ -1,18 +1,18 @@
 'use client'
 
 import React from 'react'
-import Header from '../components/Header'
-import QuickMenu from '../components/footers/QuickMenu'
+import Header from '../../components/Header'
+import QuickMenu from '../../components/footers/QuickMenu'
 import Image from 'next/image'
 import { useState } from 'react'
-import languages from '../components/temporaryJsons/language-list.json'
-import basePath from '../utilities/basepath'
-import Level from '../components/Level'
-import Statistics from '../components/Statistics'
-import Cashback from '../components/Cashback'
-import TransactionHistoryTable from '../components/TransactionHistoryTable'
-import MostWageredGames from '../components/MostWageredGames'
-import MainComponents from '../components/MainComponents'
+import languages from '../../components/temporaryJsons/language-list.json'
+import basePath from '../../utilities/basepath'
+import Level from '../../components/Level'
+import Statistics from '../../components/Statistics'
+import Cashback from '../../components/Cashback'
+import TransactionHistoryTable from '../../components/TransactionHistoryTable'
+import MostWageredGames from '../../components/MostWageredGames'
+import MainComponents from '../../components/MainComponents'
 
 interface ProfileProps {
   username: string,

@@ -12,13 +12,13 @@ const Header = () => {
         <Link href="/" className='flex-shrink-0'>
           <Image className='rounded-full' src={`${basePath}/images/phx-gamble-logo.png`} alt="Header Main Logo" width={45} height={44} />
         </Link>
-        <div className='w-[43.76%] h-[49px]'>
+        <div className='w-[43.76%] h-[49px] responsive-text'>
           <WalletDropdown bitCoinHeightPixel={30} bitCoinWidthPixel={30} />
         </div>
-        <button className='w-[49px] h-[49px] bg-[#241a46] rounded-xl flex items-center justify-center'>
+        <Link href={'/pages/wallet'} className='w-[49px] h-[49px] bg-[#241a46] rounded-xl flex items-center justify-center'>
           <Image className='rounded-full' src={`${basePath}/images/plus-purple-image.png`} alt="Header Main Logo" width={25} height={25} />
-        </button>
-        <div className='w-[49px] h-[49px] bg-[#241a46] rounded-xl flex items-center justify-center text-3xl font-bold pb-[4px]'>
+        </Link>
+        <div className='w-[49px] h-[49px] bg-[#241a46] rounded-xl flex items-center justify-center text-3xl font-bold'>
           <Image className='rounded-full' src={`${basePath}/images/purple-question-image.png`} alt="Question Logo" width={25} height={25} />
         </div>
         <ProfileButton />

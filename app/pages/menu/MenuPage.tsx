@@ -1,14 +1,14 @@
 'use client'
 
 import React from 'react'
-import Header from '../components/Header'
-import QuickMenu from '../components/footers/QuickMenu'
-import SmallBanner from '../components/banners/SmallBanner'
-import Serachbar from '../components/Serachbar'
-import ListContainterWithTitleHeader from '../components/lists/ListContainterWithTitleHeader'
-import ListItem from '../components/lists/ListItem'
-import basePath from '../utilities/basepath'
-import DropdownListItem from '../components/dropdowns/DropdownListItem'
+import Header from '../../components/Header'
+import QuickMenu from '../../components/footers/QuickMenu'
+import SmallBanner from '../../components/banners/SmallBanner'
+import Serachbar from '../../components/Serachbar'
+import ListContainterWithTitleHeader from '../../components/lists/ListContainterWithTitleHeader'
+import ListItem from '../../components/lists/ListItem'
+import basePath from '../../utilities/basepath'
+import DropdownListItem from '../../components/dropdowns/DropdownListItem'
 
 const MenuPage = () => {
   return (

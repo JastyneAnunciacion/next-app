@@ -1,14 +1,14 @@
 'use client'
 
 import React from 'react'
-import Header from '../components/Header'
-import QuickMenu from '../components/footers/QuickMenu'
-import SelectionDropdown from '../components/dropdowns/SelectionDropdown'
-import providerList from '../components/temporaryJsons/provider-list.json'
-import GridList from '../components/GridList'
-import walletList from '../components/temporaryJsons/wallet-list.json'
-import Serachbar from '../components/Serachbar'
-import MainComponents from '../components/MainComponents'
+import Header from '../../components/Header'
+import QuickMenu from '../../components/footers/QuickMenu'
+import SelectionDropdown from '../../components/dropdowns/SelectionDropdown'
+import providerList from '../../components/temporaryJsons/provider-list.json'
+import GridList from '../../components/GridList'
+import walletList from '../../components/temporaryJsons/wallet-list.json'
+import Serachbar from '../../components/Serachbar'
+import MainComponents from '../../components/MainComponents'
 
 const CasinoPage = () => {
   const sortOptions = [
