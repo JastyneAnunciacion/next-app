@@ -22,6 +22,7 @@ export default function Home() {
 
   return (
     <MainComponents footerPage="Games">
+      <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
       <div className="flex flex-col w-full items-center">
         <div className="w-full max-w-[91.88%]">
