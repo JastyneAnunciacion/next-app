@@ -1,8 +1,6 @@
 'use client'
 
 import React from 'react'
-import Header from '../../components/Header'
-import QuickMenu from '../../components/quickMenus/QuickMenu'
 import Image from 'next/image'
 import { useState } from 'react'
 import languages from '../../components/temporaryJsons/language-list.json'
@@ -11,8 +9,8 @@ import Level from '../../components/Level'
 import Statistics from '../../components/Statistics'
 import Cashback from '../../components/Cashback'
 import TransactionHistoryTable from '../../components/TransactionHistoryTable'
-import MostWageredGames from '../../components/MostWageredGames'
 import MainComponents from '../../components/MainComponents'
+import Link from 'next/link'
 
 interface ProfileProps {
   username: string,
@@ -37,18 +35,18 @@ const ProfilePage = () => {
       <div className='w-full max-w-[91.88%]'>
         <div className='relative text-lg flex items-center justify-between w-full h-14 rounded-lg px-4 bg-[#241A43] z-10'>
           <p className='absolute left-1/2 transform -translate-x-1/2 text-[#b575e1] text-xl'>Profile</p>
-          <div className='flex-shrink-0 ml-auto'>
+          <Link href='/pages/settings' className='flex-shrink-0 ml-auto'>
             <Image src={`${basePath}/images/cog-image.png`} alt='Profile Settings Icon' width={25} height={25} />
-          </div>
+          </Link>
         </div>
 
         <div className='relative w-full flex flex-col gap-2 items-center text-white'>
 
-          <div className='mt-[34px] flex flex-col items-center'>
+          <div className='mt-[34px] gap-[14px] flex flex-col items-center'>
             <div className='flex-shrink-0'>
               <Image className='rounded-full' src={`${basePath}/images/temporary-profile-large-image.png`} alt='Large Profile Icon' width={137} height={137} />
             </div>
-            <p className='text-lg'>Username</p>
+            <p className='text-responsive-md'>Username</p>
           </div>
         </div>
         <div className='relative flex items-center gap-3 mt-8 mb-3'>

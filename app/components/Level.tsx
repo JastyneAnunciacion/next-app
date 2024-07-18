@@ -15,7 +15,7 @@ const Level = ({ level = 1, levelImgSrc = '/images/level-image.png', currentXP =
                 <div className='flex gap-3 items-center'>
                     <div className='w-full flex flex-col gap-[5px]'>
                         <div className='h-[38px] w-full bg-[#241b42] rounded-full items-center flex justify-center p-1'>
-                            <div className='h-2 w-full bg-[#241b42] rounded-full'>
+                            <div className='h-2 w-full px-[2.72%] bg-[#241b42] rounded-full'>
                                 <div className='h-full bg-[#1fe384] rounded-full'
                                     style={{ width: `${(currentXP / XPrequirement) * 100}%` }}
                                 />
