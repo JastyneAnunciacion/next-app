@@ -6,9 +6,10 @@ interface ListContainterWithTitleHeaderProps {
   title: string,
   children: ReactNode,
   imgSrc?: string
+  hasBorderBottom?: boolean
 }
 
-const ListContainterWithTitleHeader = ({ title, children, imgSrc }: ListContainterWithTitleHeaderProps) => {
+const ListContainterWithTitleHeader = ({ title, children, imgSrc, hasBorderBottom = true }: ListContainterWithTitleHeaderProps) => {
   return (
     <div>
       <div className='flex w-full gap-1 items-center text-[20px] text-w px-3'>
@@ -19,7 +20,7 @@ const ListContainterWithTitleHeader = ({ title, children, imgSrc }: ListContaint
         </div>
         {title}
       </div>
-      <div className='px-3 py-[18px] border-b border-[#261E47] flex flex-col'>
+      <div className={`px-3 py-[18px] ${hasBorderBottom && 'border-b border-[#261E47]'} flex flex-col`}>
         {children}
       </div>
     </div>

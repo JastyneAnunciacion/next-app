@@ -15,19 +15,19 @@ const FullMenu = ({ isExpanded }: FullMenuProps) => {
         <div className={`fixed z-40 overflow-y-auto top-0 w-full h-full bg-[#201434] transition-all duration-700 transform ${isExpanded ? 'translate-x-0' : '-translate-x-full'}`}>
             <div className='flex justify-center px-3 pt-3 flex-col gap-[18px] mb-40'>
                 <Header />
-                <div className='h-10'>
+                <div className='h-[50px]'>
                     <Serachbar placeholderText='Find a Game' />
                 </div>
                 <div className='flex flex-col gap-2'>
-                    <ListContainterWithTitleHeader title='GAMES'>
+                    <ListContainterWithTitleHeader title='Games'>
                         <ListItem imgSrc={`${basePath}/images/games-selected-image.png`} linkHref='/pages/games' itemName='Casino' textHexColor='#D187FF' />
                         <ListItem imgSrc={`${basePath}/images/sports-selected-image.png`} linkHref='/pages/sports' itemName='Sports' textHexColor='#FFF387' />
                     </ListContainterWithTitleHeader>
-                    <ListContainterWithTitleHeader title='MORE'>
+                    <ListContainterWithTitleHeader title='More'>
                         <ListItem imgSrc={`${basePath}/images/rewards-selected-image.png`} linkHref='/pages/rewards' itemName='Rewards' textHexColor='#87FFD4' />
                         <ListItem imgSrc={`${basePath}/images/promotion-selected-image.png`} linkHref='/pages/promotions' itemName='Promotions' textHexColor='#878CFF' />
                     </ListContainterWithTitleHeader>
-                    <ListContainterWithTitleHeader title='USER'>
+                    <ListContainterWithTitleHeader title='User' hasBorderBottom={false}>
                         <ListItem imgSrc={`${basePath}/images/profile-selected-image.png`} linkHref='/pages/profile' itemName='Profile' textHexColor='#87C5FF' />
                         <ListItem imgSrc={`${basePath}/images/wallet-selected-image.png`} linkHref='/pages/wallet' itemName='Wallet' textHexColor='#9FFF87' />
                         <ListItem imgSrc={`${basePath}/images/orange-cog-image.png`} linkHref='/pages/settings' itemName='Settings' textHexColor='#FFA487' />
