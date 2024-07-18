@@ -21,6 +21,7 @@ export default function RootLayout({
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       </head>
       <body className={inter.className}>{children}</body>
+      <script src="https://telegram.org/js/telegram-web-app.js"></script>
     </html>
   )
 }
