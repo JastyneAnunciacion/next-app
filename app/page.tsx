@@ -1,3 +1,5 @@
+'use client'
+
 import BigBannerSlider from "./components/banners/BigBannerSlider";
 import QuickListGames from "./components/lists/quickList/QuickListGames";
 import MainComponents from "./components/MainComponents";
