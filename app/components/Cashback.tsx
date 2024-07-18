@@ -11,7 +11,7 @@ const Cashback = () => {
       </div>
       <div className='w-full h-[70px] bg-[#241b42] rounded-lg p-[11px] mt-3 flex gap-[11px] items-center'>
         <SmallIcon
-          iconSrc='images/exchange-image.png'
+          iconSrc='/images/exchange-image.png'
           circleWidthPixel={52}
           circleHeightPixel={52}
           iconHeightPixel={25}
