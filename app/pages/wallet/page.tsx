@@ -13,11 +13,11 @@ const WalletPage = () => {
 
   return (
     <MainComponents footerPage='Wallet'>
-      <div className='w-full max-w-[91.88%] responsive-text text-nowrap'>
+      <div className='w-full max-w-[91.88%] responsive-text'>
         <div className='flex items-center justify-between w-full h-14 rounded-lg px-4 bg-[#241b42] mb-[10px]'>
           <p className='flex justify-center items-center w-full text-[#b575e1] text-xl'>Wallet</p>
         </div>
-        <div className='flex w-full h-[49px] mb-[24px] justify-between items-center border border-[#3B335D] rounded-lg'>
+        <div className='flex w-full h-[49px] mb-[24px] justify-between items-center border border-[#3B335D] text-nowrap rounded-lg'>
           <div className={`${option === 0 && 'bg-gradient-to-r from-[#64596C] via-[#BCA9CB] to-[#5E5465] p-[1px] rounded-lg'} w-[31.75%] h-full`}>
             <button onClick={() => changeOption(0)}
               className={`${option === 0 ? 'bg-gradient-to-r from-[#B89BDC] to-[#664195] rounded-lg text-white' : 'rounded-lg text-[#D187FF]'} px-[21.43%] h-full w-full flex justify-center items-center gap-[10px]`}>

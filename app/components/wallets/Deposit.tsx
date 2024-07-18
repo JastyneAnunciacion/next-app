@@ -33,6 +33,7 @@ const Deposit = () => {
                         dropDownButtonHeightPixel={36}
                         dropDownArrowWidthPixel={12}
                         dropDownArrowHeightPixel={15}
+                        customPaddingX={4.53}
                     />
                 </div>
             </div>
@@ -62,7 +63,7 @@ const Deposit = () => {
                     />
                     <p className='text-responsive-md'>Express Deposit</p>
                 </div>
-                <p className='text-[#b575e1] text-wrap'>You can deposit through Telegram Bots. Choose one of the bots shown below.</p>
+                <p className='text-[#b575e1]'>You can deposit through Telegram Bots. Choose one of the bots shown below.</p>
                 <div className='flex w-full items-center h-[49px] gap-[11px] text-white'>
                     <button className={`border-[#3B335D] border rounded-md h-full w-full flex justify-center items-center gap-3`}>
                         <div className='shrink-0'>
@@ -91,7 +92,7 @@ const Deposit = () => {
                         />
                         <p className='text-responsive-md'>Deposit through Blockchain</p>
                     </div>
-                    <p className='text-[#D187FF] text-wrap'>You can deposit through Telegram Bots. Choose one of the bots shown below.</p>
+                    <p className='text-[#D187FF]'>You can deposit through Telegram Bots. Choose one of the bots shown below.</p>
                     <div className='mt-[2px] h-[60px]'>
                         <CopyTextTemplate textToCopy='exampleDepositAddressCodeCopyLink' />
                     </div>

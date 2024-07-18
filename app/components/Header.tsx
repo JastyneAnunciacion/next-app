@@ -12,7 +12,7 @@ const Header = () => {
         <Link href="/" className='flex-shrink-0'>
           <Image className='rounded-full' src={`${basePath}/images/phx-gamble-logo.png`} alt="Header Main Logo" width={45} height={44} />
         </Link>
-        <div className='w-[43.76%] h-[49px] responsive-text'>
+        <div className='w-[43.76%] h-[49px] text-responsive-xs'>
           <WalletDropdown bitCoinHeightPixel={30} bitCoinWidthPixel={30} />
         </div>
         <Link href='/pages/wallet' className='w-[49px] h-[49px] bg-[#241a46] rounded-xl flex items-center justify-center'>

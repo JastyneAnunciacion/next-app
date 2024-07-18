@@ -67,13 +67,13 @@ const QuickList = ({ headerIconPath, title, childrenList, gapAmountPixel = 0, vi
           <div>
             <SmallIcon circleWidthPixel={30} circleHeightPixel={30} iconSrc={headerIconPath} />
           </div>
-          <p className='responsive-text w-full text-nowrap'>{title}</p>
+          <p className='text-responsive-sm w-full text-nowrap'>{title}</p>
         </div>
 
         <div className='flex items-center'>
           {viewAllLink && (
             <div className='flex justify-end'>
-              <Link href={viewAllLink} className='w-[92px] h-[41px] border border-[#332a61] text-[14px] rounded-md mr-[13px] flex items-center justify-center'>
+              <Link href={viewAllLink} className='w-[92px] h-[41px] border border-[#332a61] text-responsive-xs  rounded-md mr-[13px] flex items-center justify-center'>
                 View All
               </Link>
             </div>

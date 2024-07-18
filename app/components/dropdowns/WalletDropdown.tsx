@@ -13,6 +13,8 @@ interface WalletDropdownProps {
   dropDownArrowWidthPixel?: number,
   dropDownArrowHeightPixel?: number,
   dropDownOffset?: number,
+  customPaddingX?: number,
+  customTokenAndAmountGap?: number
 }
 
 const WalletDropdown = ({
@@ -22,7 +24,8 @@ const WalletDropdown = ({
   dropDownButtonHeightPixel = 28,
   dropDownArrowWidthPixel = 10,
   dropDownArrowHeightPixel = 13,
-  dropDownOffset = 0
+  dropDownOffset = 0,
+  customPaddingX = 7.77,
 }: WalletDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentlySelected, setCurrentlySelected] = useState(0);
@@ -35,9 +38,13 @@ const WalletDropdown = ({
   const selectedWallet = list[currentlySelected];
   return (
     <div className='relative bg-gradient-to-r from-[#926dca] to-[#926dca]/0 w-full h-full p-[1px] flex items-center justify-center rounded-lg'>
-      <button onClick={() => setIsOpen((prev) => !prev)} className="bg-gradient-to-r from-[#412974] to-[#231d42] w-full h-full text-white px-[7.77%] flex items-center justify-between rounded-lg">
+      <button
+        onClick={() => setIsOpen((prev) => !prev)}
+        style={{ paddingLeft: customPaddingX + '%', paddingRight: customPaddingX + '%' }}
+        className={`bg-gradient-to-r from-[#412974] to-[#231d42] w-full h-full text-white flex items-center justify-between rounded-lg`}
+      >
         {selectedWallet && (
-          <div className='flex h-full w-full items-center gap-[5.7%]'>
+          <div className='flex h-full w-full items-center gap-[11px] pr-[10.88%]'>
             <Image src={basePath + selectedWallet.TokenIconSrc} alt="Token Icon" width={bitCoinWidthPixel} height={bitCoinHeightPixel}></Image>
             <p className='overflow-hidden text-ellipsis whitespace-nowrap w-full text-left'>{selectedWallet.Amount}</p>
           </div>
@@ -49,7 +56,6 @@ const WalletDropdown = ({
         >
           <Image src={`${basePath}/images/${isOpen ? 'up' : 'down'}-thin-arrow-image.png`} alt="Arrows" width={dropDownArrowWidthPixel} height={dropDownArrowHeightPixel} />
         </div>
-
       </button>
 
       {isOpen && (

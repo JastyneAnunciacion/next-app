@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Header from '../../components/Header'
-import QuickMenu from '../../components/quickMenu/QuickMenu'
+import QuickMenu from '../../components/quickMenus/QuickMenu'
 import Image from 'next/image'
 import { useState } from 'react'
 import languages from '../../components/temporaryJsons/language-list.json'

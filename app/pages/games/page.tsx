@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Header from '../../components/Header'
-import QuickMenu from '../../components/quickMenu/QuickMenu'
+import QuickMenu from '../../components/quickMenus/QuickMenu'
 import SelectionDropdown from '../../components/dropdowns/SelectionDropdown'
 import providerList from '../../components/temporaryJsons/provider-list.json'
 import GridList from '../../components/GridList'

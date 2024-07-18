@@ -16,14 +16,14 @@ const BuyCrypto = () => {
                         iconHeightPixel={11}
                         iconSrc='/images/credit-card-image.png'
                     />
-                    <p className='text-[20px]'>Buy Crypto</p>
+                    <p className='text-responsive-md'>Buy Crypto</p>
                 </div>
-                <p className='text-[16px] text-[#D187FF9C] text-opacity-[61]'>Buy crypto instantly, and have it automatically transferred to your wallet. Services related to payments are provided by a separate platform which is owned by a third party.</p>
+                <p className='text-[#D187FF9C] text-opacity-[61]'>Buy crypto instantly, and have it automatically transferred to your wallet. Services related to payments are provided by a separate platform which is owned by a third party.</p>
             </div>
 
             <div className='flex flex-col gap-[10px]'>
-                <p className='text-[16px] ml-[6px] text-[#C4C4C4]'>Your Pay</p>
-                <div className='h-[63px] w-full'>
+                <p className='text-responsive-sm ml-[6px] text-[#C4C4C4]'>Your Pay</p>
+                <div className='h-[63px] w-full text-responsive-md'>
                     <CurrencyDropdown
                         currencyIconWidthPixel={30}
                         currencyIconHeightPixel={30}
@@ -37,10 +37,10 @@ const BuyCrypto = () => {
 
             <div className='flex flex-col gap-[3px]'>
                 <div className='h-[60px] rounded-t-lg bg-[#241A43] flex items-center px-[19px]'>
-                    <p className='text-[16px] text-[#836FCD]'>Provider</p>
+                    <p className='text-responsive-sm text-[#836FCD]'>Provider</p>
                 </div>
                 <div className='h-[60px] rounded-b-lg bg-[#241A43] flex items-center px-[19px]'>
-                    <p className='text-[16px] text-[#836FCD]'>Methods</p>
+                    <p className='text-responsive-sm text-[#836FCD]'>Methods</p>
                 </div>
             </div>
 

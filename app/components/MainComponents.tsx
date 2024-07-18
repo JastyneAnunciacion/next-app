@@ -2,7 +2,7 @@
 
 import React, { ReactNode } from 'react';
 import Header from './Header';
-import QuickMenu from './quickMenu/QuickMenu';
+import QuickMenu from './quickMenus/QuickMenu';
 import { useState, useEffect } from 'react';
 
 interface MainComponentsProps {
