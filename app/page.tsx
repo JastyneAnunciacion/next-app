@@ -9,23 +9,26 @@ import { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
+    const maxRetries = 50;
+    let retries = 0;
+
     const initTelegramWebApp = () => {
-      try {
-        if (window.Telegram && window.Telegram.WebApp) {
-          const WebApp = window.Telegram.WebApp;
-          WebApp.expand();
-          console.log("Telegram WebApp expanded");
-          WebApp.MainButton.hide();
-          console.log("Telegram MainButton hidden");
-          WebApp.ready();
-          console.log("Telegram WebApp is ready");
+      if (window.Telegram && window.Telegram.WebApp) {
+        const WebApp = window.Telegram.WebApp;
+        WebApp.expand();
+        console.log("Telegram WebApp expanded");
+        WebApp.MainButton.hide();
+        console.log("Telegram MainButton hidden");
+        WebApp.ready();
+        console.log("Telegram WebApp is ready");
+      } else {
+        retries += 1;
+        if (retries < maxRetries) {
+          console.warn(`Telegram WebApp is not available yet, retrying... (${retries}/${maxRetries})`);
+          setTimeout(initTelegramWebApp, 200);
         } else {
-          console.warn("Telegram WebApp is not available yet, retrying...");
-          // Retry after a short delay if WebApp is not available yet
-          setTimeout(initTelegramWebApp, 100);
+          console.error("Failed to initialize Telegram WebApp after maximum retries");
         }
-      } catch (error) {
-        console.error("Error initializing Telegram WebApp:", error);
       }
     };
 
