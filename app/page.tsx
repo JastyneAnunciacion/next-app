@@ -9,14 +9,18 @@ import { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.Telegram) {
-      const webApp = window.Telegram.WebApp;
+    // Check if Telegram Web App API is available
+    if (window.Telegram.WebApp) {
+      const WebApp = window.Telegram.WebApp;
 
-      // Expand the WebApp to full screen
-      webApp.expand();
+      // Expand the Web App
+      WebApp.expand();
 
-      // Hide the main button which removes the keyboard
-      webApp.MainButton.hide();
+      // Hide the keyboard
+      WebApp.MainButton.hide();
+
+      // Optional: Set up other WebApp functionalities
+      WebApp.ready();
     }
   }, []);
 
