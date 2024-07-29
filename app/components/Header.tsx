@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header className='w-full h-full flex items-center'>
       <div className='py-[12px] px-[2.27%] flex items-center w-full max-w-full h-full justify-center gap-[2.08vw]'>
-        <Link href="/" className='w-[9.17vw] h-[9.37vw]'>
+        <Link href="/" className='w-[9.17vw] h-[9.37vw] shrink-0'>
           <Image className='rounded-full' src={`${basePath}/images/phx-gamble-logo.png`} alt="Header Main Logo" layout='responsive' width={100} height={100} />
         </Link>
         <div className='w-[40.21vw] h-[10.21vw] shrink-0'>
