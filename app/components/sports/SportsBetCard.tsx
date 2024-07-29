@@ -14,11 +14,11 @@ interface TeamProps {
 interface SportsBetCardProps {
     sportImgSrc?: string;
     league?: string;
-    date?: Date;
+    date?: string;
     team1?: TeamProps;
     team2?: TeamProps;
     drawAmount?: number;
-    gameType: '1x2' | 'Winner' | 'Total' | 'Winner (incl. overtime)';
+    gameType: string;
 }
 
 const SportsBetCard = ({ sportImgSrc, league, date, team1, team2, drawAmount, gameType }: SportsBetCardProps) => {
@@ -36,17 +36,28 @@ const SportsBetCard = ({ sportImgSrc, league, date, team1, team2, drawAmount, ga
             <div className='flex justify-between items-center text-gray-300'>
                 <div className='flex gap-1 items-center'>
                     <div>
-                        <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Sports Icon' width={20} height={20}></Image>
+                        <Image src={`${sportImgSrc ? `${basePath + sportImgSrc}` : `${basePath}/images/pencil-circle-fill.256x256.png`}`} alt='Sports Icon' width={20} height={20}></Image>
                     </div>
-                    <p className='text-nowrap'>International Clubs UEFA Championship League</p>
+                    <p className='text-nowrap'>{league ? league : 'League Name'}</p>
                 </div>
-                <button>
-                    <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Favorites Icon' width={20} height={20}></Image>
-                </button>
+                <div className='flex gap-2'>
+                    <button>
+                        <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Favorites Icon' width={20} height={20}></Image>
+                    </button>
+                    <button>
+                        <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Favorites Icon' width={20} height={20}></Image>
+                    </button>
+                </div>
             </div>
 
             <div className='flex gap-1 items-center'>
-                <p>May 8, 3:00</p>
+                <p>{date ?
+                    <>
+                        {date}
+                    </>
+                    :
+                    'Month Day, Time 24 hr'
+                }</p>
                 <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Icon' width={15} height={15}></Image>
             </div>
 
@@ -54,16 +65,16 @@ const SportsBetCard = ({ sportImgSrc, league, date, team1, team2, drawAmount, ga
                 <div>
                     <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Team Icon' width={22} height={22}></Image>
                 </div>
-                <p>Paris Saint-Germain</p>
+                <p>{team1 ? team1.teamName : 'Team 1 Name'}</p>
             </div>
             <div className='flex gap-3'>
                 <div>
                     <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Team Icon' width={22} height={22}></Image>
                 </div>
-                <p>Paris Saint-Germain</p>
+                <p>{team1 ? team2.teamName : 'Team 2 Name'}</p>
             </div>
 
-            <p>{gameType} a</p>
+            <p>{gameType}</p>
 
             <div className='flex justify-between gap-2 text-xs h-9 w-full shrink-0 mt-1'>
                 <button className='bg-gray-600 p-1 w-full h-full flex justify-between items-center rounded-lg'>
@@ -94,7 +105,6 @@ const SportsBetCard = ({ sportImgSrc, league, date, team1, team2, drawAmount, ga
             <div className='w-full h-1' />
 
             <SportsBetCardOverButtons />
-
         </div>
     )
 }

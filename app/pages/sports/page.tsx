@@ -2,9 +2,9 @@ import React from 'react'
 import QuickMenu from '../../components/quickMenus/QuickMenu'
 import SportsHeader from '../../components/sports/SportsHeader'
 import SportsHomeTabButtons from '../../components/sports/SportsHomeTabButtons'
-import MediumBanner from '../../components/banners/MediumBanner'
 import SportsQuickBetCardSlides from '../../components/sports/SportsQuickBetCardSlides'
 import SportsPopularSection from '../../components/sports/SportsPopularSection'
+import SportsBanner from '@/app/components/sports/SportsBanner'
 
 const sportsPage = () => {
   return (
@@ -12,7 +12,9 @@ const sportsPage = () => {
       <SportsHeader />
       <div className='px-4'>
         <SportsHomeTabButtons />
-        <MediumBanner />
+        <div className='w-full h-72'>
+          <SportsBanner />
+        </div>
         <SportsQuickBetCardSlides />
         <SportsPopularSection />
       </div>

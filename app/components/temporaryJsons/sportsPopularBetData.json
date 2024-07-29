@@ -1,0 +1,104 @@
+[
+    {
+        "sportImgSrc": "",
+        "league": "Premier League",
+        "date": "2023-07-29T12:00:00Z",
+        "team1": {
+            "teamImgSrc": "",
+            "teamName": "Manchester United",
+            "teamBetAmount": 100
+        },
+        "team2": {
+            "teamImgSrc": "",
+            "teamName": "Liverpool",
+            "teamBetAmount": 200
+        },
+        "drawAmount": 3.5,
+        "gameType": "Winner"
+    },
+    {
+        "sportImgSrc": "",
+        "league": "Champions League",
+        "date": "2023-07-29T15:00:00Z",
+        "team1": {
+            "teamImgSrc": "",
+            "teamName": "Real Madrid",
+            "teamBetAmount": 120
+        },
+        "team2": {
+            "teamImgSrc": "",
+            "teamName": "Barcelona",
+            "teamBetAmount": 180
+        },
+        "drawAmount": 2.8,
+        "gameType": "Total"
+    },
+    {
+        "sportImgSrc": "",
+        "league": "La Liga",
+        "date": "2023-07-30T18:00:00Z",
+        "team1": {
+            "teamImgSrc": "",
+            "teamName": "Atletico Madrid",
+            "teamBetAmount": 150
+        },
+        "team2": {
+            "teamImgSrc": "",
+            "teamName": "Sevilla",
+            "teamBetAmount": 170
+        },
+        "drawAmount": 2.9,
+        "gameType": "1x2"
+    },
+    {
+        "sportImgSrc": "",
+        "league": "Serie A",
+        "date": "2023-07-31T20:00:00Z",
+        "team1": {
+            "teamImgSrc": "",
+            "teamName": "Juventus",
+            "teamBetAmount": 110
+        },
+        "team2": {
+            "teamImgSrc": "",
+            "teamName": "Inter Milan",
+            "teamBetAmount": 210
+        },
+        "drawAmount": 3.2,
+        "gameType": "Winner (incl. overtime)"
+    },
+    {
+        "sportImgSrc": "",
+        "league": "Bundesliga",
+        "date": "2023-08-01T14:00:00Z",
+        "team1": {
+            "teamImgSrc": "",
+            "teamName": "Bayern Munich",
+            "teamBetAmount": 140
+        },
+        "team2": {
+            "teamImgSrc": "",
+            "teamName": "Borussia Dortmund",
+            "teamBetAmount": 190
+        },
+        "drawAmount": 3.0,
+        "gameType": "Winner"
+    },
+    {
+        "sportImgSrc": "",
+        "league": "Ligue 1",
+        "date": "2023-08-02T16:00:00Z",
+        "team1": {
+            "teamImgSrc": "",
+            "teamName": "Paris Saint-Germain",
+            "teamBetAmount": 160
+        },
+        "team2": {
+            "teamImgSrc": "",
+            "teamName": "Lyon",
+            "teamBetAmount": 180
+        },
+        "drawAmount": 2.7,
+        "gameType": "1x2"
+    }
+]
