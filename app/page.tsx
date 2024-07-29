@@ -9,19 +9,19 @@ import { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
-    // Check if Telegram Web App API is available
-    if (window.Telegram.WebApp) {
-      const WebApp = window.Telegram.WebApp;
+    const initTelegramWebApp = () => {
+      if (window.Telegram && window.Telegram.WebApp) {
+        const WebApp = window.Telegram.WebApp;
+        WebApp.expand();
+        WebApp.MainButton.hide();
+        WebApp.ready();
+      } else {
+        // Retry after a short delay if WebApp is not available yet
+        setTimeout(initTelegramWebApp, 100);
+      }
+    };
 
-      // Expand the Web App
-      WebApp.expand();
-
-      // Hide the keyboard
-      WebApp.MainButton.hide();
-
-      // Optional: Set up other WebApp functionalities
-      WebApp.ready();
-    }
+    initTelegramWebApp();
   }, []);
 
   return (
