@@ -22,6 +22,7 @@ export default function Home() {
 
   return (
     <MainComponents footerPage="Games">
+
       <div className="flex flex-col w-full items-center">
         <div className="w-full max-w-[91.88%]">
           <BigBannerSlider />

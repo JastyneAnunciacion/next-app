@@ -20,6 +20,30 @@
   @apply text-responsive-xs sm:text-responsive-sm md:text-responsive-md lg:text-responsive-lg;
 }
 
+@media (min-width: 320px) {
+  .responsive-wallet-header-text {
+    @apply text-wallet-header-responsive-320;
+  }
+}
+
+@media (min-width: 640px) {
+  .responsive-wallet-header-text {
+    @apply text-responsive-sm;
+  }
+}
+
+@media (min-width: 768px) {
+  .responsive-wallet-header-text {
+    @apply text-responsive-md;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-wallet-header-text {
+    @apply text-responsive-lg;
+  }
+}
+
 body {
   background-color: #201434;
   -ms-overflow-style: none;

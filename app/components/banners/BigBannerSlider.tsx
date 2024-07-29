@@ -45,7 +45,7 @@ const BigBannerSlider = () => {
         }
         timerRef.current = setInterval(() => {
             setCurrentSlide(prev => (prev === Math.ceil(slides.length / 2) - 1 ? 0 : prev + 1));
-        }, 5500); //
+        }, 5500);
     };
 
     useEffect(() => {
@@ -53,6 +53,10 @@ const BigBannerSlider = () => {
             sliderRef.current.style.transform = `translateX(-${currentSlide * 100}%)`;
         }
     }, [currentSlide]);
+
+    useEffect(() => {
+        resetTimer();
+    }, []);
 
     return (
         <div className='flex gap-[11px] mb-[26px] items-center justify-center flex-col w-full'>

@@ -46,7 +46,9 @@ const WalletDropdown = ({
         {selectedWallet && (
           <div className='flex h-full w-full items-center gap-[11px] pr-[10.88%]'>
             <Image src={basePath + selectedWallet.TokenIconSrc} alt="Token Icon" width={bitCoinWidthPixel} height={bitCoinHeightPixel}></Image>
-            <p className='overflow-hidden text-ellipsis whitespace-nowrap w-full text-left'>{selectedWallet.Amount}</p>
+            <p className='overflow-hidden text-ellipsis whitespace-nowrap w-full text-left' style={{ fontSize: 'clamp(12px, 3vw, 20px)' }}>
+              {selectedWallet.Amount}
+            </p>
           </div>
         )}
 

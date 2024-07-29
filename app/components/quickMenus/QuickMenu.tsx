@@ -27,7 +27,7 @@ const QuickMenu = ({ currentPage = '', onExpand }: QuickMenuProps) => {
       <div className='h-40' />
       <div className='w-full pointer-events-none' />
       <div className='flex items-center justify-center'>
-        <div className={`${isMenuExpanded ? 'w-[72px] duration-500 z-50' : 'w-full duration-700'} flex justify-center items-center max-w-[83.95%] py-[14px] bg-[#1F2937] h-[72px] fixed rounded-full bottom-[52px] z-20 transition-all `}>
+        <div className={`${isMenuExpanded ? 'w-[72px] duration-500 z-50' : 'w-full duration-700'} flex justify-center items-center max-w-[83.96%] bg-[#1F2937] min-h-[60px] h-[8.98%] max-h-[72px] fixed rounded-full bottom-[52px] z-20 transition-all`}>
           <div className={`${isMenuExpanded ? 'justify-center' : 'justify-between'} flex items-center w-full max-w-[85.29%]`}>
             <button className={`${isMenuExpanded && 'w-full'} p-2 flex flex-col items-center justify-center`} onClick={toggleMenu}>
               {isMenuExpanded ?
@@ -38,7 +38,7 @@ const QuickMenu = ({ currentPage = '', onExpand }: QuickMenuProps) => {
                 </div>
                 :
                 <div>
-                  <div className='flex-shrink-0 flex flex-col gap-1 items-center'>
+                  <div className='shrink-0 flex flex-col gap-1 items-center'>
                     <Image
                       src={basePath + '/images/menu-image.png'}
                       alt='Footer Button Image'

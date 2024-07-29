@@ -1,8 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { NextScript } from 'next/document'
 import { Inter } from 'next/font/google'
-import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,12 +18,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <NextScript>
-          <Script
-            src="https://telegram.org/js/telegram-web-app.js"
-            strategy="beforeInteractive"
-          />
-        </NextScript>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       </head>
       <body className={inter.className}>{children}</body>
