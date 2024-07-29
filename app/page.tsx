@@ -10,14 +10,22 @@ import { useEffect } from "react";
 export default function Home() {
   useEffect(() => {
     const initTelegramWebApp = () => {
-      if (window.Telegram && window.Telegram.WebApp) {
-        const WebApp = window.Telegram.WebApp;
-        WebApp.expand();
-        WebApp.MainButton.hide();
-        WebApp.ready();
-      } else {
-        // Retry after a short delay if WebApp is not available yet
-        setTimeout(initTelegramWebApp, 100);
+      try {
+        if (window.Telegram && window.Telegram.WebApp) {
+          const WebApp = window.Telegram.WebApp;
+          WebApp.expand();
+          console.log("Telegram WebApp expanded");
+          WebApp.MainButton.hide();
+          console.log("Telegram MainButton hidden");
+          WebApp.ready();
+          console.log("Telegram WebApp is ready");
+        } else {
+          console.warn("Telegram WebApp is not available yet, retrying...");
+          // Retry after a short delay if WebApp is not available yet
+          setTimeout(initTelegramWebApp, 100);
+        }
+      } catch (error) {
+        console.error("Error initializing Telegram WebApp:", error);
       }
     };
 
