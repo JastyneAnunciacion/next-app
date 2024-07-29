@@ -33,35 +33,77 @@ const BigBannerSlider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const sliderRef = useRef<HTMLDivElement>(null);
     const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+    const isScrolling = useRef(false);
 
     const goToSlide = (index: number) => {
-        setCurrentSlide(index);
-        resetTimer();
+        if (sliderRef.current) {
+            const slideWidth = sliderRef.current.clientWidth;
+            const newScrollLeft = index * (slideWidth);
+            sliderRef.current.scrollTo({
+                left: newScrollLeft,
+                behavior: 'smooth'
+            });
+            setCurrentSlide(index);
+            resetTimer();
+        }
     };
+
+    const goToSlideViaTimer = (index: number) => {
+        if (sliderRef.current) {
+            const slideWidth = sliderRef.current.clientWidth;
+            const newScrollLeft = index * (slideWidth);
+            sliderRef.current.scrollTo({
+                left: newScrollLeft,
+                behavior: 'smooth'
+            });
+            setCurrentSlide(index);
+            resetTimer();
+        }
+    }
 
     const resetTimer = () => {
         if (timerRef.current) {
             clearInterval(timerRef.current);
         }
         timerRef.current = setInterval(() => {
-            setCurrentSlide(prev => (prev === Math.ceil(slides.length / 2) - 1 ? 0 : prev + 1));
+            setCurrentSlide(prev => {
+                const nextSlide = (prev === Math.ceil(slides.length / 2) - 1 ? 0 : prev + 1);
+                // goToSlideViaTimer(nextSlide);
+                return nextSlide;
+            });
         }, 5500);
     };
 
-    useEffect(() => {
-        if (sliderRef.current) {
-            sliderRef.current.style.transform = `translateX(-${currentSlide * 100}%)`;
+    const handleScroll = () => {
+        if (sliderRef.current && !isScrolling.current) {
+            const scrollLeft = sliderRef.current.scrollLeft;
+            const containerWidth = sliderRef.current.clientWidth;
+            const index = Math.round(scrollLeft / (containerWidth));
+            setCurrentSlide(index);
         }
-    }, [currentSlide]);
+    };
 
     useEffect(() => {
         resetTimer();
     }, []);
 
+    useEffect(() => {
+        const container = sliderRef.current;
+        if (container) {
+            container.addEventListener('scroll', handleScroll);
+        }
+        return () => {
+            if (container) {
+                container.removeEventListener('scroll', handleScroll);
+            }
+        };
+    }, []);
+
+
     return (
         <div className='flex gap-[11px] mb-[26px] items-center justify-center flex-col w-full'>
             <div className="overflow-hidden w-full h-full">
-                <div className="flex w-full" ref={sliderRef} style={{ transition: 'transform 0.5s ease' }}>
+                <div className="flex w-full overflow-x-auto" ref={sliderRef} style={{ transition: 'transform 0.5s ease' }}>
                     {slides.map((slide, index) => (
                         <button key={index} className={`${index % 2 == 0 ? 'ml-[1%] mr-[0.75%]' : 'ml-[0.75%] mr-[1%]'} shrink-0 w-[48.25%] h-auto flex items-center justify-center`}>
                             <Image src={basePath + slide.imgSrc} alt='Banner Image' layout='responsive' width={100} height={100} className='rounded-lg' />

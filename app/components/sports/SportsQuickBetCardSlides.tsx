@@ -9,8 +9,6 @@ const SportsQuickBetCardSlides = () => {
     const slides = Array(12).fill({ imgSrc: '' }); // Example slides with placeholder data
 
     const [currentSlide, setCurrentSlide] = useState(0);
-    const [isScrollHandlingEnabled, setIsScrollHandlingEnabled] = useState(true);
-    const [scrollDestination, setScrollDestination] = useState<number | null>(null);
     const sliderRef = useRef<HTMLDivElement>(null);
 
     const goToSlide = (index: number) => {
@@ -22,24 +20,15 @@ const SportsQuickBetCardSlides = () => {
                 behavior: 'smooth'
             });
             setCurrentSlide(index);
-            setScrollDestination(newScrollLeft);
-            setIsScrollHandlingEnabled(false);
         }
     };
 
     const handleScroll = () => {
-        if (sliderRef.current && isScrollHandlingEnabled) {
+        if (sliderRef.current) {
             const slideWidth = sliderRef.current.clientWidth;
             const scrollLeft = sliderRef.current.scrollLeft;
             const index = Math.floor((scrollLeft + GAP_SIZE / 2) / (slideWidth + GAP_SIZE));
             setCurrentSlide(index);
-        } else if (sliderRef.current && scrollDestination !== null) {
-            const slideWidth = sliderRef.current.clientWidth;
-            const scrollLeft = sliderRef.current.scrollLeft;
-            if (Math.abs(scrollLeft - scrollDestination) < 1) {
-                setIsScrollHandlingEnabled(true);
-                setScrollDestination(null);
-            }
         }
     };
 
@@ -53,7 +42,7 @@ const SportsQuickBetCardSlides = () => {
                 currentSlider.removeEventListener('scroll', handleScroll);
             }
         }
-    }, [isScrollHandlingEnabled, scrollDestination]);
+    }, []);
 
     return (
         <div className='flex flex-col items-center my-3'>
