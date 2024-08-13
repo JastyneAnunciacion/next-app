@@ -11,13 +11,13 @@ const Withdraw = () => {
                 <p className='text-responsive-md ml-[6px]'>Select Currency</p>
                 <div className='text-responsive-md h-[63px]'>
                     <WalletDropdown
-                        bitCoinWidthPixel={30}
-                        bitCoinHeightPixel={30}
-                        dropDownButtonWidthPixel={36}
-                        dropDownButtonHeightPixel={36}
-                        dropDownArrowWidthPixel={12}
-                        dropDownArrowHeightPixel={15}
-                        customPaddingX={4.53}
+                    // bitCoinWidthPixel={30}
+                    // bitCoinHeightPixel={30}
+                    // dropDownButtonWidthPixel={36}
+                    // dropDownButtonHeightPixel={36}
+                    // dropDownArrowWidthPixel={12}
+                    // dropDownArrowHeightPixel={15}
+                    // customPaddingX={4.53}
                     />
                 </div>
             </div>
