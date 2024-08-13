@@ -16,32 +16,15 @@
   }
 }
 
-.responsive-text {
-  @apply text-responsive-xs sm:text-responsive-sm md:text-responsive-md lg:text-responsive-lg;
+@font-face {
+  font-family: 'Manrope-Regular';
+  src: url('./assets/fonts/Manrope-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-@media (min-width: 320px) {
-  .responsive-wallet-header-text {
-    @apply text-wallet-header-responsive-320;
-  }
-}
-
-@media (min-width: 640px) {
-  .responsive-wallet-header-text {
-    @apply text-responsive-sm;
-  }
-}
-
-@media (min-width: 768px) {
-  .responsive-wallet-header-text {
-    @apply text-responsive-md;
-  }
-}
-
-@media (min-width: 1024px) {
-  .responsive-wallet-header-text {
-    @apply text-responsive-lg;
-  }
+.font-manrope {
+  font-family: 'Manrope-Regular', sans-serif;
 }
 
 body {
