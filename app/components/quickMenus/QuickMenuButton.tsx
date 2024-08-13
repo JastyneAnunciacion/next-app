@@ -18,10 +18,10 @@ const QuickMenuButton = ({ buttonName, iconSrc, iconActiveSrc, activeTextColor, 
   return (
     <div>
       <Link href={pageHref} className={`${active && 'pointer-events-none'} p-2 flex flex-col gap-1 items-center`}>
-        <div className='flex-shrink-0'>
-          <Image src={basePath + iconStatus} alt='Footer Button Image' width={22} height={22}></Image>
+        <div className='w-[4.58vw] aspect-square'>
+          <Image src={basePath + iconStatus} alt='Footer Button Image' layout='responsive' width={100} height={100} />
         </div>
-        <div className='text-[10px]' style={{ color: textColor }}>
+        <div style={{ color: textColor }}>
           {buttonName}
         </div>
       </Link >

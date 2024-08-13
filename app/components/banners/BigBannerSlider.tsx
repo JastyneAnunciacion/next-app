@@ -68,7 +68,7 @@ const BigBannerSlider = () => {
         timerRef.current = setInterval(() => {
             setCurrentSlide(prev => {
                 const nextSlide = (prev === Math.ceil(slides.length / 2) - 1 ? 0 : prev + 1);
-                // goToSlideViaTimer(nextSlide);
+                goToSlideViaTimer(nextSlide);
                 return nextSlide;
             });
         }, 5500);

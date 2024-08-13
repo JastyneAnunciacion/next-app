@@ -3,21 +3,21 @@ import Image from 'next/image'
 import basePath from '../utilities/basepath'
 
 interface SmallIconProps {
-    circleWidthPixel?: number,
-    circleHeightPixel?: number,
+    circleSize?: string,
     iconSrc?: string,
-    iconWidthPixel?: number,
-    iconHeightPixel?: number
+    iconSize?: string,
 }
 
-const SmallIcon = ({ circleWidthPixel = 24, circleHeightPixel = 24, iconSrc, iconWidthPixel = 12, iconHeightPixel = 12 }: SmallIconProps) => {
+const SmallIcon = ({ circleSize, iconSrc, iconSize }: SmallIconProps) => {
     const icon = iconSrc ? iconSrc : '/images/popular-games-image.png';
     return (
         <div
-            style={{ width: `${circleWidthPixel}px`, height: `${circleHeightPixel}px` }}
+            style={{ width: circleSize, aspectRatio: 1 / 1 }}
             className="bg-gradient-to-b from-[#9C6EF7] to-[#7727F7] rounded-full flex items-center justify-center shrink-0"
         >
-            <Image src={basePath + icon} alt="Small Icon" width={iconWidthPixel} height={iconHeightPixel} />
+            <div style={{ width: iconSize, aspectRatio: 1 / 1 }}>
+                <Image src={basePath + icon} alt="Small Icon" layout='responsive' width={100} height={100} />
+            </div>
         </div>
     )
 }

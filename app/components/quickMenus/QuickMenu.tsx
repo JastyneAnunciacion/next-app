@@ -24,31 +24,28 @@ const QuickMenu = ({ currentPage = '', onExpand }: QuickMenuProps) => {
 
   return (
     <div>
-      <div className='h-40' />
-      <div className='w-full pointer-events-none' />
-      <div className='flex items-center justify-center'>
-        <div className={`${isMenuExpanded ? 'w-[72px] duration-500 z-50' : 'w-full duration-700'} flex justify-center items-center max-w-[83.96%] bg-[#1F2937] min-h-[60px] h-[8.98%] max-h-[72px] fixed rounded-full bottom-[52px] z-20 transition-all`}>
-          <div className={`${isMenuExpanded ? 'justify-center' : 'justify-between'} flex items-center w-full max-w-[85.29%]`}>
+      <div className='flex items-center justify-center font-manrope font-bold text-[2.08vw]'>
+        <div className={`${isMenuExpanded ? 'w-[15%] duration-500 z-50' : 'w-full duration-700'} flex justify-center items-center max-w-[83.95%] bg-[#1F2937] h-[9.72vh] fixed rounded-full bottom-[7.15vh] z-20 transition-all`}>
+          <div className={`${isMenuExpanded ? 'justify-center' : 'justify-between'} flex items-center w-full px-[8.31%]`}>
             <button className={`${isMenuExpanded && 'w-full'} p-2 flex flex-col items-center justify-center`} onClick={toggleMenu}>
               {isMenuExpanded ?
                 <div>
-                  <div className='text-[10px]'>
-                    <p className='font-bold text-[20px] text-[#FF8787]'>X</p>
+                  <div>
+                    <p className='text-[4.16vw] text-[#FF8787]'>X</p>
                   </div>
                 </div>
                 :
-                <div>
-                  <div className='shrink-0 flex flex-col gap-1 items-center'>
+                <div className='flex flex-col gap-[0.54vh] items-center'>
+                  <div className='w-[4.58vw] aspect-square'>
                     <Image
                       src={basePath + '/images/menu-image.png'}
                       alt='Footer Button Image'
-                      width={22}
-                      height={22}
+                      layout='responsive'
+                      width={100}
+                      height={100}
                     />
-                    <div className='text-[10px]'>
-                      <p>Menu</p>
-                    </div>
                   </div>
+                  <p>Menu</p>
                 </div>
               }
             </button>
@@ -101,7 +98,7 @@ const QuickMenu = ({ currentPage = '', onExpand }: QuickMenuProps) => {
         </div>
         <FullMenu isExpanded={isMenuExpanded} />
       </div>
-      <div className='fixed bg-gradient-to-t from-[#242037] from-20% via-[#1F1648]/9 via-78% to-[#D9D9D9]/0 w-full h-36 bottom-0 z-0 pointer-events-none' />
+      <div className='fixed bg-gradient-to-t from-[#242037] via-[#1F1648]/9 via-78% to-[#D9D9D9]/0 w-full h-[25.24vh] bottom-0 z-0 pointer-events-none' />
     </div>
   );
 };
