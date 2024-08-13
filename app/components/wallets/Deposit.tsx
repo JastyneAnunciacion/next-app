@@ -27,13 +27,13 @@ const Deposit = () => {
                 <p className='ml-[6px] text-responsive-md'>Select Currency</p>
                 <div className='h-[63px] text-responsive-md'>
                     <WalletDropdown
-                        bitCoinWidthPixel={30}
-                        bitCoinHeightPixel={30}
-                        dropDownButtonWidthPixel={36}
-                        dropDownButtonHeightPixel={36}
-                        dropDownArrowWidthPixel={12}
-                        dropDownArrowHeightPixel={15}
-                        customPaddingX={4.53}
+                    // bitCoinWidthPixel={30}
+                    // bitCoinHeightPixel={30}
+                    // dropDownButtonWidthPixel={36}
+                    // dropDownButtonHeightPixel={36}
+                    // dropDownArrowWidthPixel={12}
+                    // dropDownArrowHeightPixel={15}
+                    // customPaddingX={4.53}
                     />
                 </div>
             </div>
