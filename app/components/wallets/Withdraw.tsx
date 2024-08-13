@@ -25,10 +25,8 @@ const Withdraw = () => {
             <div className='flex flex-col gap-[10px]'>
                 <div className='flex gap-[7px] items-center'>
                     <SmallIcon
-                        circleWidthPixel={30}
-                        circleHeightPixel={30}
-                        iconWidthPixel={15}
-                        iconHeightPixel={11}
+                        circleSize='6.25vw'
+                        iconSize='3.13w'
                         iconSrc='/images/credit-card-image.png'
                     />
                     <p className='text-responsive-md'>Withdraw through Blockchain</p>

@@ -99,6 +99,7 @@ const QuickMenu = ({ currentPage = '', onExpand }: QuickMenuProps) => {
         <FullMenu isExpanded={isMenuExpanded} />
       </div>
       <div className='fixed bg-gradient-to-t from-[#242037] via-[#1F1648]/9 via-78% to-[#D9D9D9]/0 w-full h-[25.24vh] bottom-0 z-0 pointer-events-none' />
+      <div className='h-[20vh] bottom-0 z-0 pointer-events-none' />
     </div>
   );
 };
