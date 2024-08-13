@@ -3,17 +3,15 @@ import CopyButton from './CopyButton'
 
 interface CopyTextTemplate {
   textToCopy: string,
-  textWidth?: string,
 }
 
-const CopyTextTemplate = ({ textToCopy, textWidth = '' }: CopyTextTemplate) => {
-  const TextWidth = textWidth === '' ? 'w-full' : textWidth;
+const CopyTextTemplate = ({ textToCopy }: CopyTextTemplate) => {
   return (
     <div className='bg-[#241b42] text-white h-full w-full rounded-xl flex justify-between p-4 items-center gap-2'>
-      <div className={`text-[16px] text-ellipsis overflow-hidden ${TextWidth} whitespace-nowrap`}>
+      <div className={`text-[3.33vw] w-[37.71vw] text-ellipsis overflow-hidden whitespace-nowrap`}>
         {textToCopy}
       </div>
-      <div className='w-[39px] h-[39px]'>
+      <div className='w-[8.13vw] aspect-square'>
         <CopyButton textToCopy={textToCopy} />
       </div>
     </div>

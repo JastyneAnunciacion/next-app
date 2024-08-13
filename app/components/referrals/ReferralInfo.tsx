@@ -5,14 +5,14 @@ import SmallIcon from '../SmallIcon'
 
 const ReferralInfo = () => {
     return (
-        <div className='flex h-[109px] w-full items-center gap-[15px] mb-[33px] bg-[#241b42] py-[13px] rounded-lg responsive-text justify-between'>
-            <div className='flex items-center gap-[15px] ml-[4.53%]'>
-                <div className='h-auto'>
-                    <Image src={`${basePath}/images/temporary-profile-medium-image.png`} alt='Medium Profile Icon' layout='responsive' width={18.82} height={100} className='rounded-full' />
+        <div className='flex h-[14.71vh] w-full items-center gap-[15px] mb-[33px] bg-[#241b42] py-[13px] rounded-lg justify-between'>
+            <div className='flex items-center gap-[3.13vw] ml-[4.53%]'>
+                <div className='w-[17.29vw] aspect-square'>
+                    <Image src={`${basePath}/images/temporary-profile-medium-image.png`} alt='Medium Profile Icon' layout='responsive' width={100} height={100} />
                 </div>
-                <div className='flex flex-col gap-2'>
-                    <p className='text-responsive-lg'>Username</p>
-                    <div className='flex gap-[10px] items-center'>
+                <div className='flex flex-col gap-[1.34vh] font-medium'>
+                    <p className='text-[5vw]'>Username</p>
+                    <div className='flex gap-[2.29vw] items-center'>
                         <div>
                             <SmallIcon
                                 circleSize='6.25vw'
@@ -20,14 +20,14 @@ const ReferralInfo = () => {
                                 iconSrc='/images/referral-rank-icon.png'
                             />
                         </div>
-                        <p className='text-[#D187FF]'>New Player</p>
+                        <p className='text-[#D187FF] text-[3.33vw]'>New Player</p>
                     </div>
                 </div>
             </div>
-            <div className='bg-[#352C58] text-[#D187FF] h-[49px] w-[21.54%] flex text-responsive-md items-center justify-center rounded-2xl mr-[10.20%]'>
+            <div className='bg-[#352C58] text-[#D187FF] w-[19.79vw] aspect-[95/49] flex font-medium text-[5vw] items-center justify-center rounded-2xl mr-[10.20%]'>
                 10%
             </div>
-        </div>
+        </div >
     )
 }
 

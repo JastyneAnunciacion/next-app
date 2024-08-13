@@ -5,13 +5,13 @@ import CopyTextTemplate from '../copy/CopyTextTemplate'
 
 const ReferralLink = () => {
   return (
-    <div className='w-full flex flex-col gap-[14px] mb-[20px]'>
-      <p className='text-[#b575e1] text-[20px]'>Your Referral Link</p>
-      <div className='flex w-full gap-2 h-[60px] items-center justify-center'>
-        <div className='w-[60.77%]'>
-          <CopyTextTemplate textToCopy='https://phx.gamble/examplereferralcode' textWidth='w-[181px]' />
+    <div className='w-full flex flex-col gap-[2.29vh] mb-[2.7vh]'>
+      <p className='text-[#D187FF] ml-[1.25vw] text-[4.17vw]'>Your Referral Link</p>
+      <div className='relative flex w-full items-center justify-start'>
+        <div className='w-[55.83vw] aspect-[67/15]'>
+          <CopyTextTemplate textToCopy='https://phx.gamble/examplereferralcode' />
         </div>
-        <div className='h-[49px] w-[37.41%]'>
+        <div className='absolute w-[40.21vw] aspect-[193/49] pl-[1.66vw] right-[-4.58vw]'>
           <ShareButton />
         </div>
       </div>
