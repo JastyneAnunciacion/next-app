@@ -12,18 +12,16 @@ interface ListContainterWithTitleHeaderProps {
 const ListContainterWithTitleHeader = ({ title, children, imgSrc, hasBorderBottom = true }: ListContainterWithTitleHeaderProps) => {
   return (
     <div>
-      <div className='flex w-full gap-1 items-center text-[20px] text-w px-3'>
+      <div className='flex w-full gap-1 items-center text-[4.16vw] font-medium px-[2.08vw]'>
         {imgSrc && (
           <SmallIcon
             circleSize='6.25vw'
             iconSize='3.54vw'
             iconSrc={imgSrc} />
         )}
-        <div>
-        </div>
         {title}
       </div>
-      <div className={`px-3 py-[18px] ${hasBorderBottom && 'border-b border-[#261E47]'} flex flex-col`}>
+      <div className={`py-[2.43vh] gap-[4.05vh] ${hasBorderBottom && 'border-b border-[#261E47]'} flex flex-col`}>
         {children}
       </div>
     </div>

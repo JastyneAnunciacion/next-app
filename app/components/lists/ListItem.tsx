@@ -16,9 +16,11 @@ const ListItem = ({ imgSrc = "", itemName, linkHref = "", onClick = () => { }, t
   const textColor = textHexColor ? textHexColor : '#00000'
   return (
     <Link href={linkHref}>
-      <button onClick={onClick} className='text-[16px] w-full h-9 flex gap-2 px-3 items-center'>
+      <button onClick={onClick} className='text-[3.33vw] font-medium w-full flex px-[5.42vw] gap-[1.88vw] items-center'>
         {imgSrc && (
-          <Image src={imgSrc} alt='List Item' width={22} height={22} />
+          <div className='w-[4.58vw] aspect-square'>
+            <Image src={imgSrc} alt='List Item' layout='responsive' width={100} height={100} />
+          </div>
         )}
         <p style={{ color: textColor }}>{itemName}</p>
       </button>

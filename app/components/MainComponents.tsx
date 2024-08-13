@@ -30,7 +30,7 @@ const MainComponents = ({ children, footerPage }: MainComponentsProps) => {
 
     return (
         <main className={`flex flex-col max-w-full h-screen w-screen ${isMenuExpanded && 'overflow-hidden'}`}>
-            <div className='w-full flex justify-center self-center mb-[5px]'>
+            <div className='w-full flex justify-center self-center mb-[0.67vh]'>
                 <Header />
             </div>
             <div className='w-full flex flex-col items-center self-center'>
