@@ -14,7 +14,11 @@ const ReferralInfo = () => {
                     <p className='text-responsive-lg'>Username</p>
                     <div className='flex gap-[10px] items-center'>
                         <div>
-                            <SmallIcon circleWidthPixel={30} circleHeightPixel={30} iconSrc='/images/referral-rank-icon.png' iconWidthPixel={16} iconHeightPixel={16} />
+                            <SmallIcon
+                                circleSize='6.25vw'
+                                iconSize='3.33vw'
+                                iconSrc='/images/referral-rank-icon.png'
+                            />
                         </div>
                         <p className='text-[#D187FF]'>New Player</p>
                     </div>

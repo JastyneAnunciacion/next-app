@@ -11,11 +11,9 @@ const Cashback = () => {
       </div>
       <div className='w-full h-[70px] bg-[#241b42] rounded-lg p-[11px] mt-3 flex gap-[11px] items-center'>
         <SmallIcon
+          circleSize='10.83vw'
+          iconSize='5.21vw'
           iconSrc='/images/exchange-image.png'
-          circleWidthPixel={52}
-          circleHeightPixel={52}
-          iconHeightPixel={25}
-          iconWidthPixel={25}
         />
         <div className='flex w-full justify-between items-center text-responsive-sm'>
           <p>Your cashback:</p>
