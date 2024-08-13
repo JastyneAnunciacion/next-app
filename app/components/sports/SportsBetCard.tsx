@@ -71,7 +71,7 @@ const SportsBetCard = ({ sportImgSrc, league, date, team1, team2, drawAmount, ga
                 <div>
                     <Image src={`${basePath}/images/pencil-circle-fill.256x256.png`} alt='Team Icon' width={22} height={22}></Image>
                 </div>
-                <p>{team1 ? team2.teamName : 'Team 2 Name'}</p>
+                <p>{team2 ? team2.teamName : 'Team 2 Name'}</p>
             </div>
 
             <p>{gameType}</p>
