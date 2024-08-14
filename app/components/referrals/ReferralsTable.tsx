@@ -5,32 +5,36 @@ import SmallIcon from '../SmallIcon'
 
 const ReferralsTable = () => {
   return (
-    <div className='w-full mb-[56px]'>
-      <div className='flex gap-[7px] items-center'>
+    <div className='w-full text-[3.33vw] font-medium'>
+      <div className='flex gap-[1.45vw] items-center mb-[2.29vw]'>
         <SmallIcon
           circleSize='6.25vw'
           iconSize='3.13vw'
           iconSrc='/images/credit-card-image.png'
         />
-        <p>Your Referrals</p>
+        <p className='text-[4.16vw]'>Your Referrals</p>
       </div>
-      <div className='flex flex-col mt-2 bg-[#241b42] h-64 rounded-xl overflow-hidden'>
-        <div className='flex bg-[#6b6483] justify-between text-white text-sm font'>
-          <p className='w-full p-2'>Type</p>
-          <p className='w-full p-2'>Amount</p>
-          <p className='w-full p-2'>Status</p>
+      <div className='flex flex-col bg-[#241b42] h-[60.42vw] rounded-xl overflow-hidden mb-[3.54vw]'>
+        <div className='flex bg-[#6b6483] h-[8.54vw] pl-[4.17vw] items-center justify-between'>
+          <p className='w-full'>Type</p>
+          <p className='w-full'>Amount</p>
+          <p className='w-full'>Status</p>
         </div>
       </div>
 
-      <div className='flex items-center justify-center mt-3 gap-2'>
-        <button className='bg-gradient-to-l from-[#8558d9] to-[#782bf6] rounded-xl w-10 h-10 p-1 flex justify-between items-center'>
-          <Image src={`${basePath}/images/left-arrow-image.png`} alt="Left Arrow" width={30} height={30} />
+      <div className='flex items-center justify-center gap-[2.26vw]'>
+        <button className='bg-gradient-to-l from-[#8558d9] to-[#782bf6] rounded-xl w-[9.61vw] aspect-square flex justify-center items-center'>
+          <div className='w-[3.20vw] aspect-[15.38/20] flex items-center justify-centers'>
+            <Image src={`${basePath}/images/left-thin-arrow-image.png`} alt="Left Arrow" layout='responsive' width={100} height={100} />
+          </div>
         </button>
-        <div className='bg-[#8558d9] text-white rounded-xl w-10 h-10 flex items-center justify-center'>
+        <div className='bg-[#8558d9] text-white rounded-xl w-[9.61vw] aspect-square flex items-center justify-center'>
           1
         </div>
-        <button className='bg-gradient-to-r from-[#8558d9] to-[#782bf6] rounded-xl w-10 h-10 p-1 flex justify-between items-center'>
-          <Image src={`${basePath}/images/right-arrow-image.png`} alt="Right Arrow" width={30} height={30} />
+        <button className='bg-gradient-to-r from-[#8558d9] to-[#782bf6] rounded-xl w-[9.61vw] aspect-square flex justify-center items-center'>
+          <div className='h-[3.20vw] aspect-[15.38/20] flex items-center justify-centers'>
+            <Image src={`${basePath}/images/right-thin-arrow-image.png`} alt="Right Arrow" layout='responsive' width={100} height={100} />
+          </div>
         </button>
       </div>
     </div>

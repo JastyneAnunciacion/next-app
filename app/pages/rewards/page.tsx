@@ -19,12 +19,24 @@ const RewardsPage = () => {
         <button className='w-full aspect-[147/71] my-[2.7vh]'>
           <Image src={`${basePath}/images/medium-banner-image-1.png`} alt='Reward Banner Image' layout='responsive' width={100} height={100} />
         </button>
-        <ReferralInfo />
-        <ReferralLink />
-        <ReferralStatistics />
-        <InvitesPromo currentInvites={2} maxInvites={10} />
-        <ReferralsTable />
-        <FAQReferral />
+        <div className='w-full aspect-[441/109] mb-[6.88vw]'>
+          <ReferralInfo />
+        </div>
+        <div className='w-full mb-[4.17vw]'>
+          <ReferralLink />
+        </div>
+        <div className='w-full'>
+          <ReferralStatistics />
+        </div>
+        <div className='w-full mb-[11.25vw]'>
+          <InvitesPromo currentInvites={2} maxInvites={10} />
+        </div>
+        <div className='w-full mb-[11.25vw]'>
+          <ReferralsTable />
+        </div>
+        <div className='w-full'>
+          <FAQReferral />
+        </div>
       </div>
     </MainComponents>
   )

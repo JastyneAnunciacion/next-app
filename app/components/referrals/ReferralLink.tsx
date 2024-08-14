@@ -5,7 +5,7 @@ import CopyTextTemplate from '../copy/CopyTextTemplate'
 
 const ReferralLink = () => {
   return (
-    <div className='w-full flex flex-col gap-[2.29vh] mb-[2.7vh]'>
+    <div className='w-full flex flex-col gap-[3.54vw]'>
       <p className='text-[#D187FF] ml-[1.25vw] text-[4.17vw]'>Your Referral Link</p>
       <div className='relative flex w-full items-center justify-start'>
         <div className='w-[55.83vw] aspect-[67/15]'>

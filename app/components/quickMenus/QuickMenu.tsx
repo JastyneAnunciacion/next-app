@@ -25,7 +25,7 @@ const QuickMenu = ({ currentPage = '', onExpand }: QuickMenuProps) => {
   return (
     <div>
       <div className='flex items-center justify-center font-manrope font-bold text-[2.08vw]'>
-        <div className={`${isMenuExpanded ? 'w-[15%] duration-500 z-50' : 'w-full duration-700'} flex justify-center items-center max-w-[83.95%] bg-[#1F2937] h-[9.72vh] fixed rounded-full bottom-[7.15vh] z-20 transition-all`}>
+        <div className={`${isMenuExpanded ? 'w-[15%] duration-500 z-50' : 'w-full duration-700'} flex justify-center items-center max-w-[83.95%] bg-[#1F2937] aspect-[403/72] fixed rounded-full bottom-[7.15vh] z-20 transition-all`}>
           <div className={`${isMenuExpanded ? 'justify-center' : 'justify-between'} flex items-center w-full px-[8.31%]`}>
             <button className={`${isMenuExpanded && 'w-full'} p-2 flex flex-col items-center justify-center`} onClick={toggleMenu}>
               {isMenuExpanded ?
