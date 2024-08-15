@@ -23,7 +23,7 @@ const QuickListGames = ({ gameListTitle, gameList }: QuickListGamesProps) => {
       childrenList={gameList.map((item, i) => {
         const imageIndex = Math.floor(Math.random() * 7) + 1;
         return (
-          <button key={i} className={`bg-gray-600 w-[41.25vw] aspect-[198/251] shrink-0 rounded-lg`}>
+          <button key={i} className={`bg-gray-600 w-[41.25vw] aspect-[198/251] shrink-0 rounded-xl`}>
             <Image
               src={`${basePath}/images/game-icon-${imageIndex}.png`}
               alt="Game Banner"

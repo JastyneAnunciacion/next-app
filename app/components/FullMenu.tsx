@@ -13,14 +13,14 @@ interface FullMenuProps {
 const FullMenu = ({ isExpanded }: FullMenuProps) => {
     return (
         <div className={`fixed z-40 overflow-y-auto top-0 w-full h-full bg-[#201434] font-normal transition-all duration-700 transform ${isExpanded ? 'translate-x-0' : '-translate-x-full'}`}>
-            <div className='w-full flex justify-center self-center mb-[0.67vh]'>
+            <div className='w-full flex justify-center self-center mb-[3.75vw]'>
                 <Header />
             </div>
-            <div className='flex justify-center px-[4.16vw] flex-col gap-[2.43vh] mb-40'>
-                <div className='h-[6.75vh]'>
+            <div className='flex justify-center px-[4.16vw] flex-col gap-[3.75vw] mb-[42.29vw]'>
+                <div className='w-full aspect-[441/50]'>
                     <Serachbar placeholderText='Find a Game' />
                 </div>
-                <div className='flex flex-col gap-[1.61vh]'>
+                <div className='flex flex-col gap-[2.5vw]'>
                     <ListContainterWithTitleHeader title='Games'>
                         <ListItem imgSrc={`${basePath}/images/games-selected-image.png`} linkHref='/pages/games' itemName='Casino' textHexColor='#D187FF' />
                         <ListItem imgSrc={`${basePath}/images/sports-selected-image.png`} linkHref='/pages/sports' itemName='Sports' textHexColor='#FFF387' />

@@ -17,7 +17,7 @@ const QuickMenuButton = ({ buttonName, iconSrc, iconActiveSrc, activeTextColor, 
   const textColor = active ? activeTextColor : '#00000'
   return (
     <div>
-      <Link href={pageHref} className={`${active && 'pointer-events-none'} p-2 flex flex-col gap-1 items-center`}>
+      <Link href={pageHref} className={`${active && 'pointer-events-none'} flex flex-col gap-[0.83vw] items-center`}>
         <div className='w-[4.58vw] aspect-square'>
           <Image src={basePath + iconStatus} alt='Footer Button Image' layout='responsive' width={100} height={100} />
         </div>

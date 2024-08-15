@@ -25,9 +25,9 @@ const QuickMenu = ({ currentPage = '', onExpand }: QuickMenuProps) => {
   return (
     <div>
       <div className='flex items-center justify-center font-manrope font-bold text-[2.08vw]'>
-        <div className={`${isMenuExpanded ? 'w-[15%] duration-500 z-50' : 'w-full duration-700'} flex justify-center items-center max-w-[83.95%] bg-[#1F2937] aspect-[403/72] fixed rounded-full bottom-[7.15vh] z-20 transition-all`}>
-          <div className={`${isMenuExpanded ? 'justify-center' : 'justify-between'} flex items-center w-full px-[8.31%]`}>
-            <button className={`${isMenuExpanded && 'w-full'} p-2 flex flex-col items-center justify-center`} onClick={toggleMenu}>
+        <div className={`${isMenuExpanded ? 'w-[13%] aspect-square duration-500' : 'w-full aspect-[403/72] duration-700'} flex justify-center items-center max-w-[83.95%] bg-[#1F2937] fixed rounded-full bottom-[10.83vw] z-50 transition-all`}>
+          <div className={`${isMenuExpanded ? 'justify-center' : 'justify-between'} flex items-center w-full px-[6.97vw]`}>
+            <button className={`${isMenuExpanded && 'w-full'} flex flex-col items-center justify-center`} onClick={toggleMenu}>
               {isMenuExpanded ?
                 <div>
                   <div>
@@ -35,7 +35,7 @@ const QuickMenu = ({ currentPage = '', onExpand }: QuickMenuProps) => {
                   </div>
                 </div>
                 :
-                <div className='flex flex-col gap-[0.54vh] items-center'>
+                <div className='flex flex-col gap-[0.83vw] items-center'>
                   <div className='w-[4.58vw] aspect-square'>
                     <Image
                       src={basePath + '/images/menu-image.png'}
@@ -98,8 +98,8 @@ const QuickMenu = ({ currentPage = '', onExpand }: QuickMenuProps) => {
         </div>
         <FullMenu isExpanded={isMenuExpanded} />
       </div>
-      <div className='fixed bg-gradient-to-t from-[#242037] via-[#1F1648]/9 via-78% to-[#D9D9D9]/0 w-full h-[25.24vh] bottom-0 z-0 pointer-events-none' />
-      <div className='h-[20vh] bottom-0 z-0 pointer-events-none' />
+      <div className='fixed bg-gradient-to-t from-[#242037] via-[#1F1648]/9 via-78% to-[#D9D9D9]/0 w-full h-[39.16vw] bottom-0 z-0 pointer-events-none' />
+      <div className='h-[42.29vw] bottom-0 z-0 pointer-events-none' />
     </div>
   );
 };

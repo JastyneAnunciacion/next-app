@@ -60,18 +60,18 @@ const QuickList = ({ headerIconPath, title, childrenList, gap = '0', viewAllLink
   }, []);
 
   return (
-    <div className={`flex flex-col gap-[1.89vh] items-center font-manrope`}>
+    <div className={`flex flex-col gap-[4.37vw] items-center font-manrope`}>
       <div className='flex w-full items-center justify-between max-w-[91.88%]'>
 
-        <div className='w-full flex items-center gap-[10px]'>
-          <SmallIcon circleSize='6.25vw' iconSize='2.5vw' iconSrc={headerIconPath} />
+        <div className='w-full flex items-center gap-[2.08vw]'>
+          <SmallIcon circleSize='6.25vw' iconSize='2.5vw' iconAspectWidth={10} iconAspectHeight={12} iconSrc={headerIconPath} />
           <p className='text-[4.16vw] w-full flex-shrink text-nowrap'>{title}</p>
         </div>
 
-        <div className='flex items-center w-full'>
+        <div className='flex items-center gap-[2.71vw] w-full'>
           {viewAllLink && (
             <div className=' ml-auto'>
-              <Link href={viewAllLink} className='w-[19.17vw] aspect-[92/41] border border-[#332a61] text-[2.91vw] rounded-md mr-[13px] flex items-center justify-center'>
+              <Link href={viewAllLink} className='w-[19.17vw] aspect-[92/41] border border-[#332a61] text-[2.91vw] rounded-md flex items-center justify-center'>
                 View All
               </Link>
             </div>
@@ -80,14 +80,14 @@ const QuickList = ({ headerIconPath, title, childrenList, gap = '0', viewAllLink
           <div className='flex gap-[0.21vw] items-center justify-center'>
             <button
               onClick={() => scrollTo('left')}
-              className={`w-[8.33vw] aspect-square flex items-center justify-center text-xs rounded-l-2xl ${isAtStart ? 'bg-[#231d42]/70' : 'bg-[#2a2444]'}`}
+              className={`w-[8.33vw] aspect-square flex items-center justify-center rounded-l-3xl ${isAtStart ? 'bg-[#231d42]/70' : 'bg-[#2a2444]'}`}
               disabled={isAtStart}
             >
               <p className={`text-[22px] font-mono ${isAtStart ? 'text-gray-400' : 'text-gray-300'}`}>&lt;</p>
             </button>
             <button
               onClick={() => scrollTo('right')}
-              className={`w-[8.33vw] aspect-square flex items-center justify-center text-xs rounded-r-2xl ${isAtEnd ? 'bg-[#231d42]/70' : 'bg-[#2a2444]'}`}
+              className={`w-[8.33vw] aspect-square flex items-center justify-center rounded-r-3xl ${isAtEnd ? 'bg-[#231d42]/70' : 'bg-[#2a2444]'}`}
               disabled={isAtEnd}
             >
               <p className={`text-[22px] font-mono ${isAtEnd ? 'text-gray-400' : 'text-gray-300'}`}>&gt;</p>
