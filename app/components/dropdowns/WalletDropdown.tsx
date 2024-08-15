@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import list from '../temporaryJsons/wallet-list.json'
 import Image from 'next/image'
 import basePath from '../../utilities/basepath'
@@ -12,10 +12,38 @@ interface WalletDropdownProps {
   arrowBoxSize?: string
 }
 
-
 const WalletDropdown = ({ paddingLeft = '2.92vw', arrowBoxSize = '6.25vw', paddingRight = '3.13vw' }: WalletDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentlySelected, setCurrentlySelected] = useState(0);
+  const [dropdownTop, setDropdownTop] = useState<number | null>(null);
+
+  const mainDivRef = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (mainDivRef.current && isOpen) {
+      const rect = mainDivRef.current.getBoundingClientRect();
+      setDropdownTop(rect.bottom + window.scrollY);
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
 
   const handleItemClick = (index: number) => {
     setCurrentlySelected(index);
@@ -23,8 +51,12 @@ const WalletDropdown = ({ paddingLeft = '2.92vw', arrowBoxSize = '6.25vw', paddi
   };
 
   const selectedWallet = list[currentlySelected];
+
   return (
-    <div className='relative bg-gradient-to-r from-[#A379DF] to-[#221C42]/0 w-full h-full p-[0.21vw] flex items-center justify-center rounded-2xl'>
+    <div
+      ref={mainDivRef}
+      className='relative bg-gradient-to-r text-[4.17vw] font-manrope from-[#A379DF] to-[#221C42]/0 w-full h-full p-[0.21vw] flex items-center justify-center rounded-2xl'
+    >
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         style={{ paddingLeft: paddingLeft, paddingRight: paddingRight }}
@@ -50,29 +82,32 @@ const WalletDropdown = ({ paddingLeft = '2.92vw', arrowBoxSize = '6.25vw', paddi
           </div>
         </div>
       </button>
-
-      {isOpen && (
-        <div className='absolute bg-[#1A1E27] w-full left-0 bottom-0 flex flex-col overflow-hidden z-20 rounded-xl'>
-          <div className="h-[260px] overflow-y-auto z-10 text-white border-b border-[#252A35]">
+      {isOpen && dropdownTop !== null && (
+        <div
+          ref={dropdownRef}
+          className='fixed left-1/2 transform -translate-x-1/2 w-[88.75vw] aspect-[142/143] bg-[#1A1E27] flex flex-col overflow-hidden z-20 rounded-xl'
+          style={{ top: `${dropdownTop}px` }}
+        >
+          <div className="overflow-y-auto z-10 text-white border-b border-[#252A35] flex flex-col py-[3.75vw] px-[5.63vw] gap-[5.83vw]">
             {list.map((item, i) => (
-              <button onClick={(() => handleItemClick(i))} className='flex gap-2 w-full px-4 hover:bg-[#272d3a] cursor-pointer items-center justify-between' key={i}>
-                <h3>{item.Amount}</h3>
-                <div className='flex items-center gap-2'>
-                  <h3 className='text-left'>{item.Token}</h3>
-                  <div className='shrink-0'>
-                    <Image src={basePath + item.TokenIconSrc} alt="Token Icon" width={20} height={20} />
+              <button onClick={(() => handleItemClick(i))} className='flex hover:bg-[#272d3a] cursor-pointer items-center justify-between' key={i}>
+                <p>{item.Amount}</p>
+                <div className='flex justify-between  w-[20vw] items-center gap-[2.08vw]'>
+                  <p className='text-left font-bold'>{item.Token}</p>
+                  <div className='shrink-0 w-[5.21vw] aspect-square'>
+                    <Image src={basePath + item.TokenIconSrc} alt="Token Icon" layout='responsive' width={100} height={100} />
                   </div>
                 </div>
               </button>
             ))}
           </div>
 
-          <div className='py-[20px] px-3 flex flex-col justify-center'>
-            <div className='text-white text-sm flex justify-between'>
+          <div className='py-[6.67vw] px-[5.63vw] text-[3.33vw] h-[29.38vw] gap-[6.88vw] flex flex-col justify-center'>
+            <div className='flex justify-between'>
               <p>Hide 0 balances</p>
               <Toggle bgIsDark={true} />
             </div>
-            <div className='text-white text-sm flex justify-between'>
+            <div className='flex justify-between'>
               <p>Display in USD</p>
               <Toggle bgIsDark={true} />
             </div>

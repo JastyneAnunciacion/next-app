@@ -8,7 +8,7 @@ import basePath from '../utilities/basepath';
 const Header = () => {
   return (
     <header className='w-full h-full flex items-center'>
-      <div className='py-[12px] px-[2.27%] flex items-center w-full aspect-[441/74] justify-center gap-[2.08vw]'>
+      <div className='borders px-[6.04vw] flex items-center w-full aspect-[441/74] justify-center gap-[2.08vw]'>
         <Link href="/" className='w-[9.17vw] aspect-square shrink-0'>
           <Image className='rounded-full' src={`${basePath}/images/phx-gamble-logo.png`} alt="Header Main Logo" layout='responsive' width={100} height={100} />
         </Link>
