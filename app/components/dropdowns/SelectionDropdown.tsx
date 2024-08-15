@@ -61,7 +61,7 @@ const SelectionDropdown = ({
         {hasArrow && !placeArrowOnRight && (
           <div
             style={{ width: arrowButtonSize }}
-            className="border aspect-square rounded-2xl items-center justify-center flex"
+            className="border aspect-square rounded-lg items-center justify-center flex"
           >
             <div
               style={{ width: arrowSize }}

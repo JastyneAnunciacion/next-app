@@ -5,7 +5,7 @@ import SmallIcon from '../SmallIcon'
 
 const ReferralInfo = () => {
     return (
-        <div className='w-full h-full flex items-center bg-[#241b42] rounded-2xl justify-between'>
+        <div className='w-full h-full flex items-center bg-[#241b42] rounded-xl justify-between'>
             <div className='flex items-center gap-[3.13vw] ml-[4.53%]'>
                 <div className='w-[17.29vw] aspect-square'>
                     <Image src={`${basePath}/images/temporary-profile-medium-image.png`} alt='Medium Profile Icon' layout='responsive' width={100} height={100} />
@@ -24,7 +24,7 @@ const ReferralInfo = () => {
                     </div>
                 </div>
             </div>
-            <div className='bg-[#352C58] text-[#D187FF] w-[19.79vw] aspect-[95/49] flex font-medium text-[5vw] items-center justify-center rounded-2xl mr-[10.20%]'>
+            <div className='bg-[#352C58] text-[#D187FF] w-[19.79vw] aspect-[95/49] flex font-medium text-[5vw] items-center justify-center rounded-xl mr-[10.20%]'>
                 10%
             </div>
         </div >

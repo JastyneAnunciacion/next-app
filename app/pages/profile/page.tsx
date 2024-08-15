@@ -33,7 +33,7 @@ const ProfilePage = () => {
         <Image className='z-0' src={`${basePath}/images/profile-page-bg-design.png`} alt='Large Profile BG ' layout='responsive' width={100} height={100} />
       </div>
       <div className='w-full max-w-[91.88%] font-manrope text-[3.33vw]'>
-        <div className='relative flex items-center justify-between w-full h-[10.42vw] rounded-3xl bg-[#241A43] z-10 px-[4.38vw]'>
+        <div className='relative flex items-center justify-between w-full h-[10.42vw] rounded-lg bg-[#241A43] z-10 px-[4.38vw]'>
           <p className='absolute left-1/2 transform -translate-x-1/2 text-[#b575e1] font-semibolds text-[4.17vw]'>Profile</p>
           <Link href='/pages/settings' className='flex-shrink-0 ml-auto w-[5.21vw] aspect-square'>
             <Image src={`${basePath}/images/cog-image.png`} alt='Profile Settings Icon' layout='responsive' width={100} height={100} />

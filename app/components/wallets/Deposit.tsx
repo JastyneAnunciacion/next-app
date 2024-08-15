@@ -57,13 +57,13 @@ const Deposit = () => {
                 </div>
                 <p className='text-[#D187FF]'>You can deposit through Telegram Bots. Choose one of the bots shown below.</p>
                 <div className='flex w-full items-center gap-[2.29vw]'>
-                    <button className={`border-[#3B335D] border rounded-2xl w-[44.79vw] aspect-[215/49] flex justify-center items-center gap-[2.08vw]`}>
+                    <button className={`border-[#3B335D] border rounded-lg w-[44.79vw] aspect-[215/49] flex justify-center items-center gap-[2.08vw]`}>
                         <div className='w-[3.87vw] aspect-[18.57/20]'>
                             <Image src={`${basePath}/images/safe-purple-image.png`} alt='Safe Icon' layout='responsive' width={100} height={100} />
                         </div>
                         <p className='text-[#D187FF]'>Wallet</p>
                     </button>
-                    <button className={`border-[#3B335D] border rounded-2xl w-[44.79vw] aspect-[215/49] flex justify-center items-center gap-[2.45vw]`}>
+                    <button className={`border-[#3B335D] border rounded-lg w-[44.79vw] aspect-[215/49] flex justify-center items-center gap-[2.45vw]`}>
                         <div className='w-[3.09vw] aspect-[14.82/21]'>
                             <Image src={`${basePath}/images/tip-jar-purple-image.png`} alt='Tip Jar Icon' layout='responsive' width={100} height={100} />
                         </div>

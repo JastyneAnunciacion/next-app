@@ -55,12 +55,12 @@ const WalletDropdown = ({ paddingLeft = '2.92vw', arrowBoxSize = '6.25vw', paddi
   return (
     <div
       ref={mainDivRef}
-      className='relative bg-gradient-to-r text-[4.17vw] font-manrope from-[#A379DF] to-[#221C42]/0 w-full h-full p-[0.21vw] flex items-center justify-center rounded-2xl'
+      className='relative bg-gradient-to-r text-[4.17vw] font-manrope from-[#A379DF] to-[#221C42]/0 w-full h-full p-[0.21vw] flex items-center justify-center rounded-lg'
     >
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         style={{ paddingLeft: paddingLeft, paddingRight: paddingRight }}
-        className={`relative bg-gradient-to-r from-[#412A78] to-[#221C42] w-full h-full text-white flex items-center justify-between rounded-2xl`}
+        className={`relative bg-gradient-to-r from-[#412A78] to-[#221C42] w-full h-full text-white flex items-center justify-between rounded-lg`}
       >
         {selectedWallet && (
           <div className='absolute flex h-full w-full items-center gap-[2.29vw]'>
@@ -75,7 +75,7 @@ const WalletDropdown = ({ paddingLeft = '2.92vw', arrowBoxSize = '6.25vw', paddi
 
         <div
           style={{ width: arrowBoxSize }}
-          className='flex-shrink-0 ml-auto bg-gradient-to-b from-[#9C6EF7] to-[#7727F7] aspect-square rounded-2xl items-center justify-center flex'
+          className='flex-shrink-0 ml-auto bg-gradient-to-b from-[#9C6EF7] to-[#7727F7] aspect-square rounded-lg items-center justify-center flex'
         >
           <div className='w-[33.33%] aspect-[10/13]'>
             <Image src={`${basePath}/images/${isOpen ? 'up' : 'down'}-thin-arrow-image.png`} alt="Arrows" layout='responsive' width={100} height={100} />
@@ -85,7 +85,7 @@ const WalletDropdown = ({ paddingLeft = '2.92vw', arrowBoxSize = '6.25vw', paddi
       {isOpen && dropdownTop !== null && (
         <div
           ref={dropdownRef}
-          className='fixed left-1/2 transform -translate-x-1/2 w-[88.75vw] aspect-[142/143] bg-[#1A1E27] flex flex-col overflow-hidden z-20 rounded-xl'
+          className='fixed left-1/2 transform -translate-x-1/2 w-[88.75vw] aspect-[142/143] bg-[#1A1E27] flex flex-col overflow-hidden z-20 rounded-2xl'
           style={{ top: `${dropdownTop}px` }}
         >
           <div className="overflow-y-auto z-10 text-white border-b border-[#252A35] flex flex-col py-[3.75vw] px-[5.63vw] gap-[5.83vw]">

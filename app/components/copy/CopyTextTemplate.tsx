@@ -12,7 +12,7 @@ const CopyTextTemplate = ({ textToCopy, textWidth = '37.71vw', paddingLeft = '3.
   return (
     <div
       style={{ paddingLeft: paddingLeft, paddingRight: paddingRight }}
-      className='bg-[#241A43] text-white h-full w-full rounded-3xl flex justify-between items-center gap-[1.67vw]'
+      className='bg-[#241A43] text-white h-full w-full rounded-xl flex justify-between items-center gap-[1.67vw]'
     >
       <div
         style={{ width: textWidth }}

@@ -23,8 +23,19 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Rubik-Regular';
+  src: url('./assets/fonts/Rubik-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .font-manrope {
   font-family: 'Manrope-Regular', sans-serif;
+}
+
+.font-rubik {
+  font-family: 'Rubik-Regular', sans-serif;
 }
 
 body {

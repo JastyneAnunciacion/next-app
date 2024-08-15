@@ -32,11 +32,11 @@ const CurrencyDropdown = ({
 
   const selectedCurrency = list[currentlySelected];
   return (
-    <div className='relative bg-gradient-to-r from-[#926dca] to-[#926dca]/0 w-full h-full p-[0.21vw] rounded-2xl'>
+    <div className='relative bg-gradient-to-r from-[#926dca] to-[#926dca]/0 w-full h-full p-[0.21vw] rounded-lg'>
       <button
         style={{ paddingLeft: paddingLeft, paddingRight: paddingRight }}
         onClick={() => setIsOpen((prev) => !prev)}
-        className="bg-gradient-to-r from-[#412974] to-[#231d42] w-full h-full flex items-center justify-between rounded-2xl"
+        className="bg-gradient-to-r from-[#412974] to-[#231d42] w-full h-full flex items-center justify-between rounded-lg"
       >
         {selectedCurrency && (
           <div className='flex items-center gap-[2.29vw]'>

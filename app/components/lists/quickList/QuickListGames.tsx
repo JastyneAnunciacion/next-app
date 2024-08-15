@@ -30,7 +30,7 @@ const QuickListGames = ({ gameListTitle, gameList }: QuickListGamesProps) => {
               layout='responsive'
               width={100}
               height={100}
-              className="w-full h-full rounded-lg"
+              className="w-full h-full rounded-md"
             />
           </button>
         );

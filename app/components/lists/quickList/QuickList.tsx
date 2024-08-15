@@ -77,20 +77,20 @@ const QuickList = ({ headerIconPath, title, childrenList, gap = '0', viewAllLink
             </div>
           )}
 
-          <div className='flex gap-[0.21vw] items-center justify-center'>
+          <div className='flex gap-[0.21vw] items-center font-rubik font-medium text-[4.17vw] justify-center'>
             <button
               onClick={() => scrollTo('left')}
               className={`w-[8.33vw] aspect-square flex items-center justify-center rounded-l-3xl ${isAtStart ? 'bg-[#231d42]/70' : 'bg-[#2a2444]'}`}
               disabled={isAtStart}
             >
-              <p className={`text-[22px] font-mono ${isAtStart ? 'text-gray-400' : 'text-gray-300'}`}>&lt;</p>
+              <p className={`${isAtStart ? 'text-gray-400' : 'text-gray-300'}`}>&lt;</p>
             </button>
             <button
               onClick={() => scrollTo('right')}
               className={`w-[8.33vw] aspect-square flex items-center justify-center rounded-r-3xl ${isAtEnd ? 'bg-[#231d42]/70' : 'bg-[#2a2444]'}`}
               disabled={isAtEnd}
             >
-              <p className={`text-[22px] font-mono ${isAtEnd ? 'text-gray-400' : 'text-gray-300'}`}>&gt;</p>
+              <p className={`${isAtEnd ? 'text-gray-400' : 'text-gray-300'}`}>&gt;</p>
             </button>
           </div>
         </div>

@@ -37,8 +37,8 @@ const BuyCrypto = () => {
                 </div>
             </div>
 
-            <div className='bg-gradient-to-r from-[#607073] via-[#A9C7CB] to-[#546265] w-full h-[10.20vw] p-[0.21vw] rounded-3xl mb-[8.33vw]'>
-                <button className='flex items-center gap-[1.83vw] justify-center bg-gradient-to-r from-[#8CCEF4] to-[#4C8293] w-full h-full rounded-3xl'>
+            <div className='bg-gradient-to-r from-[#607073] via-[#A9C7CB] to-[#546265] w-full h-[10.20vw] p-[0.21vw] rounded-lg mb-[8.33vw]'>
+                <button className='flex items-center gap-[1.83vw] justify-center bg-gradient-to-r from-[#8CCEF4] to-[#4C8293] w-full h-full rounded-lg'>
                     <div className='shrink-0 w-[3.08vw] aspect-[14.82/21]'>
                         <Image src={`${basePath}/images/tip-jar-image.png`} alt='Buy Crypto Icon' layout='responsive' width={100} height={100} />
                     </div>
@@ -46,7 +46,7 @@ const BuyCrypto = () => {
                 </button>
             </div>
 
-            <div className='bg-[#23213C] rounded-2xl text-[#637AF4] h-[15.42vw] px-[5.21vw] flex items-center'>
+            <div className='bg-[#23213C] rounded-xl text-[#637AF4] h-[15.42vw] px-[5.21vw] flex items-center'>
                 <p>Depending on the blockchain network, the purchase may take a few minutes to arrive.</p>
             </div>
         </div>
