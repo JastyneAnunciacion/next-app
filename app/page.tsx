@@ -39,14 +39,14 @@ export default function Home() {
     <MainComponents footerPage="Games">
 
       <div className="flex flex-col w-full items-center">
-        <div className="w-full max-w-[91.88%] mb-[2.29vh]">
+        <div className="w-full max-w-[91.88%] flex flex-col mb-[3.54vw] gap-[5.41vw]">
           <BigBannerSlider />
-          <div className="w-full h-[6.74vh]">
+          <div className="w-full h-[10.41vw]">
             <Serachbar placeholderText='Search Games' />
           </div>
         </div>
 
-        <div className="w-full flex flex-col gap-[4.05vh] justify-center">
+        <div className="w-full flex flex-col gap-[6.25vw] justify-center">
           <QuickListGames gameListTitle="Top Games" gameList={walletList} />
           <QuickListGames gameListTitle="New" gameList={walletList} />
           <QuickListGames gameListTitle="Biggest Multiplier" gameList={walletList} />

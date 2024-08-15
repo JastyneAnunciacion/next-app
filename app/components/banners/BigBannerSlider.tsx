@@ -101,12 +101,12 @@ const BigBannerSlider = () => {
 
 
     return (
-        <div className='flex gap-[11px] mb-[26px] items-center justify-center flex-col w-full'>
+        <div className='flex gap-[11px] items-center justify-center flex-col w-full'>
             <div className="overflow-hidden w-full h-full">
                 <div className="flex w-full overflow-x-auto" ref={sliderRef} style={{ transition: 'transform 0.5s ease' }}>
                     {slides.map((slide, index) => (
                         <button key={index} className={`${index % 2 == 0 ? 'ml-[1%] mr-[0.75%]' : 'ml-[0.75%] mr-[1%]'} shrink-0 w-[48.25%] h-auto flex items-center justify-center`}>
-                            <Image src={basePath + slide.imgSrc} alt='Banner Image' layout='responsive' width={100} height={100} className='rounded-lg' />
+                            <Image src={basePath + slide.imgSrc} alt='Banner Image' layout='responsive' width={100} height={100} className='rounded-xl' />
                         </button>
                     ))}
                 </div>
@@ -117,7 +117,7 @@ const BigBannerSlider = () => {
                     <button
                         key={index}
                         onClick={() => goToSlide(index)}
-                        className={`rounded-full flex ${currentSlide === index ? 'bg-[#E302AC] cursor-default w-[10px] h-[10px]' : 'bg-[#4B3E84] w-[8px] h-[8px] cursor-pointer'}`}
+                        className={`rounded-full flex aspect-square ${currentSlide === index ? 'bg-[#E302AC] cursor-default w-[2.08vw]' : 'bg-[#4B3E84] w-[1.67vw] cursor-pointer'}`}
                     />
                 ))}
             </div>
