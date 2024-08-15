@@ -5,20 +5,20 @@ import SmallIcon from './SmallIcon'
 
 const Cashback = () => {
   return (
-    <div className='mb-[35px] responsive-text'>
+    <div className='flex flex-col gap-[1.88vw] text-[3.33vw]'>
       <div className='flex gap-1 items-center justify-center'>
-        <p className='text-[#D187FF] text-responsive-md'>Cashback</p>
+        <p className='text-[#D187FF] text-[4.17vw]'>Cashback</p>
       </div>
-      <div className='w-full h-[70px] bg-[#241b42] rounded-lg p-[11px] mt-3 flex gap-[11px] items-center'>
-        <SmallIcon
-          circleSize='10.83vw'
-          iconSize='5.21vw'
-          iconSrc='/images/exchange-image.png'
-        />
-        <div className='flex w-full justify-between items-center text-responsive-sm'>
+      <div className='w-full aspect-[440/87] pl-[2.29vw] pr-[10.63vw] bg-[#241b42] rounded-2xl flex items-center justify-between'>
+        <div className='flex gap-[2.29vw] items-center justify-center'>
+          <SmallIcon
+            circleSize='10.83vw'
+            iconSize='5.21vw'
+            iconSrc='/images/exchange-image.png'
+          />
           <p>Your cashback:</p>
-          <p className='mr-[40px]'>5%</p>
         </div>
+        <p>5%</p>
       </div>
     </div>
   )
