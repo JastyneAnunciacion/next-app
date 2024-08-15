@@ -4,7 +4,7 @@ const TransactionHistoryTable = () => {
     return (
         <div className='responsive-text'>
             <div className='flex gap-1 items-center justify-center '>
-                <p className='text-[#b575e1] text-responsive-md'>Transactions</p>
+                <p className='text-[#D187FF] text-responsive-md'>Transactions</p>
             </div>
             <div className='flex flex-col mt-2 bg-[#241b42] h-64 rounded-xl overflow-hidden'>
                 <div className='flex bg-[#6b6483] justify-between text-white'>

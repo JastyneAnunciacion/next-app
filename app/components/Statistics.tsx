@@ -7,7 +7,7 @@ const Statistics = () => {
     return (
         <div className='mb-[35px]'>
             <div className='flex items-center justify-center mb-[9px]'>
-                <p className='text-[#b575e1] text-responsive-md'>Statistics</p>
+                <p className='text-[#D187FF] text-responsive-md'>Statistics</p>
             </div>
             <div className='w-full flex flex-col gap-2 text-white'>
                 <div className='flex gap-[2.26%]'>

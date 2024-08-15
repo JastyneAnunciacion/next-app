@@ -77,7 +77,7 @@ const QuickList = ({ headerIconPath, title, childrenList, gap = '0', viewAllLink
             </div>
           )}
 
-          <div className='flex gap-[1px] items-center justify-center'>
+          <div className='flex gap-[0.21vw] items-center justify-center'>
             <button
               onClick={() => scrollTo('left')}
               className={`w-[8.33vw] aspect-square flex items-center justify-center text-xs rounded-l-2xl ${isAtStart ? 'bg-[#231d42]/70' : 'bg-[#2a2444]'}`}

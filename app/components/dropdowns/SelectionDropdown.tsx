@@ -12,10 +12,10 @@ interface SelectionDropdownProps {
   hasArrow?: boolean,
   placeArrowOnRight?: boolean;
   placeHolderText?: string;
-  dropDownButtonWidthPixel?: number,
-  dropDownButtonHeightPixel?: number,
-  dropDownArrowWidthPixel?: number,
-  dropDownArrowHeightPixel?: number
+  arrowButtonSize?: string,
+  arrowSize?: string,
+  paddingLeft?: string,
+  paddingRight?: string,
 }
 
 const SelectionDropdown = ({
@@ -23,10 +23,10 @@ const SelectionDropdown = ({
   hasArrow = true,
   placeArrowOnRight = false,
   placeHolderText = '',
-  dropDownButtonWidthPixel = 28,
-  dropDownButtonHeightPixel = 28,
-  dropDownArrowWidthPixel = 10,
-  dropDownArrowHeightPixel = 13
+  arrowButtonSize = '7.5vw',
+  arrowSize = '2.5vw',
+  paddingLeft = '3.96vw',
+  paddingRight = '4.79vw'
 }: SelectionDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(0);
@@ -35,13 +35,19 @@ const SelectionDropdown = ({
     <div className="relative w-full h-full">
       <button
         onClick={() => setIsOpen(prev => !prev)}
-        className="relative bg-[#241b42] text-white p-4 w-full h-full flex justify-between items-center rounded-lg"
+        style={{ paddingLeft: paddingLeft, paddingRight: paddingRight }}
+        className="relative bg-[#241b42] w-full h-full flex justify-between items-center rounded-2xl"
       >
         {hasArrow && !placeArrowOnRight && (
           <div
-            style={{ width: `${dropDownButtonWidthPixel}px`, height: `${dropDownButtonHeightPixel}px` }}
-            className='flex-shrink-0 bg-gradient-to-b from-[#9C6EF7] to-[#7727F7] rounded-lg items-center justify-center flex'>
-            <Image src={`${basePath}/images/${isOpen ? 'down-arrow-image.png' : 'right-arrow-image.png'}`} alt="Arrow" width={40} height={40} />
+            style={{ width: arrowButtonSize }}
+            className='border aspect-square rounded-2xl items-center justify-center flex'>
+            <div
+              style={{ width: arrowSize }}
+              className='aspect-[4/5]'
+            >
+              <Image src={`${basePath}/images/${isOpen ? 'up-thin-arrow-image.png' : 'down-thin-arrow-image.png'}`} alt="Arrow" layout='responsive' width={100} height={100} />
+            </div>
           </div>
         )}
         <div className='flex gap-1'>
@@ -54,9 +60,14 @@ const SelectionDropdown = ({
         </div>
         {hasArrow && placeArrowOnRight && (
           <div
-            style={{ width: `${dropDownButtonWidthPixel}px`, height: `${dropDownButtonHeightPixel}px` }}
-            className='flex-shrink-0 border rounded-lg items-center justify-center flex'>
-            <Image src={`${basePath}/images/${isOpen ? 'up-thin-arrow-image.png' : 'down-thin-arrow-image.png'}`} alt="Arrow" width={dropDownArrowWidthPixel} height={dropDownArrowHeightPixel} />
+            style={{ width: arrowButtonSize }}
+            className='border aspect-square rounded-2xl items-center justify-center flex'>
+            <div
+              style={{ width: arrowSize }}
+              className='aspect-[4/5]'
+            >
+              <Image src={`${basePath}/images/${isOpen ? 'up-thin-arrow-image.png' : 'down-thin-arrow-image.png'}`} alt="Arrow" layout='responsive' width={100} height={100} />
+            </div>
           </div>
         )}
 

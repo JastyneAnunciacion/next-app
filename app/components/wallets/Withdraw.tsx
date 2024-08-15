@@ -6,79 +6,81 @@ import SmallIcon from '../SmallIcon'
 
 const Withdraw = () => {
     return (
-        <div className='flex flex-col gap-6'>
-            <div className='flex flex-col gap-[10px]'>
-                <p className='text-responsive-md ml-[6px]'>Select Currency</p>
-                <div className='text-responsive-md h-[63px]'>
+        <div className='flex flex-col gap-[5vw]'>
+            <div className='flex flex-col gap-[2.08vw]'>
+                <p className='ml-[1.25vw] text-[4.17vw]'>Select Currency</p>
+                <div className='h-[13.12vw]'>
                     <WalletDropdown
-                    // bitCoinWidthPixel={30}
-                    // bitCoinHeightPixel={30}
-                    // dropDownButtonWidthPixel={36}
-                    // dropDownButtonHeightPixel={36}
-                    // dropDownArrowWidthPixel={12}
-                    // dropDownArrowHeightPixel={15}
-                    // customPaddingX={4.53}
+                        paddingLeft='3.96vw'
+                        paddingRight='4.79vw'
+                        arrowBoxSize='7.5vw'
                     />
                 </div>
             </div>
 
-            <div className='flex flex-col gap-[10px]'>
-                <div className='flex gap-[7px] items-center'>
+            <div className='flex flex-col gap-[2.08vw]'>
+                <div className='flex gap-[1.46vw] items-center'>
                     <SmallIcon
                         circleSize='6.25vw'
-                        iconSize='3.13w'
+                        iconSize='3.13vw'
                         iconSrc='/images/credit-card-image.png'
+                        iconAspectWidth={15}
+                        iconAspectHeight={11}
                     />
-                    <p className='text-responsive-md'>Withdraw through Blockchain</p>
+                    <p className='text-[4.17vw]'>Withdraw through Blockchain</p>
                 </div>
-                <p className='text-[#b575e1]'>Direct withdrawal trough blockchain can take up to 10 minutes. Please be patient!</p>
+                <p className='text-[#D187FF]'>Direct withdrawal trough blockchain can take up to 10 minutes. Please be patient!</p>
             </div>
 
-            <div className='flex flex-col gap-[10px]'>
-                <p className='text-responsive-md text-[#C4C4C4] ml-[6px]  '>Withdrawal address</p>
-                <input placeholder='Enter your address' className='w-full bg-[#241A43] h-[60px] rounded-xl flex items-center pl-4 [&::-webkit-inner-spin-button]:appearance-none outline-none placeholder-white' />
+            <div className='flex flex-col gap-[2.08vw]'>
+                <p className='text-[#C4C4C4] ml-[1.25vw] text-[4.17vw]'>Withdrawal Address</p>
+                <input placeholder='Enter your address here' className='w-full bg-[#241A43] h-[12.5vw] rounded-2xl flex items-center pl-[3.96vw] [&::-webkit-inner-spin-button]:appearance-none outline-none placeholder-white' />
             </div>
 
-            <div className='flex flex-col gap-1'>
-                <div className='flex justify-between items-center'>
-                    <p className='text-responsive-md text-[#C4C4C4] ml-[6px]'>Withdrawal Amount</p>
-                    <div className='text-responsive-sm flex gap-[6px] items-center'>
+            <div className='flex flex-col'>
+                <div className='flex justify-between items-center mb-[2.08vw]'>
+                    <p className='text-[#C4C4C4] ml-[1.25vw] text-[4.17vw]'>Withdrawal Amount</p>
+                    <div className='text-responsive-sm flex gap-[1.25vw] items-center'>
                         <p className='text-[#C4C4C4]'>Available:</p>
-                        <div className='flex gap-[5px] items-center shrink-0'>
-                            <Image src={`${basePath}/images/tokens/BTC-outline-icon.png`} alt='Buy Crypto Icon' width={20} height={20} />
-                            <p>0</p>
+                        <div className='flex gap-[1.04vw] items-center shrink-0'>
+                            <div className='w-[4.17vw] aspect-square'>
+                                <Image src={`${basePath}/images/tokens/BTC-outline-icon.png`} alt='Buy Crypto Icon' layout='responsive' width={100} height={100} />
+                            </div>
+                            <p className='text-[2.92vw]'>10</p>
                         </div>
                     </div>
                 </div>
 
-                <div className='w-full bg-[#241A43] h-[60px] rounded-xl text-white flex items-center justify-between px-[4.53%]'>
-                    <div className='flex gap-[11px] items-center'>
-                        <div className='shrink-0'>
-                            <Image src={`${basePath}/images/tokens/BTC-outline-icon.png`} alt='Token Icon' width={30} height={30}></Image>
+                <div className='w-full bg-[#241A43] h-[12.5vw] rounded-2xl mb-[1.04vw] text-white flex items-center justify-between pl-[4.17vw] pr-[2.08vw]'>
+                    <div className='flex gap-[2.29vw] items-center'>
+                        <div className='w-[6.25vw] aspect-square'>
+                            <Image src={`${basePath}/images/tokens/BTC-outline-icon.png`} alt='Token Icon' layout='responsive' width={100} height={100} />
                         </div>
-                        <input placeholder='0.00' className='w-full text-[20px] bg-transparent [&::-webkit-inner-spin-button]:appearance-none outline-none' type='number' />
+                        <input placeholder='0.00' className='w-full text-[4.17vw] bg-transparent placeholder:text-white [&::-webkit-inner-spin-button]:appearance-none outline-none' type='number' />
                     </div>
-                    <button className='bg-[#352C58] w-[13.60%] h-[39px] px-[15px] flex items-center justify-center mr-[1.13%] rounded-lg text-white'>25%</button>
-                    <button className='bg-[#352C58] w-[13.60%] h-[39px] px-[15px] flex items-center justify-center mr-[1.13%] rounded-lg text-white'>50%</button>
-                    <button className='bg-[#352C58] w-[13.60%] h-[39px] px-[15px] flex items-center justify-center rounded-lg text-white'>100%</button>
-                </div>
-
-                <div className='flex gap-2 items-center mb-[20px]'>
-                    <p className='ml-[6px] text-responsive-xs text-[#D187FF]'>Minimal withdrawal: </p>
-                    <div className='flex gap-[5px] items-center'>
-                        <div className='shrink-0'>
-                            <Image src={`${basePath}/images/tokens/BTC-outline-icon.png`} alt='Token Icon' width={20} height={20}></Image>
-                        </div>
-                        <p>1</p>
+                    <div className='flex gap-[1.04vw]'>
+                        <button className='bg-[#352C58] w-[12.5vw] aspect-[20/13] flex items-center justify-center rounded-2xl'>25%</button>
+                        <button className='bg-[#352C58] w-[12.5vw] aspect-[20/13] flex items-center justify-center rounded-2xl'>50%</button>
+                        <button className='bg-[#352C58] w-[12.5vw] aspect-[20/13] flex items-center justify-center rounded-2xl'>100%</button>
                     </div>
                 </div>
 
-                <div className='bg-gradient-to-r from-[#736260] via-[#CBADA9] to-[#655654] w-full h-[49px] p-[1px] rounded-lg'>
-                    <button className='flex items-center gap-[9px] justify-center bg-gradient-to-r from-[#DCA39B] to-[#765753] w-full h-full rounded-lg text-white'>
-                        <div className='shrink-0'>
-                            <Image src={`${basePath}/images/tip-jar-image.png`} alt='Withdraw Icon' width={21} height={21}></Image>
+                <div className='flex gap-[1.66vw] items-center mb-[4.16vw]'>
+                    <p className='ml-[2.08vw] text-responsive-xs text-[#D187FF]'>Minimal withdrawal: </p>
+                    <div className='flex gap-[1.04vw] items-center shrink-0'>
+                        <div className='w-[4.17vw] aspect-square'>
+                            <Image src={`${basePath}/images/tokens/BTC-outline-icon.png`} alt='Buy Crypto Icon' layout='responsive' width={100} height={100} />
                         </div>
-                        <p>Withdraw</p>
+                        <p className='text-[2.92vw]'>1</p>
+                    </div>
+                </div>
+
+                <div className='bg-gradient-to-r from-[#736260] via-[#CBADA9] to-[#655654] w-full h-[10.20vw] p-[0.21vw] rounded-3xl'>
+                    <button className='flex items-center gap-[1.82vw] justify-center bg-gradient-to-r from-[#DCA39B] to-[#765753] w-full h-full rounded-3xl'>
+                        <div className='shrink-0 w-[3.09vw] aspect-[14.82/21]'>
+                            <Image src={`${basePath}/images/tip-jar-image.png`} alt='Withdraw Icon' layout='responsive' width={100} height={100} />
+                        </div>
+                        <p className='font-bold text-[2.92vw]'>Withdraw</p>
                     </button>
                 </div>
             </div>

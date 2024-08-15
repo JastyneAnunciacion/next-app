@@ -22,7 +22,7 @@ const Level = ({ level = 1, levelImgSrc = '/images/level-image.png', currentXP =
                             </div>
                         </div>
                         <div className='flex justify-between text-white'>
-                            <p className='text-[#b575e1]'>Level {level}</p>
+                            <p className='text-[#D187FF]'>Level {level}</p>
                             <div className='flex'>
                                 <p>{currentXP}</p>
                                 <p>/{XPrequirement}XP</p>

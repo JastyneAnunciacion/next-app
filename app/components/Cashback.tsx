@@ -7,7 +7,7 @@ const Cashback = () => {
   return (
     <div className='mb-[35px] responsive-text'>
       <div className='flex gap-1 items-center justify-center'>
-        <p className='text-[#b575e1] text-responsive-md'>Cashback</p>
+        <p className='text-[#D187FF] text-responsive-md'>Cashback</p>
       </div>
       <div className='w-full h-[70px] bg-[#241b42] rounded-lg p-[11px] mt-3 flex gap-[11px] items-center'>
         <SmallIcon

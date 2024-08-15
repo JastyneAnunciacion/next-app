@@ -62,7 +62,7 @@ const DropdownExpand = ({ title, children, isArrowOnRight = true, position = 'Mi
                     </>
                 )}
             </button>
-            <div ref={contentRef} className={`px-4 transition-max-height duration-500 overflow-hidden`}>
+            <div ref={contentRef} className={`transition-max-height duration-500 overflow-hidden`}>
                 {children}
             </div>
         </div>

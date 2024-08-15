@@ -11,11 +11,13 @@ const ReferralsTable = () => {
           circleSize='6.25vw'
           iconSize='3.13vw'
           iconSrc='/images/credit-card-image.png'
+          iconAspectWidth={15}
+          iconAspectHeight={11}
         />
         <p className='text-[4.16vw]'>Your Referrals</p>
       </div>
-      <div className='flex flex-col bg-[#241b42] h-[60.42vw] rounded-xl overflow-hidden mb-[3.54vw]'>
-        <div className='flex bg-[#6b6483] h-[8.54vw] pl-[4.17vw] items-center justify-between'>
+      <div className='flex flex-col bg-[#241b42] h-[60.42vw] rounded-2xl overflow-hidden mb-[3.54vw]'>
+        <div className='flex bg-[#6A6482] h-[8.54vw] pl-[4.17vw] items-center justify-between'>
           <p className='w-full'>Type</p>
           <p className='w-full'>Amount</p>
           <p className='w-full'>Status</p>

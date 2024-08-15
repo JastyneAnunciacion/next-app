@@ -22,56 +22,50 @@ const Deposit = () => {
     }));
 
     return (
-        <div className='flex flex-col gap-6'>
-            <div className='flex flex-col gap-[10px]'>
-                <p className='ml-[6px] text-responsive-md'>Select Currency</p>
-                <div className='h-[63px] text-responsive-md'>
+        <div className='flex flex-col gap-[5vw]'>
+            <div className='flex flex-col gap-[2.08vw]'>
+                <p className='ml-[1.25vw] text-[4.17vw]'>Select Currency</p>
+                <div className='h-[13.12vw]'>
                     <WalletDropdown
-                    // bitCoinWidthPixel={30}
-                    // bitCoinHeightPixel={30}
-                    // dropDownButtonWidthPixel={36}
-                    // dropDownButtonHeightPixel={36}
-                    // dropDownArrowWidthPixel={12}
-                    // dropDownArrowHeightPixel={15}
-                    // customPaddingX={4.53}
+                        paddingLeft='3.96vw'
+                        paddingRight='4.79vw'
+                        arrowBoxSize='7.5vw'
                     />
                 </div>
             </div>
 
-            <div className='flex flex-col gap-[10px]'>
-                <p className='ml-[6px] text-responsive-md'>Select Network</p>
-                <div className='h-[60px] text-responsive-sm'>
+            <div className='flex flex-col gap-[2.08vw]'>
+                <p className='ml-[1.25vw] text-[4.17vw]'>Select Network</p>
+                <div className='h-[12.5vw]'>
                     <SelectionDropdown
                         items={networks}
                         placeArrowOnRight={true}
-                        dropDownButtonWidthPixel={36}
-                        dropDownButtonHeightPixel={36}
-                        dropDownArrowWidthPixel={12}
-                        dropDownArrowHeightPixel={15}
                     />
                 </div>
             </div>
 
-            <div className='flex flex-col gap-[10px]'>
-                <div className='flex gap-[7px] items-center'>
+            <div className='flex flex-col gap-[2.08vw]'>
+                <div className='flex gap-[1.46vw] items-center'>
                     <SmallIcon
                         circleSize='6.25vw'
-                        iconSize='3.13w'
+                        iconSize='3.13vw'
                         iconSrc='/images/credit-card-image.png'
+                        iconAspectWidth={15}
+                        iconAspectHeight={11}
                     />
-                    <p className='text-responsive-md'>Express Deposit</p>
+                    <p className='text-[4.17vw]'>Express Deposit</p>
                 </div>
-                <p className='text-[#b575e1]'>You can deposit through Telegram Bots. Choose one of the bots shown below.</p>
-                <div className='flex w-full items-center h-[49px] gap-[11px] text-white'>
-                    <button className={`border-[#3B335D] border rounded-md h-full w-full flex justify-center items-center gap-3`}>
-                        <div className='shrink-0'>
-                            <Image src={`${basePath}/images/safe-purple-image.png`} alt='Deposit Throught Blockchain Icon' width={20} height={20} />
+                <p className='text-[#D187FF]'>You can deposit through Telegram Bots. Choose one of the bots shown below.</p>
+                <div className='flex w-full items-center gap-[2.29vw]'>
+                    <button className={`border-[#3B335D] border rounded-2xl w-[44.79vw] aspect-[215/49] flex justify-center items-center gap-[2.08vw]`}>
+                        <div className='w-[3.87vw] aspect-[18.57/20]'>
+                            <Image src={`${basePath}/images/safe-purple-image.png`} alt='Safe Icon' layout='responsive' width={100} height={100} />
                         </div>
                         <p className='text-[#D187FF]'>Wallet</p>
                     </button>
-                    <button className={`border-[#3B335D] border rounded-md h-full w-full flex justify-center items-center gap-3`}>
-                        <div className='shrink-0'>
-                            <Image src={`${basePath}/images/tip-jar-purple-image.png`} alt='Deposit Throught Blockchain Icon' width={21} height={21} />
+                    <button className={`border-[#3B335D] border rounded-2xl w-[44.79vw] aspect-[215/49] flex justify-center items-center gap-[2.45vw]`}>
+                        <div className='w-[3.09vw] aspect-[14.82/21]'>
+                            <Image src={`${basePath}/images/tip-jar-purple-image.png`} alt='Tip Jar Icon' layout='responsive' width={100} height={100} />
                         </div>
                         <p className='text-[#D187FF]'>@CryptoBot</p>
                     </button>
@@ -79,18 +73,20 @@ const Deposit = () => {
             </div>
 
             <div>
-                <div className='flex flex-col gap-[10px]'>
-                    <div className='flex gap-[7px] items-center'>
+                <div className='flex flex-col gap-[2.08vw]'>
+                    <div className='flex gap-[1.46vw] items-center'>
                         <SmallIcon
                             circleSize='6.25vw'
-                            iconSize='3.13w'
+                            iconSize='3.13vw'
                             iconSrc='/images/credit-card-image.png'
+                            iconAspectWidth={15}
+                            iconAspectHeight={11}
                         />
-                        <p className='text-responsive-md'>Deposit through Blockchain</p>
+                        <p className='text-[4.17vw]'>Deposit through Blockchain</p>
                     </div>
                     <p className='text-[#D187FF]'>You can deposit through Telegram Bots. Choose one of the bots shown below.</p>
-                    <div className='mt-[2px] h-[60px]'>
-                        <CopyTextTemplate textToCopy='exampleDepositAddressCodeCopyLink' />
+                    <div className='mt-[0.42vw] h-[12.5vw]'>
+                        <CopyTextTemplate textToCopy='exampleDepositAddressCodeCopyLink' textWidth='100%' />
                     </div>
                 </div>
             </div>
