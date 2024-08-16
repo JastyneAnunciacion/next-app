@@ -21,7 +21,7 @@ const ListContainterWithTitleHeader = ({ title, children, imgSrc, hasBorderBotto
         )}
         {title}
       </div>
-      <div className={`mt-[2.08vw] gap-[6.25vw] ${hasBorderBottom && 'border-b border-[#261E47]'} flex flex-col`}>
+      <div className={`mt-[2.08vw] ${hasBorderBottom && 'border-b border-[#261E47]'} flex flex-col`}>
         {children}
       </div>
     </div>
