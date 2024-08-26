@@ -30,7 +30,7 @@ const DropdownExpand = ({ title, children, isArrowOnRight = true, position = 'Mi
     }, [isOpen, children]);
 
     return (
-        <div className={`w-full transition-all text-[3.33vw] font-medium duration-500 ${position === 'Top' && 'rounded-t-lg'} ${position === 'Bottom' && 'rounded-b-lg'} border border-[#39276F] overflow-hidden`}>
+        <div className={`w-full transition-all text-[3.33vw] font-medium duration-500 ${position === 'Top' && 'rounded-t-lg'} ${position === 'Bottom' && 'rounded-b-lg'} overflow-hidden`}>
             <button
                 onClick={() => setOpen(prev => !prev)}
                 className={`w-full h-[13.75vw] flex items-center justify-between pl-[6.25vw] pr-[7.83vw] bg-[#241a43] text-left text-[#D187FF] ${position === 'Top' && 'rounded-t-lg border-b'} ${position === 'Middle' && 'border-b'} border-[#4b3785]`}>
