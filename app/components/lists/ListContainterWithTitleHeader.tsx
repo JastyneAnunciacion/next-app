@@ -7,9 +7,10 @@ interface ListContainterWithTitleHeaderProps {
   children: ReactNode,
   imgSrc?: string
   hasBorderBottom?: boolean
+  gap?: string
 }
 
-const ListContainterWithTitleHeader = ({ title, children, imgSrc, hasBorderBottom = true }: ListContainterWithTitleHeaderProps) => {
+const ListContainterWithTitleHeader = ({ title, children, imgSrc, hasBorderBottom = true, gap }: ListContainterWithTitleHeaderProps) => {
   return (
     <div>
       <div className='flex w-full gap-[1.46vw] items-center text-[4.16vw] font-medium px-[2.08vw]'>
@@ -21,7 +22,9 @@ const ListContainterWithTitleHeader = ({ title, children, imgSrc, hasBorderBotto
         )}
         {title}
       </div>
-      <div className={`mt-[2.08vw] ${hasBorderBottom && 'border-b border-[#261E47]'} flex flex-col gap-[6.25vw] pb-[6.25vw]`}>
+      <div
+        style={{ gap: gap, paddingBottom: gap }}
+        className={`mt-[2.08vw] ${hasBorderBottom && 'border-b border-[#261E47]'} flex flex-col`}>
         {children}
       </div>
     </div>

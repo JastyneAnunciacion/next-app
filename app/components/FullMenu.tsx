@@ -21,15 +21,15 @@ const FullMenu = ({ isExpanded }: FullMenuProps) => {
                     <Serachbar placeholderText='Find a Game' />
                 </div>
                 <div className='flex flex-col gap-[2.5vw]'>
-                    <ListContainterWithTitleHeader title='Games'>
+                    <ListContainterWithTitleHeader title='Games' gap='6.25vw'>
                         <ListItem imgSrc={`${basePath}/images/games-selected-image.png`} linkHref='/pages/games' itemName='Casino' textHexColor='#D187FF' />
                         <ListItem imgSrc={`${basePath}/images/sports-selected-image.png`} linkHref='/pages/sports' itemName='Sports' textHexColor='#FFF387' />
                     </ListContainterWithTitleHeader>
-                    <ListContainterWithTitleHeader title='More'>
+                    <ListContainterWithTitleHeader title='More' gap='6.25vw'>
                         <ListItem imgSrc={`${basePath}/images/rewards-selected-image.png`} linkHref='/pages/rewards' itemName='Rewards' textHexColor='#87FFD4' />
                         <ListItem imgSrc={`${basePath}/images/promotion-selected-image.png`} linkHref='/pages/promotions' itemName='Promotions' textHexColor='#878CFF' />
                     </ListContainterWithTitleHeader>
-                    <ListContainterWithTitleHeader title='User' hasBorderBottom={false}>
+                    <ListContainterWithTitleHeader title='User' hasBorderBottom={false} gap='6.25vw'>
                         <ListItem imgSrc={`${basePath}/images/profile-selected-image.png`} linkHref='/pages/profile' itemName='Profile' textHexColor='#87C5FF' />
                         <ListItem imgSrc={`${basePath}/images/wallet-selected-image.png`} linkHref='/pages/wallet' itemName='Wallet' textHexColor='#9FFF87' />
                         <ListItem imgSrc={`${basePath}/images/orange-cog-image.png`} linkHref='/pages/settings' itemName='Settings' textHexColor='#FFA487' />
